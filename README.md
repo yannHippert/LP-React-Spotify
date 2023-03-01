@@ -67,14 +67,14 @@
 -   [ ] Display a fake player in the center
 -   [ ] Display fake control button on the right
 
-### General informations
+## General informations
 
-## Router
+### Router
 
 You'll need to use react router to navigate trought playlist. You'll need to use url parameters, please see 
 https://v5.reactrouter.com/web/example/url-params
 
-## Design
+### Design
 
 You'll need to reproduce the following design
 
