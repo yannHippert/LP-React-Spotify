@@ -1,0 +1,4826 @@
+[
+    {
+        "title": "Hey, Soul Sister",
+        "artist": "Train",
+        "genre": "neo mellow",
+        "year": 2010,
+        "duration": 217,
+        "popularity": 83
+    },
+    {
+        "title": "Love The Way You Lie",
+        "artist": "Eminem",
+        "genre": "detroit hip hop",
+        "year": 2010,
+        "duration": 263,
+        "popularity": 82
+    },
+    {
+        "title": "TiK ToK",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 200,
+        "popularity": 80
+    },
+    {
+        "title": "Bad Romance",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 295,
+        "popularity": 79
+    },
+    {
+        "title": "Just the Way You Are",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2010,
+        "duration": 221,
+        "popularity": 78
+    },
+    {
+        "title": "Baby",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2010,
+        "duration": 214,
+        "popularity": 77
+    },
+    {
+        "title": "Dynamite",
+        "artist": "Taio Cruz",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 203,
+        "popularity": 77
+    },
+    {
+        "title": "Secrets",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 225,
+        "popularity": 77
+    },
+    {
+        "title": "Empire State of Mind (Part II) Broken Down",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2010,
+        "duration": 216,
+        "popularity": 76
+    },
+    {
+        "title": "Only Girl (In The World)",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2010,
+        "duration": 235,
+        "popularity": 73
+    },
+    {
+        "title": "Club Can't Handle Me (feat. David Guetta)",
+        "artist": "Flo Rida",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 235,
+        "popularity": 73
+    },
+    {
+        "title": "Marry You",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2010,
+        "duration": 230,
+        "popularity": 73
+    },
+    {
+        "title": "Cooler Than Me - Single Mix",
+        "artist": "Mike Posner",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 213,
+        "popularity": 73
+    },
+    {
+        "title": "Telephone",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 221,
+        "popularity": 73
+    },
+    {
+        "title": "Like A G6",
+        "artist": "Far East Movement",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 217,
+        "popularity": 72
+    },
+    {
+        "title": "OMG (feat. will.i.am)",
+        "artist": "Usher",
+        "genre": "atl hip hop",
+        "year": 2010,
+        "duration": 269,
+        "popularity": 72
+    },
+    {
+        "title": "Eenie Meenie",
+        "artist": "Sean Kingston",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 202,
+        "popularity": 71
+    },
+    {
+        "title": "The Time (Dirty Bit)",
+        "artist": "The Black Eyed Peas",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 308,
+        "popularity": 70
+    },
+    {
+        "title": "Alejandro",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 274,
+        "popularity": 69
+    },
+    {
+        "title": "Your Love Is My Drug",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 187,
+        "popularity": 69
+    },
+    {
+        "title": "Meet Me Halfway",
+        "artist": "The Black Eyed Peas",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 284,
+        "popularity": 68
+    },
+    {
+        "title": "Whataya Want from Me",
+        "artist": "Adam Lambert",
+        "genre": "australian pop",
+        "year": 2010,
+        "duration": 227,
+        "popularity": 66
+    },
+    {
+        "title": "Take It Off",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 215,
+        "popularity": 66
+    },
+    {
+        "title": "Misery",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2010,
+        "duration": 216,
+        "popularity": 65
+    },
+    {
+        "title": "All The Right Moves",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 238,
+        "popularity": 65
+    },
+    {
+        "title": "Animal",
+        "artist": "Neon Trees",
+        "genre": "indie pop",
+        "year": 2010,
+        "duration": 212,
+        "popularity": 65
+    },
+    {
+        "title": "Naturally",
+        "artist": "Selena Gomez & The Scene",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 203,
+        "popularity": 64
+    },
+    {
+        "title": "I Like It",
+        "artist": "Enrique Iglesias",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 231,
+        "popularity": 63
+    },
+    {
+        "title": "Teenage Dream",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 228,
+        "popularity": 63
+    },
+    {
+        "title": "California Gurls",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 235,
+        "popularity": 62
+    },
+    {
+        "title": 3,
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 213,
+        "popularity": 62
+    },
+    {
+        "title": "My First Kiss - feat. Ke$ha",
+        "artist": "3OH!3",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 192,
+        "popularity": 62
+    },
+    {
+        "title": "Blah Blah Blah (feat. 3OH!3)",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 172,
+        "popularity": 62
+    },
+    {
+        "title": "Imma Be",
+        "artist": "The Black Eyed Peas",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 258,
+        "popularity": 62
+    },
+    {
+        "title": "Try Sleeping with a Broken Heart",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2010,
+        "duration": 249,
+        "popularity": 62
+    },
+    {
+        "title": "Sexy Bitch (feat. Akon)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 196,
+        "popularity": 61
+    },
+    {
+        "title": "Bound To You - Burlesque Original Motion Picture Soundtrack",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 264,
+        "popularity": 61
+    },
+    {
+        "title": "If I Had You",
+        "artist": "Adam Lambert",
+        "genre": "australian pop",
+        "year": 2010,
+        "duration": 228,
+        "popularity": 59
+    },
+    {
+        "title": "Rock That Body",
+        "artist": "The Black Eyed Peas",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 269,
+        "popularity": 59
+    },
+    {
+        "title": "Dog Days Are Over",
+        "artist": "Florence + The Machine",
+        "genre": "art pop",
+        "year": 2010,
+        "duration": 253,
+        "popularity": 58
+    },
+    {
+        "title": "Something's Got A Hold On Me - Burlesque Original Motion Picture Soundtrack",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 185,
+        "popularity": 58
+    },
+    {
+        "title": "Doesn't Mean Anything",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2010,
+        "duration": 273,
+        "popularity": 57
+    },
+    {
+        "title": "Hard",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2010,
+        "duration": 251,
+        "popularity": 57
+    },
+    {
+        "title": "Loca",
+        "artist": "Shakira",
+        "genre": "colombian pop",
+        "year": 2010,
+        "duration": 193,
+        "popularity": 56
+    },
+    {
+        "title": "You Lost Me",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 257,
+        "popularity": 56
+    },
+    {
+        "title": "Not Myself Tonight",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 186,
+        "popularity": 55
+    },
+    {
+        "title": "Written in the Stars (feat. Eric Turner)",
+        "artist": "Tinie Tempah",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 220,
+        "popularity": 52
+    },
+    {
+        "title": "DJ Got Us Fallin' In Love (feat. Pitbull)",
+        "artist": "Usher",
+        "genre": "atl hip hop",
+        "year": 2010,
+        "duration": 221,
+        "popularity": 52
+    },
+    {
+        "title": "Castle Walls (feat. Christina Aguilera)",
+        "artist": "T.I.",
+        "genre": "atl hip hop",
+        "year": 2010,
+        "duration": 329,
+        "popularity": 49
+    },
+    {
+        "title": "Break Your Heart",
+        "artist": "Taio Cruz",
+        "genre": "dance pop",
+        "year": 2010,
+        "duration": 186,
+        "popularity": 33
+    },
+    {
+        "title": "Hello",
+        "artist": "Martin Solveig",
+        "genre": "big room",
+        "year": 2010,
+        "duration": 191,
+        "popularity": 0
+    },
+    {
+        "title": "A Thousand Years",
+        "artist": "Christina Perri",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 285,
+        "popularity": 81
+    },
+    {
+        "title": "Someone Like You",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2011,
+        "duration": 285,
+        "popularity": 80
+    },
+    {
+        "title": "Give Me Everything",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 252,
+        "popularity": 79
+    },
+    {
+        "title": "Just the Way You Are",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2011,
+        "duration": 221,
+        "popularity": 78
+    },
+    {
+        "title": "Rolling in the Deep",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2011,
+        "duration": 228,
+        "popularity": 76
+    },
+    {
+        "title": "Run the World (Girls)",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 236,
+        "popularity": 76
+    },
+    {
+        "title": "Moves Like Jagger - Studio Recording From The Voice Performance",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2011,
+        "duration": 201,
+        "popularity": 76
+    },
+    {
+        "title": "Love On Top",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 267,
+        "popularity": 76
+    },
+    {
+        "title": "Grenade",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2011,
+        "duration": 223,
+        "popularity": 75
+    },
+    {
+        "title": "Tonight Tonight",
+        "artist": "Hot Chelle Rae",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 200,
+        "popularity": 75
+    },
+    {
+        "title": "What the Hell",
+        "artist": "Avril Lavigne",
+        "genre": "canadian pop",
+        "year": 2011,
+        "duration": 221,
+        "popularity": 74
+    },
+    {
+        "title": "Born This Way",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 260,
+        "popularity": 73
+    },
+    {
+        "title": "Monster",
+        "artist": "Kanye West",
+        "genre": "chicago rap",
+        "year": 2011,
+        "duration": 379,
+        "popularity": 73
+    },
+    {
+        "title": "Marry You",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2011,
+        "duration": 230,
+        "popularity": 73
+    },
+    {
+        "title": "Best Thing I Never Had",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 254,
+        "popularity": 73
+    },
+    {
+        "title": "Party Rock Anthem",
+        "artist": "LMFAO",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 262,
+        "popularity": 72
+    },
+    {
+        "title": "We R Who We R",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 205,
+        "popularity": 72
+    },
+    {
+        "title": "Price Tag",
+        "artist": "Jessie J",
+        "genre": "australian pop",
+        "year": 2011,
+        "duration": 223,
+        "popularity": 72
+    },
+    {
+        "title": "Good Life",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 253,
+        "popularity": 72
+    },
+    {
+        "title": "Just Can抰 Get Enough",
+        "artist": "The Black Eyed Peas",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 219,
+        "popularity": 71
+    },
+    {
+        "title": "On The Floor",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 285,
+        "popularity": 69
+    },
+    {
+        "title": "What's My Name?",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2011,
+        "duration": 263,
+        "popularity": 69
+    },
+    {
+        "title": "Yeah 3x",
+        "artist": "Chris Brown",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 242,
+        "popularity": 69
+    },
+    {
+        "title": "Without You (feat. Usher)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 208,
+        "popularity": 68
+    },
+    {
+        "title": "Sexy And I Know It",
+        "artist": "LMFAO",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 199,
+        "popularity": 67
+    },
+    {
+        "title": "The Edge Of Glory",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 321,
+        "popularity": 67
+    },
+    {
+        "title": "E.T.",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 230,
+        "popularity": 66
+    },
+    {
+        "title": "Till the World Ends",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 238,
+        "popularity": 65
+    },
+    {
+        "title": "I Wanna Go",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 210,
+        "popularity": 64
+    },
+    {
+        "title": "Blow",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 220,
+        "popularity": 64
+    },
+    {
+        "title": "You And I",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 307,
+        "popularity": 64
+    },
+    {
+        "title": "Judas",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 249,
+        "popularity": 63
+    },
+    {
+        "title": "Tonight (I'm Fuckin' You)",
+        "artist": "Enrique Iglesias",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 232,
+        "popularity": 63
+    },
+    {
+        "title": "Please Don't Go",
+        "artist": "Mike Posner",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 197,
+        "popularity": 63
+    },
+    {
+        "title": "We Found Love",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2011,
+        "duration": 215,
+        "popularity": 61
+    },
+    {
+        "title": "Marry The Night",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 265,
+        "popularity": 61
+    },
+    {
+        "title": "1+1",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 274,
+        "popularity": 60
+    },
+    {
+        "title": "Hold It Against Me",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 229,
+        "popularity": 59
+    },
+    {
+        "title": "I'm Into You",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 200,
+        "popularity": 59
+    },
+    {
+        "title": "Papi",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 223,
+        "popularity": 58
+    },
+    {
+        "title": "Cheers (Drink To That)",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2011,
+        "duration": 262,
+        "popularity": 58
+    },
+    {
+        "title": "S&M Remix",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2011,
+        "duration": 257,
+        "popularity": 54
+    },
+    {
+        "title": "Written in the Stars (feat. Eric Turner)",
+        "artist": "Tinie Tempah",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 220,
+        "popularity": 52
+    },
+    {
+        "title": "Jar of Hearts",
+        "artist": "Christina Perri",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 247,
+        "popularity": 50
+    },
+    {
+        "title": "Castle Walls (feat. Christina Aguilera)",
+        "artist": "T.I.",
+        "genre": "atl hip hop",
+        "year": 2011,
+        "duration": 329,
+        "popularity": 49
+    },
+    {
+        "title": "Turning Page",
+        "artist": "Sleeping At Last",
+        "genre": "acoustic pop",
+        "year": 2011,
+        "duration": 255,
+        "popularity": 46
+    },
+    {
+        "title": "Super Bass",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 201,
+        "popularity": 38
+    },
+    {
+        "title": "Raise Your Glass",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 208,
+        "popularity": 38
+    },
+    {
+        "title": "Invading My Mind",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 201,
+        "popularity": 31
+    },
+    {
+        "title": "Moment 4 Life - Album Version (Edited)",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 279,
+        "popularity": 28
+    },
+    {
+        "title": "Last Friday Night (T.G.I.F.)",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 231,
+        "popularity": 27
+    },
+    {
+        "title": "Firework",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 228,
+        "popularity": 25
+    },
+    {
+        "title": "Muny - Album Version (Edited)",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2011,
+        "duration": 227,
+        "popularity": 7
+    },
+    {
+        "title": "Titanium (feat. Sia)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 245,
+        "popularity": 80
+    },
+    {
+        "title": "Locked Out of Heaven",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 233,
+        "popularity": 79
+    },
+    {
+        "title": "Paradise",
+        "artist": "Coldplay",
+        "genre": "permanent wave",
+        "year": 2012,
+        "duration": 279,
+        "popularity": 79
+    },
+    {
+        "title": "Payphone",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 231,
+        "popularity": 79
+    },
+    {
+        "title": "What Makes You Beautiful",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2012,
+        "duration": 200,
+        "popularity": 78
+    },
+    {
+        "title": "I Knew You Were Trouble.",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 220,
+        "popularity": 77
+    },
+    {
+        "title": "Call Me Maybe",
+        "artist": "Carly Rae Jepsen",
+        "genre": "canadian pop",
+        "year": 2012,
+        "duration": 193,
+        "popularity": 76
+    },
+    {
+        "title": "Love You Like A Love Song",
+        "artist": "Selena Gomez & The Scene",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 188,
+        "popularity": 76
+    },
+    {
+        "title": "Set Fire to the Rain",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2012,
+        "duration": 242,
+        "popularity": 76
+    },
+    {
+        "title": "We Are Never Ever Getting Back Together",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 193,
+        "popularity": 75
+    },
+    {
+        "title": "Stronger (What Doesn't Kill You)",
+        "artist": "Kelly Clarkson",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 222,
+        "popularity": 74
+    },
+    {
+        "title": "Try",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 248,
+        "popularity": 74
+    },
+    {
+        "title": "Starships",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 211,
+        "popularity": 73
+    },
+    {
+        "title": "One More Night",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 220,
+        "popularity": 73
+    },
+    {
+        "title": "Good Time",
+        "artist": "Owl City",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 206,
+        "popularity": 73
+    },
+    {
+        "title": "Glad You Came",
+        "artist": "The Wanted",
+        "genre": "boy band",
+        "year": 2012,
+        "duration": 198,
+        "popularity": 72
+    },
+    {
+        "title": "Beauty And A Beat",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2012,
+        "duration": 228,
+        "popularity": 72
+    },
+    {
+        "title": "International Love",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 227,
+        "popularity": 72
+    },
+    {
+        "title": "Some Nights",
+        "artist": "fun.",
+        "genre": "baroque pop",
+        "year": 2012,
+        "duration": 277,
+        "popularity": 72
+    },
+    {
+        "title": "Boyfriend",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2012,
+        "duration": 171,
+        "popularity": 71
+    },
+    {
+        "title": "Part Of Me",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 216,
+        "popularity": 71
+    },
+    {
+        "title": "Domino",
+        "artist": "Jessie J",
+        "genre": "australian pop",
+        "year": 2012,
+        "duration": 232,
+        "popularity": 69
+    },
+    {
+        "title": "Where Have You Been",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2012,
+        "duration": 243,
+        "popularity": 68
+    },
+    {
+        "title": "Wide Awake",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 221,
+        "popularity": 68
+    },
+    {
+        "title": "The One That Got Away",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 227,
+        "popularity": 67
+    },
+    {
+        "title": "Dance Again",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 237,
+        "popularity": 66
+    },
+    {
+        "title": "Turn Up the Music",
+        "artist": "Chris Brown",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 228,
+        "popularity": 65
+    },
+    {
+        "title": "Lights - Single Version",
+        "artist": "Ellie Goulding",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 211,
+        "popularity": 65
+    },
+    {
+        "title": "We Are Young (feat. Janelle Mon醗)",
+        "artist": "fun.",
+        "genre": "baroque pop",
+        "year": 2012,
+        "duration": 251,
+        "popularity": 63
+    },
+    {
+        "title": "Diamonds",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2012,
+        "duration": 225,
+        "popularity": 61
+    },
+    {
+        "title": "Don't Stop the Party (feat. TJR)",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 206,
+        "popularity": 59
+    },
+    {
+        "title": "You Da One",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2012,
+        "duration": 200,
+        "popularity": 57
+    },
+    {
+        "title": "Stereo Hearts (feat. Adam Levine)",
+        "artist": "Gym Class Heroes",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 211,
+        "popularity": 54
+    },
+    {
+        "title": "It Will Rain",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2012,
+        "duration": 258,
+        "popularity": 38
+    },
+    {
+        "title": "Blow Me (One Last Kiss)",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2012,
+        "duration": 256,
+        "popularity": 0
+    },
+    {
+        "title": "Underneath the Tree",
+        "artist": "Kelly Clarkson",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 230,
+        "popularity": 88
+    },
+    {
+        "title": "Wake Me Up",
+        "artist": "Avicii",
+        "genre": "big room",
+        "year": 2013,
+        "duration": 247,
+        "popularity": 85
+    },
+    {
+        "title": "Story of My Life",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 245,
+        "popularity": 81
+    },
+    {
+        "title": "Just Give Me a Reason (feat. Nate Ruess)",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 243,
+        "popularity": 81
+    },
+    {
+        "title": "Hall of Fame",
+        "artist": "The Script",
+        "genre": "celtic rock",
+        "year": 2013,
+        "duration": 203,
+        "popularity": 80
+    },
+    {
+        "title": "Roar",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 224,
+        "popularity": 78
+    },
+    {
+        "title": "We Can't Stop",
+        "artist": "Miley Cyrus",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 231,
+        "popularity": 78
+    },
+    {
+        "title": "Don't You Worry Child - Radio Edit",
+        "artist": "Swedish House Mafia",
+        "genre": "big room",
+        "year": 2013,
+        "duration": 213,
+        "popularity": 78
+    },
+    {
+        "title": "Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+        "artist": "Daft Punk",
+        "genre": "electro",
+        "year": 2013,
+        "duration": 248,
+        "popularity": 77
+    },
+    {
+        "title": "Wrecking Ball",
+        "artist": "Miley Cyrus",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 221,
+        "popularity": 77
+    },
+    {
+        "title": "Impossible",
+        "artist": "James Arthur",
+        "genre": "pop",
+        "year": 2013,
+        "duration": 209,
+        "popularity": 77
+    },
+    {
+        "title": "Blurred Lines",
+        "artist": "Robin Thicke",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 264,
+        "popularity": 76
+    },
+    {
+        "title": "Heart Attack",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 211,
+        "popularity": 76
+    },
+    {
+        "title": "We Are Never Ever Getting Back Together",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2013,
+        "duration": 193,
+        "popularity": 75
+    },
+    {
+        "title": "Die Young",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 212,
+        "popularity": 75
+    },
+    {
+        "title": "Clarity",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2013,
+        "duration": 271,
+        "popularity": 75
+    },
+    {
+        "title": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix",
+        "artist": "Lana Del Rey",
+        "genre": "art pop",
+        "year": 2013,
+        "duration": 215,
+        "popularity": 74
+    },
+    {
+        "title": "Under Control",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 184,
+        "popularity": 74
+    },
+    {
+        "title": "Everybody Talks",
+        "artist": "Neon Trees",
+        "genre": "indie pop",
+        "year": 2013,
+        "duration": 177,
+        "popularity": 74
+    },
+    {
+        "title": "Hold On, We're Going Home",
+        "artist": "Drake",
+        "genre": "canadian hip hop",
+        "year": 2013,
+        "duration": 228,
+        "popularity": 73
+    },
+    {
+        "title": "Best Song Ever",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 200,
+        "popularity": 73
+    },
+    {
+        "title": "Kiss You",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 183,
+        "popularity": 73
+    },
+    {
+        "title": "Sweet Nothing (feat. Florence Welch)",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 213,
+        "popularity": 72
+    },
+    {
+        "title": "Lose Yourself to Dance",
+        "artist": "Daft Punk",
+        "genre": "electro",
+        "year": 2013,
+        "duration": 354,
+        "popularity": 72
+    },
+    {
+        "title": "Work Bitch",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 248,
+        "popularity": 71
+    },
+    {
+        "title": "Brave",
+        "artist": "Sara Bareilles",
+        "genre": "acoustic pop",
+        "year": 2013,
+        "duration": 221,
+        "popularity": 71
+    },
+    {
+        "title": "Can't Hold Us (feat. Ray Dalton)",
+        "artist": "Macklemore & Ryan Lewis",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 258,
+        "popularity": 70
+    },
+    {
+        "title": "Feel This Moment (feat. Christina Aguilera)",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 230,
+        "popularity": 70
+    },
+    {
+        "title": "Beneath Your Beautiful",
+        "artist": "Labrinth",
+        "genre": "pop",
+        "year": 2013,
+        "duration": 272,
+        "popularity": 70
+    },
+    {
+        "title": "Let Me Love You (Until You Learn To Love Yourself)",
+        "artist": "Ne-Yo",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 252,
+        "popularity": 70
+    },
+    {
+        "title": "Thrift Shop (feat. Wanz)",
+        "artist": "Macklemore & Ryan Lewis",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 236,
+        "popularity": 69
+    },
+    {
+        "title": "If I Lose Myself - Alesso vs OneRepublic",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 215,
+        "popularity": 69
+    },
+    {
+        "title": "The Way",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 227,
+        "popularity": 68
+    },
+    {
+        "title": "Suit & Tie",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 326,
+        "popularity": 68
+    },
+    {
+        "title": "#thatPOWER",
+        "artist": "will.i.am",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 280,
+        "popularity": 68
+    },
+    {
+        "title": "I Love It (feat. Charli XCX)",
+        "artist": "Icona Pop",
+        "genre": "candy pop",
+        "year": 2013,
+        "duration": 157,
+        "popularity": 67
+    },
+    {
+        "title": "Play Hard (feat. Ne-Yo & Akon) - New Edit",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 209,
+        "popularity": 67
+    },
+    {
+        "title": "Daylight",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2013,
+        "duration": 225,
+        "popularity": 66
+    },
+    {
+        "title": "Love Somebody",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2013,
+        "duration": 230,
+        "popularity": 65
+    },
+    {
+        "title": "A Little Party Never Killed Nobody (All We Got)",
+        "artist": "Fergie",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 241,
+        "popularity": 65
+    },
+    {
+        "title": "Move",
+        "artist": "Little Mix",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 224,
+        "popularity": 63
+    },
+    {
+        "title": "Walks Like Rihanna",
+        "artist": "The Wanted",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 202,
+        "popularity": 62
+    },
+    {
+        "title": "Rock N Roll",
+        "artist": "Avril Lavigne",
+        "genre": "canadian pop",
+        "year": 2013,
+        "duration": 207,
+        "popularity": 61
+    },
+    {
+        "title": "Heartbreaker",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2013,
+        "duration": 263,
+        "popularity": 61
+    },
+    {
+        "title": "Mirrors - Radio Edit",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 277,
+        "popularity": 60
+    },
+    {
+        "title": "Next To Me",
+        "artist": "Emeli Sande",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 197,
+        "popularity": 60
+    },
+    {
+        "title": "Made In The USA",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 196,
+        "popularity": 60
+    },
+    {
+        "title": "Clown",
+        "artist": "Emeli Sande",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 221,
+        "popularity": 60
+    },
+    {
+        "title": "Girl On Fire (feat. Nicki Minaj) - Inferno Version",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2013,
+        "duration": 271,
+        "popularity": 59
+    },
+    {
+        "title": "TKO",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 424,
+        "popularity": 58
+    },
+    {
+        "title": "Come & Get It",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 232,
+        "popularity": 57
+    },
+    {
+        "title": "Live It Up",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 244,
+        "popularity": 57
+    },
+    {
+        "title": "We Own The Night",
+        "artist": "The Wanted",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 206,
+        "popularity": 56
+    },
+    {
+        "title": "Atlas - From 揟he Hunger Games: Catching Fire?Soundtrack",
+        "artist": "Coldplay",
+        "genre": "permanent wave",
+        "year": 2013,
+        "duration": 236,
+        "popularity": 55
+    },
+    {
+        "title": "What About Love",
+        "artist": "Austin Mahone",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 203,
+        "popularity": 54
+    },
+    {
+        "title": "Take Back the Night",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 353,
+        "popularity": 54
+    },
+    {
+        "title": "Applause",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 212,
+        "popularity": 52
+    },
+    {
+        "title": "Anything Could Happen",
+        "artist": "Ellie Goulding",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 286,
+        "popularity": 52
+    },
+    {
+        "title": "Finally Found You",
+        "artist": "Enrique Iglesias",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 221,
+        "popularity": 52
+    },
+    {
+        "title": "Pom Poms",
+        "artist": "Jonas Brothers",
+        "genre": "boy band",
+        "year": 2013,
+        "duration": 198,
+        "popularity": 52
+    },
+    {
+        "title": "#Beautiful",
+        "artist": "Mariah Carey",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 200,
+        "popularity": 51
+    },
+    {
+        "title": "How Ya Doin'? (feat. Missy Elliott)",
+        "artist": "Little Mix",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 211,
+        "popularity": 50
+    },
+    {
+        "title": "Crazy Kids (feat. will.i.am)",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 229,
+        "popularity": 46
+    },
+    {
+        "title": "Ooh La La (from \"The Smurfs 2\")",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 257,
+        "popularity": 45
+    },
+    {
+        "title": "People Like Us",
+        "artist": "Kelly Clarkson",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 259,
+        "popularity": 45
+    },
+    {
+        "title": "Overdose",
+        "artist": "Ciara",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 227,
+        "popularity": 43
+    },
+    {
+        "title": "Right Now - Dyro Radio Edit",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2013,
+        "duration": 186,
+        "popularity": 42
+    },
+    {
+        "title": "Give It 2 U",
+        "artist": "Robin Thicke",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 230,
+        "popularity": 41
+    },
+    {
+        "title": "Foolish Games",
+        "artist": "Jewel",
+        "genre": "alaska indie",
+        "year": 2013,
+        "duration": 250,
+        "popularity": 36
+    },
+    {
+        "title": "Outta Nowhere (feat. Danny Mercer)",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2013,
+        "duration": 207,
+        "popularity": 35
+    },
+    {
+        "title": "Freak",
+        "artist": "Kelly Rowland",
+        "genre": "atl hip hop",
+        "year": 2013,
+        "duration": 274,
+        "popularity": 28
+    },
+    {
+        "title": "All of Me",
+        "artist": "John Legend",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 270,
+        "popularity": 86
+    },
+    {
+        "title": "Stay With Me",
+        "artist": "Sam Smith",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 173,
+        "popularity": 85
+    },
+    {
+        "title": "Summer",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 223,
+        "popularity": 80
+    },
+    {
+        "title": "Happy - From \"Despicable Me 2",
+        "artist": "Pharrell Williams",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 233,
+        "popularity": 79
+    },
+    {
+        "title": "Rude",
+        "artist": "MAGIC!",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 225,
+        "popularity": 79
+    },
+    {
+        "title": "Shake It Off",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 219,
+        "popularity": 78
+    },
+    {
+        "title": "Dark Horse",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 216,
+        "popularity": 78
+    },
+    {
+        "title": "Hey Brother",
+        "artist": "Avicii",
+        "genre": "big room",
+        "year": 2014,
+        "duration": 255,
+        "popularity": 78
+    },
+    {
+        "title": "Maps",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 190,
+        "popularity": 78
+    },
+    {
+        "title": "Treasure",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 179,
+        "popularity": 77
+    },
+    {
+        "title": "Let Her Go",
+        "artist": "Passenger",
+        "genre": "folk-pop",
+        "year": 2014,
+        "duration": 253,
+        "popularity": 77
+    },
+    {
+        "title": "Problem",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 194,
+        "popularity": 75
+    },
+    {
+        "title": "Pompeii",
+        "artist": "Bastille",
+        "genre": "metropopolis",
+        "year": 2014,
+        "duration": 214,
+        "popularity": 73
+    },
+    {
+        "title": "Team",
+        "artist": "Lorde",
+        "genre": "art pop",
+        "year": 2014,
+        "duration": 193,
+        "popularity": 73
+    },
+    {
+        "title": "Love Me Again",
+        "artist": "John Newman",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 240,
+        "popularity": 73
+    },
+    {
+        "title": "Latch",
+        "artist": "Disclosure",
+        "genre": "house",
+        "year": 2014,
+        "duration": 256,
+        "popularity": 72
+    },
+    {
+        "title": "Adore You",
+        "artist": "Miley Cyrus",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 279,
+        "popularity": 72
+    },
+    {
+        "title": "Love Never Felt So Good",
+        "artist": "Michael Jackson",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 246,
+        "popularity": 71
+    },
+    {
+        "title": "Burn",
+        "artist": "Ellie Goulding",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 231,
+        "popularity": 71
+    },
+    {
+        "title": "She Looks So Perfect",
+        "artist": "5 Seconds of Summer",
+        "genre": "boy band",
+        "year": 2014,
+        "duration": 202,
+        "popularity": 71
+    },
+    {
+        "title": "Fancy",
+        "artist": "Iggy Azalea",
+        "genre": "australian hip hop",
+        "year": 2014,
+        "duration": 200,
+        "popularity": 70
+    },
+    {
+        "title": "Talk Dirty (feat. 2 Chainz)",
+        "artist": "Jason Derulo",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 178,
+        "popularity": 68
+    },
+    {
+        "title": "Gorilla",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 244,
+        "popularity": 68
+    },
+    {
+        "title": "human",
+        "artist": "Christina Perri",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 251,
+        "popularity": 68
+    },
+    {
+        "title": "Young Girls",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2014,
+        "duration": 229,
+        "popularity": 67
+    },
+    {
+        "title": "Wiggle (feat. Snoop Dogg)",
+        "artist": "Jason Derulo",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 193,
+        "popularity": 67
+    },
+    {
+        "title": "Love Runs Out",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 225,
+        "popularity": 66
+    },
+    {
+        "title": "This Is How We Do",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 204,
+        "popularity": 66
+    },
+    {
+        "title": "Mmm Yeah (feat. Pitbull)",
+        "artist": "Austin Mahone",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 232,
+        "popularity": 65
+    },
+    {
+        "title": "A Little Party Never Killed Nobody (All We Got)",
+        "artist": "Fergie",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 241,
+        "popularity": 65
+    },
+    {
+        "title": "#SELFIE",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2014,
+        "duration": 184,
+        "popularity": 65
+    },
+    {
+        "title": "Partition",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 319,
+        "popularity": 65
+    },
+    {
+        "title": "Birthday",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 215,
+        "popularity": 65
+    },
+    {
+        "title": "G.U.Y.",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 233,
+        "popularity": 65
+    },
+    {
+        "title": "Stay The Night - Featuring Hayley Williams Of Paramore",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2014,
+        "duration": 217,
+        "popularity": 64
+    },
+    {
+        "title": "Let It Go - From \"Frozen / Single Version",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 226,
+        "popularity": 63
+    },
+    {
+        "title": "Wings",
+        "artist": "Birdy",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 252,
+        "popularity": 62
+    },
+    {
+        "title": "Can't Remember to Forget You (feat. Rihanna)",
+        "artist": "Shakira",
+        "genre": "colombian pop",
+        "year": 2014,
+        "duration": 207,
+        "popularity": 62
+    },
+    {
+        "title": "Shot Me Down (feat. Skylar Grey) - Radio Edit",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 191,
+        "popularity": 61
+    },
+    {
+        "title": "Say Something",
+        "artist": "A Great Big World",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 229,
+        "popularity": 61
+    },
+    {
+        "title": "A Sky Full of Stars",
+        "artist": "Coldplay",
+        "genre": "permanent wave",
+        "year": 2014,
+        "duration": 268,
+        "popularity": 60
+    },
+    {
+        "title": "Come Get It Bae",
+        "artist": "Pharrell Williams",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 202,
+        "popularity": 59
+    },
+    {
+        "title": "Chandelier",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2014,
+        "duration": 216,
+        "popularity": 56
+    },
+    {
+        "title": "XO",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 216,
+        "popularity": 56
+    },
+    {
+        "title": "We Are One (Ole Ola) [The Official 2014 FIFA World Cup Song]",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 222,
+        "popularity": 56
+    },
+    {
+        "title": "Not About Angels",
+        "artist": "Birdy",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 190,
+        "popularity": 56
+    },
+    {
+        "title": "Drunk in Love",
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 323,
+        "popularity": 52
+    },
+    {
+        "title": "Anaconda",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 260,
+        "popularity": 50
+    },
+    {
+        "title": "Boom Clap - From the Motion Picture Das Schicksal ist ein mieser Verr鋞er",
+        "artist": "Charli XCX",
+        "genre": "candy pop",
+        "year": 2014,
+        "duration": 169,
+        "popularity": 50
+    },
+    {
+        "title": "La La La (Brasil 2014) (feat. Carlinhos Brown)",
+        "artist": "Shakira",
+        "genre": "colombian pop",
+        "year": 2014,
+        "duration": 198,
+        "popularity": 50
+    },
+    {
+        "title": "Tee Shirt - Soundtrack Version",
+        "artist": "Birdy",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 160,
+        "popularity": 49
+    },
+    {
+        "title": "Words as Weapons",
+        "artist": "Birdy",
+        "genre": "neo mellow",
+        "year": 2014,
+        "duration": 239,
+        "popularity": 44
+    },
+    {
+        "title": "You're Mine (Eternal)",
+        "artist": "Mariah Carey",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 224,
+        "popularity": 38
+    },
+    {
+        "title": "Sheezus",
+        "artist": "Lily Allen",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 235,
+        "popularity": 37
+    },
+    {
+        "title": "Cannonball",
+        "artist": "Lea Michele",
+        "genre": "hollywood",
+        "year": 2014,
+        "duration": 215,
+        "popularity": 37
+    },
+    {
+        "title": "It's On Again - Main Soundtrack",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2014,
+        "duration": 230,
+        "popularity": 30
+    },
+    {
+        "title": "I Luh Ya Papi",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 207,
+        "popularity": 28
+    },
+    {
+        "title": "Not a Bad Thing",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2014,
+        "duration": 266,
+        "popularity": 0
+    },
+    {
+        "title": "Thinking out Loud",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 282,
+        "popularity": 84
+    },
+    {
+        "title": "I'm Not The Only One",
+        "artist": "Sam Smith",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 239,
+        "popularity": 84
+    },
+    {
+        "title": "The Hills",
+        "artist": "The Weeknd",
+        "genre": "canadian contemporary r&b",
+        "year": 2015,
+        "duration": 242,
+        "popularity": 84
+    },
+    {
+        "title": "Love Yourself",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 234,
+        "popularity": 83
+    },
+    {
+        "title": "Uptown Funk",
+        "artist": "Mark Ronson",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 270,
+        "popularity": 82
+    },
+    {
+        "title": "Take Me To Church",
+        "artist": "Hozier",
+        "genre": "irish singer-songwriter",
+        "year": 2015,
+        "duration": 242,
+        "popularity": 81
+    },
+    {
+        "title": "Sugar",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 235,
+        "popularity": 81
+    },
+    {
+        "title": "Sorry",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 201,
+        "popularity": 81
+    },
+    {
+        "title": "FourFiveSeconds",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2015,
+        "duration": 188,
+        "popularity": 80
+    },
+    {
+        "title": "Love Me Like You Do - From \"Fifty Shades Of Grey",
+        "artist": "Ellie Goulding",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 253,
+        "popularity": 79
+    },
+    {
+        "title": "Earned It (Fifty Shades Of Grey) - From The \"Fifty Shades Of Grey\" Soundtrack",
+        "artist": "The Weeknd",
+        "genre": "canadian contemporary r&b",
+        "year": 2015,
+        "duration": 252,
+        "popularity": 79
+    },
+    {
+        "title": "What Do You Mean?",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 206,
+        "popularity": 79
+    },
+    {
+        "title": "Stitches",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 207,
+        "popularity": 78
+    },
+    {
+        "title": "Want to Want Me",
+        "artist": "Jason Derulo",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 208,
+        "popularity": 77
+    },
+    {
+        "title": "My House",
+        "artist": "Flo Rida",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 192,
+        "popularity": 77
+    },
+    {
+        "title": "Waves - Robin Schulz Radio Edit",
+        "artist": "Mr. Probz",
+        "genre": "tropical house",
+        "year": 2015,
+        "duration": 208,
+        "popularity": 77
+    },
+    {
+        "title": "Night Changes",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2015,
+        "duration": 227,
+        "popularity": 77
+    },
+    {
+        "title": "How Deep Is Your Love",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 213,
+        "popularity": 77
+    },
+    {
+        "title": "Never Forget You",
+        "artist": "Zara Larsson",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 213,
+        "popularity": 77
+    },
+    {
+        "title": "Love Me Harder",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 236,
+        "popularity": 76
+    },
+    {
+        "title": "Animals",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 231,
+        "popularity": 76
+    },
+    {
+        "title": "Blame",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 213,
+        "popularity": 76
+    },
+    {
+        "title": "Worth It",
+        "artist": "Fifth Harmony",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 225,
+        "popularity": 75
+    },
+    {
+        "title": "Break Free",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 215,
+        "popularity": 75
+    },
+    {
+        "title": "Don't",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 220,
+        "popularity": 74
+    },
+    {
+        "title": "Elastic Heart",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2015,
+        "duration": 257,
+        "popularity": 73
+    },
+    {
+        "title": "Rather Be (feat. Jess Glynne)",
+        "artist": "Clean Bandit",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 228,
+        "popularity": 73
+    },
+    {
+        "title": "Hello",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2015,
+        "duration": 295,
+        "popularity": 73
+    },
+    {
+        "title": "Dear Future Husband",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 184,
+        "popularity": 72
+    },
+    {
+        "title": 43776,
+        "artist": "Beyonce",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 214,
+        "popularity": 72
+    },
+    {
+        "title": "The Heart Wants What It Wants",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 227,
+        "popularity": 72
+    },
+    {
+        "title": "Hey Mama (feat. Nicki Minaj, Bebe Rexha & Afrojack)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 193,
+        "popularity": 72
+    },
+    {
+        "title": "Genie In a Bottle",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 218,
+        "popularity": 72
+    },
+    {
+        "title": "Company",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 208,
+        "popularity": 72
+    },
+    {
+        "title": "Sing",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 235,
+        "popularity": 71
+    },
+    {
+        "title": "Jealous - Remix",
+        "artist": "Nick Jonas",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 222,
+        "popularity": 70
+    },
+    {
+        "title": "Really Don't Care",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 202,
+        "popularity": 70
+    },
+    {
+        "title": "Downtown (feat. Melle Mel, Grandmaster Caz, Kool Moe Dee & Eric Nally)",
+        "artist": "Macklemore & Ryan Lewis",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 293,
+        "popularity": 70
+    },
+    {
+        "title": "Only Love Can Hurt Like This",
+        "artist": "Paloma Faith",
+        "genre": "british soul",
+        "year": 2015,
+        "duration": 233,
+        "popularity": 69
+    },
+    {
+        "title": "Heartbeat Song",
+        "artist": "Kelly Clarkson",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 199,
+        "popularity": 69
+    },
+    {
+        "title": "Up",
+        "artist": "Olly Murs",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 224,
+        "popularity": 69
+    },
+    {
+        "title": "Trumpets",
+        "artist": "Jason Derulo",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 217,
+        "popularity": 69
+    },
+    {
+        "title": "Runnin' (Lose It All)",
+        "artist": "Naughty Boy",
+        "genre": "tropical house",
+        "year": 2015,
+        "duration": 213,
+        "popularity": 69
+    },
+    {
+        "title": "Same Old Love",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 229,
+        "popularity": 69
+    },
+    {
+        "title": "I Want You To Know",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2015,
+        "duration": 240,
+        "popularity": 68
+    },
+    {
+        "title": "Lips Are Movin",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 183,
+        "popularity": 68
+    },
+    {
+        "title": "I'll Show You",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 200,
+        "popularity": 68
+    },
+    {
+        "title": "Here",
+        "artist": "Alessia Cara",
+        "genre": "canadian contemporary r&b",
+        "year": 2015,
+        "duration": 199,
+        "popularity": 68
+    },
+    {
+        "title": "I Lived",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 235,
+        "popularity": 67
+    },
+    {
+        "title": "Fireball (feat. John Ryan)",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 235,
+        "popularity": 67
+    },
+    {
+        "title": "Easy Love",
+        "artist": "Sigala",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 230,
+        "popularity": 67
+    },
+    {
+        "title": "The Feeling",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 245,
+        "popularity": 67
+    },
+    {
+        "title": "I Really Like You",
+        "artist": "Carly Rae Jepsen",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 205,
+        "popularity": 66
+    },
+    {
+        "title": "BO$$",
+        "artist": "Fifth Harmony",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 171,
+        "popularity": 66
+    },
+    {
+        "title": "Sugar",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 235,
+        "popularity": 66
+    },
+    {
+        "title": "Focus",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 211,
+        "popularity": 66
+    },
+    {
+        "title": "All About That Bass",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 189,
+        "popularity": 65
+    },
+    {
+        "title": "On My Mind",
+        "artist": "Ellie Goulding",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 213,
+        "popularity": 65
+    },
+    {
+        "title": "Love Me Like You",
+        "artist": "Little Mix",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 198,
+        "popularity": 65
+    },
+    {
+        "title": "Broken Arrows",
+        "artist": "Avicii",
+        "genre": "big room",
+        "year": 2015,
+        "duration": 233,
+        "popularity": 65
+    },
+    {
+        "title": "Booty",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 210,
+        "popularity": 64
+    },
+    {
+        "title": "What Do You Mean? - Acoustic",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 204,
+        "popularity": 64
+    },
+    {
+        "title": "Mark My Words",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 134,
+        "popularity": 63
+    },
+    {
+        "title": "Lay It All on Me",
+        "artist": "Rudimental",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 242,
+        "popularity": 62
+    },
+    {
+        "title": "American Oxygen",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2015,
+        "duration": 320,
+        "popularity": 61
+    },
+    {
+        "title": "Bang Bang",
+        "artist": "Jessie J",
+        "genre": "australian pop",
+        "year": 2015,
+        "duration": 199,
+        "popularity": 61
+    },
+    {
+        "title": "Reality - Radio Edit",
+        "artist": "Lost Frequencies",
+        "genre": "belgian edm",
+        "year": 2015,
+        "duration": 159,
+        "popularity": 61
+    },
+    {
+        "title": "Alive",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2015,
+        "duration": 264,
+        "popularity": 61
+    },
+    {
+        "title": "Sugar (feat. Francesco Yates)",
+        "artist": "Robin Schulz",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 219,
+        "popularity": 60
+    },
+    {
+        "title": "Been You",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2015,
+        "duration": 199,
+        "popularity": 60
+    },
+    {
+        "title": "Prayer in C - Robin Schulz Radio Edit",
+        "artist": "Lilly Wood and The Prick",
+        "genre": "french indie pop",
+        "year": 2015,
+        "duration": 189,
+        "popularity": 58
+    },
+    {
+        "title": "See You Again (feat. Charlie Puth)",
+        "artist": "Wiz Khalifa",
+        "genre": "hip hop",
+        "year": 2015,
+        "duration": 230,
+        "popularity": 56
+    },
+    {
+        "title": "Heroes (we could be)",
+        "artist": "Alesso",
+        "genre": "big room",
+        "year": 2015,
+        "duration": 210,
+        "popularity": 56
+    },
+    {
+        "title": "Feel The Light - From The \"Home\" Soundtrack",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 292,
+        "popularity": 55
+    },
+    {
+        "title": "Perfect",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2015,
+        "duration": 230,
+        "popularity": 55
+    },
+    {
+        "title": "Ghosttown",
+        "artist": "Madonna",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 250,
+        "popularity": 54
+    },
+    {
+        "title": "Bang My Head (feat. Sia & Fetty Wap)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 193,
+        "popularity": 54
+    },
+    {
+        "title": "Bloodstream",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2015,
+        "duration": 309,
+        "popularity": 52
+    },
+    {
+        "title": "Living For Love",
+        "artist": "Madonna",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 219,
+        "popularity": 52
+    },
+    {
+        "title": "Baby Don't Lie",
+        "artist": "Gwen Stefani",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 203,
+        "popularity": 52
+    },
+    {
+        "title": "Don't Be so Hard on Yourself",
+        "artist": "Jess Glynne",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 211,
+        "popularity": 52
+    },
+    {
+        "title": "Steal My Girl",
+        "artist": "One Direction",
+        "genre": "boy band",
+        "year": 2015,
+        "duration": 227,
+        "popularity": 51
+    },
+    {
+        "title": "Celebrate (From the Original Motion Picture \"Penguins of Madagascar\")",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 193,
+        "popularity": 50
+    },
+    {
+        "title": "We Are Here",
+        "artist": "Alicia Keys",
+        "genre": "hip pop",
+        "year": 2015,
+        "duration": 285,
+        "popularity": 49
+    },
+    {
+        "title": "St Jude",
+        "artist": "Florence + The Machine",
+        "genre": "art pop",
+        "year": 2015,
+        "duration": 225,
+        "popularity": 47
+    },
+    {
+        "title": "Yesterday (feat. Bebe Rexha)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 243,
+        "popularity": 46
+    },
+    {
+        "title": "Time of Our Lives",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 229,
+        "popularity": 45
+    },
+    {
+        "title": "Sparks",
+        "artist": "Hilary Duff",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 186,
+        "popularity": 44
+    },
+    {
+        "title": "Mr. Put It Down",
+        "artist": "Ricky Martin",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 196,
+        "popularity": 42
+    },
+    {
+        "title": "Legendary Lovers",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 224,
+        "popularity": 41
+    },
+    {
+        "title": "Spark The Fire",
+        "artist": "Gwen Stefani",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 202,
+        "popularity": 39
+    },
+    {
+        "title": "Run Run Run",
+        "artist": "Kelly Clarkson",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 273,
+        "popularity": 36
+    },
+    {
+        "title": "Let Me Be Your Lover",
+        "artist": "Enrique Iglesias",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 238,
+        "popularity": 34
+    },
+    {
+        "title": "Dangerous",
+        "artist": "Jennifer Hudson",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 255,
+        "popularity": 18
+    },
+    {
+        "title": "L.A.LOVE (la la)",
+        "artist": "Fergie",
+        "genre": "dance pop",
+        "year": 2015,
+        "duration": 193,
+        "popularity": 0
+    },
+    {
+        "title": "The Hills",
+        "artist": "The Weeknd",
+        "genre": "canadian contemporary r&b",
+        "year": 2016,
+        "duration": 242,
+        "popularity": 84
+    },
+    {
+        "title": "Love Yourself",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 234,
+        "popularity": 83
+    },
+    {
+        "title": "Cake By The Ocean",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 219,
+        "popularity": 81
+    },
+    {
+        "title": "Don't Let Me Down",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2016,
+        "duration": 208,
+        "popularity": 81
+    },
+    {
+        "title": "In the Name of Love",
+        "artist": "Martin Garrix",
+        "genre": "big room",
+        "year": 2016,
+        "duration": 196,
+        "popularity": 81
+    },
+    {
+        "title": "Into You",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 244,
+        "popularity": 80
+    },
+    {
+        "title": "This Is What You Came For",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 222,
+        "popularity": 80
+    },
+    {
+        "title": "Million Reasons",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 205,
+        "popularity": 80
+    },
+    {
+        "title": "Needed Me",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2016,
+        "duration": 192,
+        "popularity": 80
+    },
+    {
+        "title": "7 Years",
+        "artist": "Lukas Graham",
+        "genre": "danish pop",
+        "year": 2016,
+        "duration": 237,
+        "popularity": 80
+    },
+    {
+        "title": "CAN'T STOP THE FEELING! (Original Song from DreamWorks Animation's \"TROLLS\")",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 236,
+        "popularity": 79
+    },
+    {
+        "title": "Work from Home (feat. Ty Dolla $ign)",
+        "artist": "Fifth Harmony",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 214,
+        "popularity": 79
+    },
+    {
+        "title": "Scars To Your Beautiful",
+        "artist": "Alessia Cara",
+        "genre": "canadian contemporary r&b",
+        "year": 2016,
+        "duration": 230,
+        "popularity": 79
+    },
+    {
+        "title": "Like I'm Gonna Lose You (feat. John Legend)",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 225,
+        "popularity": 79
+    },
+    {
+        "title": "Work",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2016,
+        "duration": 219,
+        "popularity": 78
+    },
+    {
+        "title": "Stitches",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 207,
+        "popularity": 78
+    },
+    {
+        "title": "Me, Myself & I",
+        "artist": "G-Eazy",
+        "genre": "hip hop",
+        "year": 2016,
+        "duration": 251,
+        "popularity": 78
+    },
+    {
+        "title": "I Took A Pill In Ibiza - Seeb Remix",
+        "artist": "Mike Posner",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 198,
+        "popularity": 78
+    },
+    {
+        "title": "Dangerous Woman",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 236,
+        "popularity": 78
+    },
+    {
+        "title": "Starving",
+        "artist": "Hailee Steinfeld",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 182,
+        "popularity": 78
+    },
+    {
+        "title": "Shout Out to My Ex",
+        "artist": "Little Mix",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 246,
+        "popularity": 77
+    },
+    {
+        "title": "Electric Love",
+        "artist": "B0NS",
+        "genre": "electropop",
+        "year": 2016,
+        "duration": 218,
+        "popularity": 76
+    },
+    {
+        "title": "Confident",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 206,
+        "popularity": 75
+    },
+    {
+        "title": "Too Good",
+        "artist": "Drake",
+        "genre": "canadian hip hop",
+        "year": 2016,
+        "duration": 263,
+        "popularity": 74
+    },
+    {
+        "title": "Roses",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2016,
+        "duration": 227,
+        "popularity": 74
+    },
+    {
+        "title": "Cold Water (feat. Justin Bieber & M?",
+        "artist": "Major Lazer",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 185,
+        "popularity": 73
+    },
+    {
+        "title": "Me Too",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 181,
+        "popularity": 73
+    },
+    {
+        "title": "Light It Up (feat. Nyla & Fuse ODG) [Remix]",
+        "artist": "Major Lazer",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 166,
+        "popularity": 73
+    },
+    {
+        "title": "Ain't Your Mama",
+        "artist": "Jennifer Lopez",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 218,
+        "popularity": 72
+    },
+    {
+        "title": "Close",
+        "artist": "Nick Jonas",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 234,
+        "popularity": 72
+    },
+    {
+        "title": "Toothbrush",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 232,
+        "popularity": 72
+    },
+    {
+        "title": "All We Know",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2016,
+        "duration": 194,
+        "popularity": 72
+    },
+    {
+        "title": "Final Song",
+        "artist": "M0",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 236,
+        "popularity": 72
+    },
+    {
+        "title": "Company",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 208,
+        "popularity": 72
+    },
+    {
+        "title": "Hands To Myself",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 201,
+        "popularity": 71
+    },
+    {
+        "title": "All I Ask",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2016,
+        "duration": 272,
+        "popularity": 71
+    },
+    {
+        "title": "Just Like Fire (From the Original Motion Picture \"Alice Through The Looking Glass\")",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 215,
+        "popularity": 71
+    },
+    {
+        "title": "NO",
+        "artist": "Meghan Trainor",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 214,
+        "popularity": 70
+    },
+    {
+        "title": "Kill Em With Kindness",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 218,
+        "popularity": 70
+    },
+    {
+        "title": "Cool Girl",
+        "artist": "Tove Lo",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 199,
+        "popularity": 69
+    },
+    {
+        "title": "Runnin' (Lose It All)",
+        "artist": "Naughty Boy",
+        "genre": "tropical house",
+        "year": 2016,
+        "duration": 213,
+        "popularity": 69
+    },
+    {
+        "title": "Here",
+        "artist": "Alessia Cara",
+        "genre": "canadian contemporary r&b",
+        "year": 2016,
+        "duration": 199,
+        "popularity": 68
+    },
+    {
+        "title": "Perfect Illusion",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 182,
+        "popularity": 67
+    },
+    {
+        "title": "PILLOWTALK",
+        "artist": "ZAYN",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 204,
+        "popularity": 66
+    },
+    {
+        "title": "Out Of The Woods",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2016,
+        "duration": 236,
+        "popularity": 66
+    },
+    {
+        "title": "Rise",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 203,
+        "popularity": 66
+    },
+    {
+        "title": "Wherever I Go",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 170,
+        "popularity": 66
+    },
+    {
+        "title": "Body Say",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 194,
+        "popularity": 65
+    },
+    {
+        "title": "Don't Be A Fool",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 216,
+        "popularity": 65
+    },
+    {
+        "title": "LIKE I WOULD",
+        "artist": "ZAYN",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 192,
+        "popularity": 65
+    },
+    {
+        "title": "Cheap Thrills",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2016,
+        "duration": 225,
+        "popularity": 64
+    },
+    {
+        "title": "I Got You",
+        "artist": "Bebe Rexha",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 192,
+        "popularity": 64
+    },
+    {
+        "title": "Run Away With Me",
+        "artist": "Carly Rae Jepsen",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 251,
+        "popularity": 63
+    },
+    {
+        "title": "Cruel (feat. ZAYN)",
+        "artist": "Snakehips",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 228,
+        "popularity": 63
+    },
+    {
+        "title": "Send My Love (To Your New Lover)",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2016,
+        "duration": 223,
+        "popularity": 61
+    },
+    {
+        "title": "WTF (Where They From)",
+        "artist": "Missy Elliott",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 193,
+        "popularity": 58
+    },
+    {
+        "title": "Desire",
+        "artist": "Years & Years",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 203,
+        "popularity": 58
+    },
+    {
+        "title": "When We Were Young",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2016,
+        "duration": 291,
+        "popularity": 58
+    },
+    {
+        "title": "I Know What You Did Last Summer",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 224,
+        "popularity": 57
+    },
+    {
+        "title": "Wish That You Were Here - From 揗iss Peregrine抯 Home for Peculiar Children?Original Motion Picture",
+        "artist": "Florence + The Machine",
+        "genre": "art pop",
+        "year": 2016,
+        "duration": 403,
+        "popularity": 57
+    },
+    {
+        "title": "Hurts",
+        "artist": "Emeli Sande",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 238,
+        "popularity": 57
+    },
+    {
+        "title": "Change",
+        "artist": "Christina Aguilera",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 187,
+        "popularity": 54
+    },
+    {
+        "title": "Make Me... (feat. G-Eazy)",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 231,
+        "popularity": 53
+    },
+    {
+        "title": "Keeping Your Head Up",
+        "artist": "Birdy",
+        "genre": "neo mellow",
+        "year": 2016,
+        "duration": 208,
+        "popularity": 52
+    },
+    {
+        "title": "True Colors",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2016,
+        "duration": 225,
+        "popularity": 51
+    },
+    {
+        "title": "Make Me Like You",
+        "artist": "Gwen Stefani",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 217,
+        "popularity": 50
+    },
+    {
+        "title": "Champagne Problems",
+        "artist": "Nick Jonas",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 193,
+        "popularity": 50
+    },
+    {
+        "title": "Blown",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 197,
+        "popularity": 48
+    },
+    {
+        "title": "Start",
+        "artist": "John Legend",
+        "genre": "neo mellow",
+        "year": 2016,
+        "duration": 310,
+        "popularity": 47
+    },
+    {
+        "title": "Pep Rally",
+        "artist": "Missy Elliott",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 263,
+        "popularity": 47
+    },
+    {
+        "title": "Higher",
+        "artist": "Carly Rae Jepsen",
+        "genre": "canadian pop",
+        "year": 2016,
+        "duration": 234,
+        "popularity": 46
+    },
+    {
+        "title": "Invitation",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 200,
+        "popularity": 44
+    },
+    {
+        "title": "One Call Away (feat. Tyga) - Remix",
+        "artist": "Charlie Puth",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 192,
+        "popularity": 41
+    },
+    {
+        "title": "Beautiful Birds (feat. Birdy)",
+        "artist": "Passenger",
+        "genre": "folk-pop",
+        "year": 2016,
+        "duration": 214,
+        "popularity": 36
+    },
+    {
+        "title": "Little Lies",
+        "artist": "Hilary Duff",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 204,
+        "popularity": 36
+    },
+    {
+        "title": "Do You Wanna Come Over?",
+        "artist": "Britney Spears",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 203,
+        "popularity": 34
+    },
+    {
+        "title": "BURNITUP!",
+        "artist": "Janet Jackson",
+        "genre": "dance pop",
+        "year": 2016,
+        "duration": 250,
+        "popularity": 31
+    },
+    {
+        "title": "Picky - Remix",
+        "artist": "Joey Montana",
+        "genre": "latin",
+        "year": 2016,
+        "duration": 225,
+        "popularity": 29
+    },
+    {
+        "title": "Behind Your Back",
+        "artist": "Nelly Furtado",
+        "genre": "canadian latin",
+        "year": 2016,
+        "duration": 228,
+        "popularity": 18
+    },
+    {
+        "title": "Million Years Ago",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2016,
+        "duration": 227,
+        "popularity": 0
+    },
+    {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2017,
+        "duration": 234,
+        "popularity": 87
+    },
+    {
+        "title": "Closer",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2017,
+        "duration": 245,
+        "popularity": 86
+    },
+    {
+        "title": "Starboy",
+        "artist": "The Weeknd",
+        "genre": "canadian contemporary r&b",
+        "year": 2017,
+        "duration": 230,
+        "popularity": 85
+    },
+    {
+        "title": "Treat You Better",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2017,
+        "duration": 188,
+        "popularity": 84
+    },
+    {
+        "title": "That's What I Like",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2017,
+        "duration": 207,
+        "popularity": 83
+    },
+    {
+        "title": "Let Me Love You",
+        "artist": "DJ Snake",
+        "genre": "electronic trap",
+        "year": 2017,
+        "duration": 206,
+        "popularity": 82
+    },
+    {
+        "title": "I Feel It Coming",
+        "artist": "The Weeknd",
+        "genre": "canadian contemporary r&b",
+        "year": 2017,
+        "duration": 269,
+        "popularity": 81
+    },
+    {
+        "title": "Mercy",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2017,
+        "duration": 209,
+        "popularity": 81
+    },
+    {
+        "title": "Side To Side",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 226,
+        "popularity": 80
+    },
+    {
+        "title": "Stay",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2017,
+        "duration": 210,
+        "popularity": 80
+    },
+    {
+        "title": "It Ain't Me (with Selena Gomez)",
+        "artist": "Kygo",
+        "genre": "edm",
+        "year": 2017,
+        "duration": 221,
+        "popularity": 79
+    },
+    {
+        "title": "Malibu",
+        "artist": "Miley Cyrus",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 232,
+        "popularity": 78
+    },
+    {
+        "title": "Something Just Like This",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2017,
+        "duration": 248,
+        "popularity": 78
+    },
+    {
+        "title": "Rockabye (feat. Sean Paul & Anne-Marie)",
+        "artist": "Clean Bandit",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 251,
+        "popularity": 78
+    },
+    {
+        "title": "I Don抰 Wanna Live Forever (Fifty Shades Darker)",
+        "artist": "ZAYN",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 245,
+        "popularity": 78
+    },
+    {
+        "title": "My Way",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 219,
+        "popularity": 78
+    },
+    {
+        "title": "I'm the One (feat. Justin Bieber, Quavo, Chance the Rapper & Lil Wayne)",
+        "artist": "DJ Khaled",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 289,
+        "popularity": 77
+    },
+    {
+        "title": "Praying",
+        "artist": "Kesha",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 230,
+        "popularity": 77
+    },
+    {
+        "title": "Despacito - Remix",
+        "artist": "Luis Fonsi",
+        "genre": "latin",
+        "year": 2017,
+        "duration": 229,
+        "popularity": 76
+    },
+    {
+        "title": "The Greatest",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2017,
+        "duration": 210,
+        "popularity": 76
+    },
+    {
+        "title": "There for You",
+        "artist": "Martin Garrix",
+        "genre": "big room",
+        "year": 2017,
+        "duration": 222,
+        "popularity": 76
+    },
+    {
+        "title": "Paris",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2017,
+        "duration": 222,
+        "popularity": 76
+    },
+    {
+        "title": "Crying in the Club",
+        "artist": "Camila Cabello",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 216,
+        "popularity": 75
+    },
+    {
+        "title": "Mama",
+        "artist": "Jonas Blue",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 184,
+        "popularity": 75
+    },
+    {
+        "title": "Slide (feat. Frank Ocean & Migos)",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 231,
+        "popularity": 75
+    },
+    {
+        "title": "Swish Swish",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 243,
+        "popularity": 73
+    },
+    {
+        "title": "Chained To The Rhythm",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 238,
+        "popularity": 72
+    },
+    {
+        "title": "Cold (feat. Future)",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2017,
+        "duration": 234,
+        "popularity": 72
+    },
+    {
+        "title": "Love",
+        "artist": "Lana Del Rey",
+        "genre": "art pop",
+        "year": 2017,
+        "duration": 273,
+        "popularity": 72
+    },
+    {
+        "title": "Reggaet髇 Lento (Remix)",
+        "artist": "CNCO",
+        "genre": "boy band",
+        "year": 2017,
+        "duration": 189,
+        "popularity": 71
+    },
+    {
+        "title": "All I Ask",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2017,
+        "duration": 272,
+        "popularity": 71
+    },
+    {
+        "title": "First Time",
+        "artist": "Kygo",
+        "genre": "edm",
+        "year": 2017,
+        "duration": 194,
+        "popularity": 71
+    },
+    {
+        "title": "The Cure",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 211,
+        "popularity": 71
+    },
+    {
+        "title": "How Far I'll Go - From \"Moana",
+        "artist": "Alessia Cara",
+        "genre": "canadian contemporary r&b",
+        "year": 2017,
+        "duration": 176,
+        "popularity": 71
+    },
+    {
+        "title": "Bodak Yellow",
+        "artist": "Cardi B",
+        "genre": "pop",
+        "year": 2017,
+        "duration": 224,
+        "popularity": 70
+    },
+    {
+        "title": "Rich Love (with Seeb)",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 201,
+        "popularity": 70
+    },
+    {
+        "title": "Tired",
+        "artist": "Alan Walker",
+        "genre": "electro house",
+        "year": 2017,
+        "duration": 192,
+        "popularity": 70
+    },
+    {
+        "title": "Came Here for Love",
+        "artist": "Sigala",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 203,
+        "popularity": 70
+    },
+    {
+        "title": "24K Magic",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2017,
+        "duration": 226,
+        "popularity": 69
+    },
+    {
+        "title": "Strip That Down (feat. Quavo)",
+        "artist": "Liam Payne",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 202,
+        "popularity": 69
+    },
+    {
+        "title": "Cut To The Feeling",
+        "artist": "Carly Rae Jepsen",
+        "genre": "canadian pop",
+        "year": 2017,
+        "duration": 208,
+        "popularity": 69
+    },
+    {
+        "title": "OK - Spotify Version",
+        "artist": "Robin Schulz",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 189,
+        "popularity": 69
+    },
+    {
+        "title": "Bon app閠it",
+        "artist": "Katy Perry",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 228,
+        "popularity": 68
+    },
+    {
+        "title": "Summer Bummer (feat. A$AP Rocky & Playboi Carti)",
+        "artist": "Lana Del Rey",
+        "genre": "art pop",
+        "year": 2017,
+        "duration": 261,
+        "popularity": 67
+    },
+    {
+        "title": "Get Low (with Liam Payne)",
+        "artist": "Zedd",
+        "genre": "complextro",
+        "year": 2017,
+        "duration": 205,
+        "popularity": 66
+    },
+    {
+        "title": "Kissing Strangers",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 202,
+        "popularity": 66
+    },
+    {
+        "title": "Slow Hands",
+        "artist": "Niall Horan",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 188,
+        "popularity": 64
+    },
+    {
+        "title": "Younger Now",
+        "artist": "Miley Cyrus",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 249,
+        "popularity": 62
+    },
+    {
+        "title": "Body Moves",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 236,
+        "popularity": 62
+    },
+    {
+        "title": "Reality (feat. Janieck Devy) - Radio Edit",
+        "artist": "Lost Frequencies",
+        "genre": "belgian edm",
+        "year": 2017,
+        "duration": 158,
+        "popularity": 59
+    },
+    {
+        "title": "Angel",
+        "artist": "Fifth Harmony",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 189,
+        "popularity": 59
+    },
+    {
+        "title": "Touch (feat. Kid Ink)",
+        "artist": "Little Mix",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 203,
+        "popularity": 59
+    },
+    {
+        "title": "We Don't Talk Anymore - DROELOE Remix",
+        "artist": "Charlie Puth",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 218,
+        "popularity": 59
+    },
+    {
+        "title": "Love Incredible (feat. Camila Cabello)",
+        "artist": "Cashmere Cat",
+        "genre": "downtempo",
+        "year": 2017,
+        "duration": 180,
+        "popularity": 59
+    },
+    {
+        "title": "No Vacancy (with Sebasti醤 Yatra)",
+        "artist": "OneRepublic",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 223,
+        "popularity": 57
+    },
+    {
+        "title": "Rich Boy",
+        "artist": "Galantis",
+        "genre": "big room",
+        "year": 2017,
+        "duration": 184,
+        "popularity": 55
+    },
+    {
+        "title": "Lust for Life (with The Weeknd)",
+        "artist": "Lana Del Rey",
+        "genre": "art pop",
+        "year": 2017,
+        "duration": 264,
+        "popularity": 54
+    },
+    {
+        "title": "Greenlight (feat. Flo Rida & LunchMoney Lewis)",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 245,
+        "popularity": 54
+    },
+    {
+        "title": "Influence",
+        "artist": "Tove Lo",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 225,
+        "popularity": 54
+    },
+    {
+        "title": "Remember I Told You",
+        "artist": "Nick Jonas",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 202,
+        "popularity": 53
+    },
+    {
+        "title": "Messin' Around",
+        "artist": "Pitbull",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 223,
+        "popularity": 51
+    },
+    {
+        "title": "Water Under the Bridge",
+        "artist": "Adele",
+        "genre": "british soul",
+        "year": 2017,
+        "duration": 240,
+        "popularity": 49
+    },
+    {
+        "title": "Free Me",
+        "artist": "Sia",
+        "genre": "australian dance",
+        "year": 2017,
+        "duration": 286,
+        "popularity": 44
+    },
+    {
+        "title": "Kissing Strangers - Remix",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2017,
+        "duration": 202,
+        "popularity": 43
+    },
+    {
+        "title": "A L I E N S",
+        "artist": "Coldplay",
+        "genre": "permanent wave",
+        "year": 2017,
+        "duration": 282,
+        "popularity": 41
+    },
+    {
+        "title": "One Kiss (with Dua Lipa)",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 215,
+        "popularity": 86
+    },
+    {
+        "title": "Havana (feat. Young Thug)",
+        "artist": "Camila Cabello",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 217,
+        "popularity": 85
+    },
+    {
+        "title": "I Like It",
+        "artist": "Cardi B",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 253,
+        "popularity": 85
+    },
+    {
+        "title": "New Rules",
+        "artist": "Dua Lipa",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 209,
+        "popularity": 84
+    },
+    {
+        "title": "There's Nothing Holdin' Me Back",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2018,
+        "duration": 199,
+        "popularity": 84
+    },
+    {
+        "title": "no tears left to cry",
+        "artist": "Ariana Grande",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 206,
+        "popularity": 84
+    },
+    {
+        "title": "IDGAF",
+        "artist": "Dua Lipa",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 218,
+        "popularity": 84
+    },
+    {
+        "title": "In My Blood",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2018,
+        "duration": 211,
+        "popularity": 83
+    },
+    {
+        "title": "Wolves",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 198,
+        "popularity": 83
+    },
+    {
+        "title": "Dusk Till Dawn - Radio Edit",
+        "artist": "ZAYN",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 239,
+        "popularity": 83
+    },
+    {
+        "title": "Attention",
+        "artist": "Charlie Puth",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 209,
+        "popularity": 83
+    },
+    {
+        "title": "Electricity (with Dua Lipa)",
+        "artist": "Silk City",
+        "genre": "edm",
+        "year": 2018,
+        "duration": 238,
+        "popularity": 82
+    },
+    {
+        "title": "Love On The Brain",
+        "artist": "Rihanna",
+        "genre": "barbadian pop",
+        "year": 2018,
+        "duration": 224,
+        "popularity": 82
+    },
+    {
+        "title": "Let Me Go (with Alesso, Florida Georgia Line & watt)",
+        "artist": "Hailee Steinfeld",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 175,
+        "popularity": 82
+    },
+    {
+        "title": "Silence",
+        "artist": "Marshmello",
+        "genre": "brostep",
+        "year": 2018,
+        "duration": 181,
+        "popularity": 82
+    },
+    {
+        "title": "Sorry Not Sorry",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 204,
+        "popularity": 81
+    },
+    {
+        "title": "Shallow - Radio Edit",
+        "artist": "Lady Gaga",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 217,
+        "popularity": 80
+    },
+    {
+        "title": "These Days",
+        "artist": "Rudimental",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 211,
+        "popularity": 80
+    },
+    {
+        "title": "What Lovers Do (feat. SZA)",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 200,
+        "popularity": 79
+    },
+    {
+        "title": "Finesse - Remix; feat. Cardi B",
+        "artist": "Bruno Mars",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 217,
+        "popularity": 78
+    },
+    {
+        "title": "Perfect Duet (Ed Sheeran & Beyonc?",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 260,
+        "popularity": 78
+    },
+    {
+        "title": "Bad At Love",
+        "artist": "Halsey",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 181,
+        "popularity": 78
+    },
+    {
+        "title": "Him & I (with Halsey)",
+        "artist": "G-Eazy",
+        "genre": "hip hop",
+        "year": 2018,
+        "duration": 269,
+        "popularity": 78
+    },
+    {
+        "title": "Friends (with BloodPop?",
+        "artist": "Justin Bieber",
+        "genre": "canadian pop",
+        "year": 2018,
+        "duration": 189,
+        "popularity": 77
+    },
+    {
+        "title": "Wild Thoughts (feat. Rihanna & Bryson Tiller)",
+        "artist": "DJ Khaled",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 204,
+        "popularity": 76
+    },
+    {
+        "title": "My My My!",
+        "artist": "Troye Sivan",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 205,
+        "popularity": 76
+    },
+    {
+        "title": "Capital Letters",
+        "artist": "Hailee Steinfeld",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 219,
+        "popularity": 76
+    },
+    {
+        "title": "Sick Boy",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2018,
+        "duration": 193,
+        "popularity": 76
+    },
+    {
+        "title": "Tequila",
+        "artist": "Dan + Shay",
+        "genre": "contemporary country",
+        "year": 2018,
+        "duration": 196,
+        "popularity": 76
+    },
+    {
+        "title": "Look What You Made Me Do",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 212,
+        "popularity": 75
+    },
+    {
+        "title": "Youth (feat. Khalid)",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2018,
+        "duration": 191,
+        "popularity": 75
+    },
+    {
+        "title": "Bad Liar",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 215,
+        "popularity": 75
+    },
+    {
+        "title": "Anywhere",
+        "artist": "Rita Ora",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 215,
+        "popularity": 74
+    },
+    {
+        "title": "Say Something",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 279,
+        "popularity": 74
+    },
+    {
+        "title": "Chun-Li",
+        "artist": "Nicki Minaj",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 192,
+        "popularity": 73
+    },
+    {
+        "title": "Sign of the Times",
+        "artist": "Harry Styles",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 341,
+        "popularity": 72
+    },
+    {
+        "title": "Familiar",
+        "artist": "Liam Payne",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 197,
+        "popularity": 72
+    },
+    {
+        "title": "Let Me",
+        "artist": "ZAYN",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 185,
+        "popularity": 72
+    },
+    {
+        "title": "Supernova",
+        "artist": "Ansel Elgort",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 191,
+        "popularity": 72
+    },
+    {
+        "title": "Nervous",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2018,
+        "duration": 164,
+        "popularity": 71
+    },
+    {
+        "title": "First Time",
+        "artist": "Kygo",
+        "genre": "edm",
+        "year": 2018,
+        "duration": 194,
+        "popularity": 71
+    },
+    {
+        "title": "End Game",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 245,
+        "popularity": 70
+    },
+    {
+        "title": "Mi Gente (feat. Beyonc?",
+        "artist": "J Balvin",
+        "genre": "latin",
+        "year": 2018,
+        "duration": 210,
+        "popularity": 68
+    },
+    {
+        "title": "Lemon",
+        "artist": "N.E.R.D",
+        "genre": "hip hop",
+        "year": 2018,
+        "duration": 220,
+        "popularity": 68
+    },
+    {
+        "title": "For You (With Rita Ora)",
+        "artist": "Liam Payne",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 243,
+        "popularity": 67
+    },
+    {
+        "title": "Want To",
+        "artist": "Dua Lipa",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 212,
+        "popularity": 67
+    },
+    {
+        "title": "What I Need (feat. Kehlani)",
+        "artist": "Hayley Kiyoko",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 220,
+        "popularity": 67
+    },
+    {
+        "title": "Wait",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 191,
+        "popularity": 67
+    },
+    {
+        "title": "What About Us",
+        "artist": "P!nk",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 272,
+        "popularity": 66
+    },
+    {
+        "title": "Kissing Strangers",
+        "artist": "DNCE",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 202,
+        "popularity": 66
+    },
+    {
+        "title": "2U (feat. Justin Bieber)",
+        "artist": "David Guetta",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 195,
+        "popularity": 65
+    },
+    {
+        "title": "Walk On Water (feat. Beyonc?",
+        "artist": "Eminem",
+        "genre": "detroit hip hop",
+        "year": 2018,
+        "duration": 304,
+        "popularity": 65
+    },
+    {
+        "title": "This Town",
+        "artist": "Niall Horan",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 233,
+        "popularity": 64
+    },
+    {
+        "title": "Girls (feat. Cardi B, Bebe Rexha & Charli XCX)",
+        "artist": "Rita Ora",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 221,
+        "popularity": 64
+    },
+    {
+        "title": "MOVE TO MIAMI",
+        "artist": "Enrique Iglesias",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 169,
+        "popularity": 64
+    },
+    {
+        "title": "Miss You (with Major Lazer & Tory Lanez)",
+        "artist": "Cashmere Cat",
+        "genre": "downtempo",
+        "year": 2018,
+        "duration": 186,
+        "popularity": 64
+    },
+    {
+        "title": "Filthy",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 294,
+        "popularity": 62
+    },
+    {
+        "title": "Never Be the Same - Radio Edit",
+        "artist": "Camila Cabello",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 227,
+        "popularity": 57
+    },
+    {
+        "title": "Ferrari",
+        "artist": "Bebe Rexha",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 213,
+        "popularity": 57
+    },
+    {
+        "title": "Supplies",
+        "artist": "Justin Timberlake",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 226,
+        "popularity": 57
+    },
+    {
+        "title": "Boom Boom",
+        "artist": "RedOne",
+        "genre": "moroccan pop",
+        "year": 2018,
+        "duration": 248,
+        "popularity": 53
+    },
+    {
+        "title": "...Ready For It? - BloodPop?Remix",
+        "artist": "Taylor Swift",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 190,
+        "popularity": 52
+    },
+    {
+        "title": "Drip (feat. Migos)",
+        "artist": "Cardi B",
+        "genre": "pop",
+        "year": 2018,
+        "duration": 264,
+        "popularity": 45
+    },
+    {
+        "title": "Tell Me You Love Me - NOTD Remix",
+        "artist": "Demi Lovato",
+        "genre": "dance pop",
+        "year": 2018,
+        "duration": 182,
+        "popularity": 44
+    },
+    {
+        "title": "Memories",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 189,
+        "popularity": 99
+    },
+    {
+        "title": "Lose You To Love Me",
+        "artist": "Selena Gomez",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 206,
+        "popularity": 97
+    },
+    {
+        "title": "Someone You Loved",
+        "artist": "Lewis Capaldi",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 182,
+        "popularity": 96
+    },
+    {
+        "title": "Se駉rita",
+        "artist": "Shawn Mendes",
+        "genre": "canadian pop",
+        "year": 2019,
+        "duration": 191,
+        "popularity": 95
+    },
+    {
+        "title": "How Do You Sleep?",
+        "artist": "Sam Smith",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 202,
+        "popularity": 93
+    },
+    {
+        "title": "South of the Border (feat. Camila Cabello & Cardi B)",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 204,
+        "popularity": 92
+    },
+    {
+        "title": "Trampoline (with ZAYN)",
+        "artist": "SHAED",
+        "genre": "electropop",
+        "year": 2019,
+        "duration": 184,
+        "popularity": 92
+    },
+    {
+        "title": "Happier",
+        "artist": "Marshmello",
+        "genre": "brostep",
+        "year": 2019,
+        "duration": 214,
+        "popularity": 90
+    },
+    {
+        "title": "Truth Hurts",
+        "artist": "Lizzo",
+        "genre": "escape room",
+        "year": 2019,
+        "duration": 173,
+        "popularity": 90
+    },
+    {
+        "title": "Good as Hell (feat. Ariana Grande) - Remix",
+        "artist": "Lizzo",
+        "genre": "escape room",
+        "year": 2019,
+        "duration": 159,
+        "popularity": 90
+    },
+    {
+        "title": "Higher Love",
+        "artist": "Kygo",
+        "genre": "edm",
+        "year": 2019,
+        "duration": 228,
+        "popularity": 88
+    },
+    {
+        "title": "Only Human",
+        "artist": "Jonas Brothers",
+        "genre": "boy band",
+        "year": 2019,
+        "duration": 183,
+        "popularity": 87
+    },
+    {
+        "title": "Beautiful People (feat. Khalid)",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 198,
+        "popularity": 86
+    },
+    {
+        "title": "Sucker",
+        "artist": "Jonas Brothers",
+        "genre": "boy band",
+        "year": 2019,
+        "duration": 181,
+        "popularity": 86
+    },
+    {
+        "title": "Don't Call Me Up",
+        "artist": "Mabel",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 178,
+        "popularity": 86
+    },
+    {
+        "title": "I Don't Care (with Justin Bieber)",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 220,
+        "popularity": 85
+    },
+    {
+        "title": "Talk (feat. Disclosure)",
+        "artist": "Khalid",
+        "genre": "alternative r&b",
+        "year": 2019,
+        "duration": 198,
+        "popularity": 84
+    },
+    {
+        "title": "Giant (with Rag'n'Bone Man)",
+        "artist": "Calvin Harris",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 229,
+        "popularity": 84
+    },
+    {
+        "title": "Takeaway",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2019,
+        "duration": 210,
+        "popularity": 83
+    },
+    {
+        "title": "All Around The World (La La La)",
+        "artist": "R3HAB",
+        "genre": "big room",
+        "year": 2019,
+        "duration": 148,
+        "popularity": 82
+    },
+    {
+        "title": "Girls Like You (feat. Cardi B)",
+        "artist": "Maroon 5",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 236,
+        "popularity": 81
+    },
+    {
+        "title": "Call You Mine",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2019,
+        "duration": 218,
+        "popularity": 81
+    },
+    {
+        "title": "No Guidance (feat. Drake)",
+        "artist": "Chris Brown",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 261,
+        "popularity": 81
+    },
+    {
+        "title": "Antisocial (with Travis Scott)",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 162,
+        "popularity": 78
+    },
+    {
+        "title": "Taki Taki (feat. Selena Gomez, Ozuna & Cardi B)",
+        "artist": "DJ Snake",
+        "genre": "electronic trap",
+        "year": 2019,
+        "duration": 213,
+        "popularity": 77
+    },
+    {
+        "title": "Con Calma - Remix",
+        "artist": "Daddy Yankee",
+        "genre": "latin",
+        "year": 2019,
+        "duration": 181,
+        "popularity": 76
+    },
+    {
+        "title": "Find U Again (feat. Camila Cabello)",
+        "artist": "Mark Ronson",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 176,
+        "popularity": 75
+    },
+    {
+        "title": "Cross Me (feat. Chance the Rapper & PnB Rock)",
+        "artist": "Ed Sheeran",
+        "genre": "pop",
+        "year": 2019,
+        "duration": 206,
+        "popularity": 75
+    },
+    {
+        "title": "No Brainer (feat. Justin Bieber, Chance the Rapper & Quavo)",
+        "artist": "DJ Khaled",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 260,
+        "popularity": 70
+    },
+    {
+        "title": "Nothing Breaks Like a Heart (feat. Miley Cyrus)",
+        "artist": "Mark Ronson",
+        "genre": "dance pop",
+        "year": 2019,
+        "duration": 217,
+        "popularity": 69
+    },
+    {
+        "title": "Kills You Slowly",
+        "artist": "The Chainsmokers",
+        "genre": "electropop",
+        "year": 2019,
+        "duration": 213,
+        "popularity": 67
+    }
+]
