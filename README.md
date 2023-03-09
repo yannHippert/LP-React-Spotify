@@ -2,7 +2,7 @@
 
 ## Student name
 
-> Please write your name and surname here
+> Yann Hippert
 
 ## Get started
 
@@ -33,18 +33,18 @@
 
 ### Playlist page
 
--   [ ] Header 
+-   [ ] Header
     -   [ ] Color background based on playlist's cover color
     -   [ ] Playlist cover
     -   [ ] Playlist name
 -   [ ] Body
     -   [ ] Text input to filter on any data in the current playlist (case insensitive)
-    -   [ ] Select input with sorting on 
+    -   [ ] Select input with sorting on
         -   [ ] Title
         -   [ ] Year
         -   [ ] Genre
         -   [ ] Popularity
-        -   [ ] Duration 
+        -   [ ] Duration
     -   [ ] Display all songs of the current playlist
     -   [ ] Display a green heart if the song as been liked
     -   [ ] Clicking on heart will add / remove from liked playlist
@@ -71,7 +71,7 @@
 
 ### Router
 
-You'll need to use react router to navigate trought playlist. You'll need to use url parameters, please see 
+You'll need to use react router to navigate trought playlist. You'll need to use url parameters, please see
 https://v5.reactrouter.com/web/example/url-params
 
 ### Design

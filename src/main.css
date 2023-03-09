@@ -1,0 +1,30 @@
+#components-layout-demo-top-side-2 .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side-2 .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+}
+
+.background {
+    padding: 24px;
+    margin: 0;
+    background: linear-gradient(
+        180deg,
+        #222222 0%,
+        #1f1f1f 11.64%,
+        #171717 25.66%,
+        #161616 32.94%,
+        #151515 35.98%,
+        #131313 44.89%,
+        #121212 55.22%,
+        #121212 75.34%,
+        #121212 85.45%,
+        rgba(18, 18, 18, 0) 100%
+    );
+}
