@@ -1,0 +1,10 @@
+$scrollbar-border-radius: 10px;
+
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #535353;
+    border-radius: $scrollbar-border-radius;
+}

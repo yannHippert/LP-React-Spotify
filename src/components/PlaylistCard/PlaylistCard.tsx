@@ -1,19 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Playlist } from '../../interfaces/playlist';
-import { generateGradient } from '../../utils/GradientGenerator';
+import { PlaylistData } from '../../interfaces/playlist';
 import './PlaylistCard.css';
 
 export interface PlaylistCardProps {
-    playlist: Playlist;
+    playlist: PlaylistData;
 }
 
 const PlaylistCard = ({ playlist }: PlaylistCardProps) => {
     return (
-        <Link to={`/playlist/${playlist.id}`}>
+        <Link to={`/playlist/${playlist.key}`}>
             <div className="playlist-card">
-                <div
-                    className="gradient-image"
-                    style={generateGradient()}></div>
+                <div className="gradient-image" style={{ background: playlist.gradient }}></div>
                 <h2>{playlist.name}</h2>
             </div>
         </Link>

@@ -1,69 +1,144 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Playlist } from '../../interfaces/playlist';
-import { Song } from '../../interfaces/song';
-import { compare } from '../../utils/Comparer';
-import songs from '../../static/data.json';
-import { getRandomId } from '../../utils/IdGenerator';
+import { Playlist, PlaylistData } from '../../interfaces/playlist';
+import { Song, SongData } from '../../interfaces/song';
+import songList from '../../static/data.json';
+import { generateGradient } from '../../utils/GradientGenerator';
+import { getItemByOrNull, getRandomSublist } from '../../utils/Getters';
+import { getItemBy, getItemOrNullById } from '../../utils/Getters';
 
-interface State {
-    personal: Array<Playlist>;
-    top50s: Array<Playlist>;
+import '../../extensions/string';
+
+export interface AppState {
+    playingSong: Song | null;
+    playingPlaylist: PlaylistData | null;
+    currentPlaylist: Playlist | null;
+    songs: { [key: string]: Song };
+    playlists: Array<PlaylistData>;
 }
 
-const getTop50sPlaylists = (): Array<Playlist> => {
-    const map: { [key: string | number]: Playlist } = {};
-    for (const song of songs as Array<Song>) {
-        if (song.year in map) map[song.year].songs.push(song);
-        else
-            map[song.year] = {
-                id: getRandomId(),
-                name: `Top 50 ${song.year}`,
-                songs: [song],
-            };
+const dataToSong = (data: SongData): Song => ({
+    key: data.title.toString().toHash(),
+    title: data.title,
+    artist: data.artist,
+    genre: data.genre,
+    duration: data.duration,
+    popularity: data.popularity,
+    year: data.year,
+    isFavorite: Math.random() > 0.5
+});
+const getSongs = (): { [key: string]: Song } => {
+    const songs: { [key: string]: Song } = {};
+    for (const songData of songList as Array<SongData>) {
+        const song: Song = dataToSong(songData);
+        songs[song.key] = song;
     }
-    songs.forEach((song: any) => {});
-    const top50s = Object.values(map).sort((a, b) =>
-        b.name.localeCompare(a.name)
-    );
-    top50s.forEach(
-        (playlist) =>
-            (playlist.songs = playlist.songs.sort(
-                (a, b) => a.popularity - b.popularity
-            ))
-    );
-    return top50s;
+    return songs;
+};
+
+const personalPlaylistNames = ['FAV', 'Daily Mix 1', 'Discover Weekly', 'Malayalam', 'Dance/Electronix Mix', 'EDM/Popular'];
+
+const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistData> => {
+    const map: { [key: string]: PlaylistData } = {};
+    for (const song of Object.values(songsMap)) {
+        if (song.year in map) map[song.year].songKeys.push(song.key);
+        else {
+            const playlistName = `Top 50 ${song.year}`;
+
+            map[song.year] = {
+                key: playlistName.toHash(),
+                name: playlistName,
+                gradient: generateGradient(),
+                isPersonal: false,
+                songKeys: [song.key]
+            };
+        }
+    }
+    Object.values(map).forEach((playlist) => (playlist.songKeys = playlist.songKeys.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity)));
+    return Object.values(map).sort((a, b) => b.name.localeCompare(a.name));
+};
+
+const getPersonalPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistData> => {
+    return personalPlaylistNames.map((name) => {
+        const songList = getRandomSublist(Object.keys(songsMap));
+        return {
+            key: name.toHash(),
+            name,
+            gradient: generateGradient(),
+            isPersonal: true,
+            songKeys: songList.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity)
+        };
+    });
 };
 
 export const playlistSlice = createSlice({
-    name: 'playlist',
-    initialState: {
-        personal: [],
-        top50s: getTop50sPlaylists(),
+    name: 'store',
+    initialState: (): AppState => {
+        const songs = getSongs();
+        return {
+            playingSong: null,
+            playingPlaylist: null,
+            currentPlaylist: null,
+            songs: songs,
+            playlists: [...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)]
+        };
     },
     reducers: {
-        toggleFavorite: (
-            state: State,
-            action: { payload: { playlistId: string; song: Song } }
-        ) => {
-            const playlistIndex = state.personal.findIndex(
-                ({ id }: Playlist) => id === action.payload.playlistId
-            );
+        setCurrentSong: (state: AppState, action: { payload: { songKey: string } }) => {
+            state.playingPlaylist = getItemBy('key', state.playlists, state.currentPlaylist!.key);
+            state.playingSong = action.payload.songKey === undefined ? null : state.songs[action.payload.songKey];
+        },
+        setCurrentPlaylist: (state: AppState, action: { payload: { playlistKey: string | undefined } }) => {
+            console.log('Setting current playlist');
 
-            const songIndex = state.personal[playlistIndex].songs.findIndex(
-                (song: Song) => compare(song, action.payload.song)
-            );
-
-            if (songIndex !== -1) {
-                state.personal[playlistIndex].songs.push(action.payload.song);
+            if (action.payload.playlistKey === undefined) {
+                state.currentPlaylist = null;
             } else {
-                state.personal[playlistIndex].songs.slice(songIndex, 1);
+                const playlistData = getItemByOrNull('key', state.playlists, action.payload.playlistKey);
+                if (playlistData === undefined) {
+                    state.currentPlaylist = null;
+                    return;
+                }
+
+                state.currentPlaylist = {
+                    ...playlistData,
+                    songs: playlistData.songKeys.map((songId: string) => state.songs[songId])
+                };
             }
         },
-        onDragEnd: (
-            state: State,
-            action: { payload: { source: any; destination: any } }
-        ) => {
-            /*const { source, destination } = action.payload;
+        toggleFavorite: (state: AppState, action: { payload: { songKey: string } }) => {
+            const newFavoriteState = !state.songs[action.payload.songKey].isFavorite;
+            state.songs[action.payload.songKey].isFavorite = newFavoriteState;
+
+            if (state.currentPlaylist) {
+                const songIndex = state.currentPlaylist.songs.findIndex(({ key }: Song) => key === action.payload.songKey);
+                if (songIndex !== -1) state.currentPlaylist.songs[songIndex].isFavorite = newFavoriteState;
+            }
+
+            if (state.playingSong?.key === action.payload.songKey) {
+                state.playingSong.isFavorite = newFavoriteState;
+            }
+        },
+        togglePlaylistSong: (state: AppState, action: { payload: { playlistKey: string; songKey: string } }) => {
+            const playlist = getItemBy('key', state.playlists, action.payload.playlistKey);
+
+            const songIndex = playlist.songKeys.findIndex((songKey) => (songKey = action.payload.songKey));
+            if (songIndex !== -1) {
+                console.log(songIndex);
+                playlist.songKeys = playlist.songKeys.splice(songIndex, 1);
+            }
+
+            if (state.currentPlaylist?.key === action.payload.playlistKey) {
+                console.log('Updating current playlist');
+
+                state.currentPlaylist = {
+                    ...state.currentPlaylist,
+                    songs: state.currentPlaylist.songKeys.map((songId: string) => state.songs[songId])
+                };
+            }
+        }
+        /*
+         onDragEnd: (state: State, action: { payload: { source: any; destination: any } }) => {
+           const { source, destination } = action.payload;
 
       if (!destination) return;
 
@@ -79,11 +154,11 @@ export const playlistSlice = createSlice({
         const result = move(sourceCategory.items, destionationCategory.items, source, destination);
         sourceCategory.items = result[sourceCategory.id];
         destionationCategory.items = result[destionationCategory.id];
-      }*/
-        },
-    },
+      }
+        }*/
+    }
 });
 
-export const { toggleFavorite, onDragEnd } = playlistSlice.actions;
+export const { setCurrentSong, setCurrentPlaylist, toggleFavorite, togglePlaylistSong } = playlistSlice.actions;
 
 export default playlistSlice.reducer;

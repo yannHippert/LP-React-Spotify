@@ -1,8 +1,13 @@
-export interface Song {
+export interface SongData {
     title: string;
     artist: string;
     genre: string;
-    year: number;
     duration: number;
     popularity: number;
+    year: number;
+}
+
+export interface Song extends SongData {
+    key: string;
+    isFavorite: boolean;
 }
