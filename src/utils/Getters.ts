@@ -36,3 +36,7 @@ export function getItemById<Type extends { id: string }>(list: Array<Type>, item
 export function getItemOrNullById<Type extends { id: string }>(list: Array<Type>, itemId: string): Type | undefined {
     return list.find(({ id }: Type) => id === itemId);
 }
+
+export function mapToList<Type, Key extends keyof Type>(map: Type, keys: Array<Key>) {
+    return keys.map((key) => map[key]);
+}

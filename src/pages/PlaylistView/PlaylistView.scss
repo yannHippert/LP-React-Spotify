@@ -3,7 +3,7 @@
 
 .playlist-view {
     height: calc(100dvh - 120px);
-    overflow-y: auto;
+    overflow-y: scroll;
 
     @extend .scrollbar;
 

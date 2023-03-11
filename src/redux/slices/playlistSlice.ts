@@ -1,17 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Playlist, PlaylistData } from '../../interfaces/playlist';
+import { PlaylistData } from '../../interfaces/playlist';
 import { Song, SongData } from '../../interfaces/song';
 import songList from '../../static/data.json';
 import { generateGradient } from '../../utils/GradientGenerator';
-import { getItemByOrNull, getRandomSublist } from '../../utils/Getters';
-import { getItemBy, getItemOrNullById } from '../../utils/Getters';
+import { getRandomSublist } from '../../utils/Getters';
 
 import '../../extensions/string';
 
 export interface AppState {
-    playingSong: Song | null;
-    playingPlaylist: PlaylistData | null;
-    currentPlaylist: Playlist | null;
+    playingSong: string;
+    playingPlaylist: string;
+    currentPlaylist: string;
     songs: { [key: string]: Song };
     playlists: Array<PlaylistData>;
 }
@@ -74,66 +73,35 @@ export const playlistSlice = createSlice({
     name: 'store',
     initialState: (): AppState => {
         const songs = getSongs();
+        const playlists = [...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)];
         return {
-            playingSong: null,
-            playingPlaylist: null,
-            currentPlaylist: null,
+            playingSong: playlists[0].songKeys[0],
+            playingPlaylist: playlists[0].key,
+            currentPlaylist: '',
             songs: songs,
-            playlists: [...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)]
+            playlists: playlists
         };
     },
     reducers: {
         setCurrentSong: (state: AppState, action: { payload: { songKey: string } }) => {
-            state.playingPlaylist = getItemBy('key', state.playlists, state.currentPlaylist!.key);
-            state.playingSong = action.payload.songKey === undefined ? null : state.songs[action.payload.songKey];
+            state.playingSong = action.payload.songKey;
+            state.playingPlaylist = state.currentPlaylist;
         },
-        setCurrentPlaylist: (state: AppState, action: { payload: { playlistKey: string | undefined } }) => {
-            console.log('Setting current playlist');
-
-            if (action.payload.playlistKey === undefined) {
-                state.currentPlaylist = null;
-            } else {
-                const playlistData = getItemByOrNull('key', state.playlists, action.payload.playlistKey);
-                if (playlistData === undefined) {
-                    state.currentPlaylist = null;
-                    return;
-                }
-
-                state.currentPlaylist = {
-                    ...playlistData,
-                    songs: playlistData.songKeys.map((songId: string) => state.songs[songId])
-                };
-            }
+        setCurrentPlaylist: (state: AppState, action: { payload: { playlistKey: string } }) => {
+            state.currentPlaylist = action.payload.playlistKey;
         },
         toggleFavorite: (state: AppState, action: { payload: { songKey: string } }) => {
-            const newFavoriteState = !state.songs[action.payload.songKey].isFavorite;
-            state.songs[action.payload.songKey].isFavorite = newFavoriteState;
-
-            if (state.currentPlaylist) {
-                const songIndex = state.currentPlaylist.songs.findIndex(({ key }: Song) => key === action.payload.songKey);
-                if (songIndex !== -1) state.currentPlaylist.songs[songIndex].isFavorite = newFavoriteState;
-            }
-
-            if (state.playingSong?.key === action.payload.songKey) {
-                state.playingSong.isFavorite = newFavoriteState;
-            }
+            state.songs[action.payload.songKey].isFavorite = !state.songs[action.payload.songKey].isFavorite;
         },
         togglePlaylistSong: (state: AppState, action: { payload: { playlistKey: string; songKey: string } }) => {
-            const playlist = getItemBy('key', state.playlists, action.payload.playlistKey);
+            const playlistIndex = state.playlists.findIndex(({ key }: PlaylistData) => key === action.payload.playlistKey);
 
-            const songIndex = playlist.songKeys.findIndex((songKey) => (songKey = action.payload.songKey));
+            const songIndex = state.playlists[playlistIndex].songKeys.findIndex((songKey) => songKey === action.payload.songKey);
             if (songIndex !== -1) {
-                console.log(songIndex);
-                playlist.songKeys = playlist.songKeys.splice(songIndex, 1);
-            }
-
-            if (state.currentPlaylist?.key === action.payload.playlistKey) {
-                console.log('Updating current playlist');
-
-                state.currentPlaylist = {
-                    ...state.currentPlaylist,
-                    songs: state.currentPlaylist.songKeys.map((songId: string) => state.songs[songId])
-                };
+                state.playlists[playlistIndex].songKeys.splice(songIndex, 1);
+            } else {
+                console.log(action.payload.songKey);
+                state.playlists[playlistIndex].songKeys.push(action.payload.songKey);
             }
         }
         /*

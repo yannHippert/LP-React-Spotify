@@ -12,14 +12,19 @@ import TableContextMenu from '../../components/TableContextMenu/TableContextMenu
 
 import '../../extensions/string';
 import './PlaylistView.scss';
+import { getItemBy, mapToList } from '../../utils/Getters';
+import { Playlist, PlaylistData } from '../../interfaces/playlist';
 
 const PlaylistView = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
 
-    const playlist = useSelector(({ store }: { store: AppState }) => store.currentPlaylist);
+    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('key', store.playlists, id));
+    const globalSongs = useSelector(({ store }: { store: AppState }) => store.songs);
     const [songs, setSongs] = useState<Array<Song>>([]);
+
     const [sortingBy, setSortingBy] = useState<keyof Song>('popularity');
+    const [searchText, setSearchText] = useState<string>('');
     const [isAscending, setIsAscending] = useState(false);
     const [popup, setPopup] = useState({
         songKey: '',
@@ -29,23 +34,25 @@ const PlaylistView = () => {
     });
 
     useEffect(() => {
-        dispatch(setCurrentPlaylist({ playlistKey: id }));
+        dispatch(setCurrentPlaylist({ playlistKey: id ?? '' }));
     }, [id]);
 
     useEffect(() => {
-        setSongs(playlist?.songs ?? []);
-    }, [playlist]);
-
-    useEffect(() => {
-        setSongs(sortBy(sortingBy, songs, isAscending));
-    }, [sortingBy, isAscending]);
+        const playlistSongs = mapToList(globalSongs, playlist?.songKeys ?? []);
+        const tempSongs = playlistSongs.filter((song: Song) =>
+            Object.values(song).some((value) => {
+                return song.key === value ? false : value.toString().toLowerCase().includes(searchText);
+            })
+        );
+        setSongs(sortBy(sortingBy, tempSongs, isAscending));
+    }, [playlist, globalSongs, searchText, sortingBy, isAscending]);
 
     const handleFavoritToggle = (songKey: string) => {
         dispatch(toggleFavorite({ songKey }));
     };
 
-    const dispatchCurrentSong = (song: Song) => {
-        dispatch(setCurrentSong({ songKey: song.key }));
+    const dispatchCurrentSong = (songKey: string) => {
+        dispatch(setCurrentSong({ songKey }));
     };
 
     const columns: ColumnsType<Song> = [
@@ -114,18 +121,6 @@ const PlaylistView = () => {
         }
     }
 
-    function handleSearchChange(e: any) {
-        if (playlist === null) return;
-
-        const serachText = e.target.value.toLowerCase();
-        const filteredSongs = playlist.songs.filter((song: Song) =>
-            Object.values(song).some((value) => {
-                return song.key === value ? false : value.toString().toLowerCase().includes(serachText);
-            })
-        );
-        setSongs(sortBy(sortingBy, filteredSongs, isAscending));
-    }
-
     const filters = ['title', 'year', 'genre', 'popularity', 'duration'] as Array<keyof Song>;
 
     const items: MenuProps['items'] = filters.map((filter: keyof Song) => ({
@@ -157,7 +152,7 @@ const PlaylistView = () => {
         if (popup.isVisible) setPopup({ ...popup, isVisible: false });
     };
 
-    if (playlist === null) return <h1>NOT FOUND</h1>;
+    if (playlist === undefined) return <h1>NOT FOUND</h1>;
     //if (playlist === null) return <Navigate to="/" />;
 
     return (
@@ -174,7 +169,7 @@ const PlaylistView = () => {
                         prefix={<SearchOutlined style={{ marginRight: '1rem', paddingLeft: '0.5rem' }} />}
                         allowClear
                         className="search-filter"
-                        onChange={handleSearchChange}
+                        onChange={(e) => setSearchText(e.target.value)}
                     />
                     <Dropdown menu={{ items }} trigger={['click']} className="order-filter">
                         <a onClick={(e) => e.preventDefault()}>
@@ -194,7 +189,7 @@ const PlaylistView = () => {
                         onRow={(record, rowIndex) => {
                             return {
                                 onClick: (event) => {}, // click row
-                                onDoubleClick: (e) => dispatchCurrentSong(record), // double click row
+                                onDoubleClick: (e) => dispatchCurrentSong(record.key), // double click row
                                 onContextMenu: (e) => handleContextMenu(e, record), // right button click row
                                 onMouseEnter: (event) => {}, // mouse enter row
                                 onMouseLeave: (event) => {} // mouse leave row

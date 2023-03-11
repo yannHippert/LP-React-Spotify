@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { AppState, toggleFavorite } from '../../redux/slices/playlistSlice';
+import { getItemBy } from '../../utils/Getters';
 
 import './MediaControlBar.css';
 
@@ -13,8 +14,8 @@ interface MediaControlBarProps {
 const MediaControlBar = (props: MediaControlBarProps) => {
     const [songTime, setSongTime] = useState(0);
     const dispatch = useDispatch();
-    const song = useSelector((state: { store: AppState }) => state.store.playingSong);
-    const playlist = useSelector((state: { store: AppState }) => state.store.playingPlaylist);
+    const song = useSelector(({ store }: { store: AppState }) => store.songs[store.playingSong]);
+    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('key', store.playlists, store.playingPlaylist));
 
     useEffect(() => {
         setSongTime(0);
