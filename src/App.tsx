@@ -1,44 +1,14 @@
-import React, { useState } from 'react';
-import { HeartOutlined, HomeOutlined, PlusSquareFilled } from '@ant-design/icons';
-import { ConfigProvider, MenuProps, Modal } from 'antd';
-import { Menu, theme } from 'antd';
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import { ConfigProvider, Modal } from 'antd';
+import { theme } from 'antd';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import HomeView from './pages/Home/HomeView';
 import PlaylistView from './pages/PlaylistView/PlaylistView';
-import { useSelector } from 'react-redux';
-import { Playlist } from './interfaces/playlist';
-import { AppState } from './redux/slices/playlistSlice';
 import MediaControlBar from './components/MediaControlBar/MediaControlBar';
 
 import './main.css';
-
-type MenuItem = Required<MenuProps>['items'][number];
-
-function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode, children?: MenuItem[]): MenuItem {
-    return {
-        key,
-        icon,
-        children,
-        label
-    } as MenuItem;
-}
-
-const getItems = (playlists: Array<Playlist>): MenuItem[] => {
-    const iconItems = [
-        getItem(<Link to="/">Home</Link>, 'home', <HomeOutlined />),
-        getItem('Create Playlist', 'create', <PlusSquareFilled />),
-        getItem(<Link to="/liked">Liked Songs</Link>, 'liked', <HeartOutlined />)
-    ];
-    return [...iconItems, ...playlists.map((playlist) => getItem(<Link to={`/playlist/${playlist.key}`}>{playlist.name}</Link>, playlist.key))];
-};
+import SidebarNavigation from './components/SidebarNavigation/SidebarNaviagtion';
 
 const App = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const personalPlaylists: Array<Playlist> = useSelector(({ store }: { store: AppState }) => {
-        return store.playlists.filter((playlist) => playlist.isPersonal);
-    });
-
     return (
         <ConfigProvider
             theme={{
@@ -53,9 +23,7 @@ const App = () => {
         >
             <div className="global-wrapper">
                 <div className="main-content">
-                    <nav className="sidenav">
-                        <Menu mode="inline" defaultSelectedKeys={['home']} style={{ height: '100%', borderRight: 0 }} items={getItems(personalPlaylists)} />
-                    </nav>
+                    <SidebarNavigation />
                     <main className="background">
                         <Routes>
                             <Route path="/" element={<HomeView />} />
@@ -66,34 +34,6 @@ const App = () => {
                 </div>
 
                 <MediaControlBar />
-
-                {/* <Layout className="pageLayout">
-                <Layout>
-                    <Sider className="sidebar">
-                        <Menu mode="inline" defaultSelectedKeys={['home']} style={{ height: '100%', borderRight: 0 }} items={getItems(personalPlaylists)} />
-                    </Sider>
-                    <Content className="background">
-                        <Routes>
-                            <Route path="/" element={<HomeView />} />
-                            <Route path="/playlist/:id" element={<PlaylistView />} />
-                            <Route path="*" element={<Navigate to="/" />} />
-                        </Routes>
-                    </Content>
-                </Layout>
-                <MediaControlBar
-                    style={{
-                        textAlign: 'center',
-                        position: 'fixed',
-                        bottom: 0,
-                        left: 0,
-                        right: 0
-                    }}
-                />
-            </Layout> */}
-
-                <Modal title="Basic Modal" open={isOpen} footer={null} onCancel={() => setIsOpen(false)}>
-                    <p>Some contents...</p>
-                </Modal>
             </div>
         </ConfigProvider>
     );

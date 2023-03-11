@@ -1,0 +1,28 @@
+.sidenav {
+    background-color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: -0.0525em;
+    color: #ffffff;
+
+    .nav-logo {
+        padding: 2rem;
+        width: 164px;
+    }
+
+    .menu {
+        background-color: #000000;
+
+        .icon-container {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.2rem;
+        }
+    }
+}
