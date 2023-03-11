@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { PlaylistData } from '../../interfaces/playlist';
+import { Playlist } from '../../interfaces/playlist';
 import { Song, SongData } from '../../interfaces/song';
 import songList from '../../static/data.json';
 import { generateGradient } from '../../utils/GradientGenerator';
@@ -12,7 +12,7 @@ export interface AppState {
     playingPlaylist: string;
     currentPlaylist: string;
     songs: { [key: string]: Song };
-    playlists: Array<PlaylistData>;
+    playlists: Array<Playlist>;
 }
 
 const dataToSong = (data: SongData): Song => ({
@@ -36,8 +36,20 @@ const getSongs = (): { [key: string]: Song } => {
 
 const personalPlaylistNames = ['FAV', 'Daily Mix 1', 'Discover Weekly', 'Malayalam', 'Dance/Electronix Mix', 'EDM/Popular'];
 
-const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistData> => {
-    const map: { [key: string]: PlaylistData } = {};
+const getLikedSongsPlaylist = (): Playlist => {
+    const playlistName = 'Liked Songs';
+    return {
+        key: playlistName.toHash(),
+        name: playlistName,
+        slug: playlistName.toSlug(),
+        gradient: 'linear-gradient(135deg, #4000F4 0%, #603AED 22.48%, #7C6EE6 46.93%, #979FE1 65.71%, #A2B3DE 77.68%, #ADC8DC 88.93%, #C0ECD7 100%)',
+        isPersonal: false,
+        songKeys: []
+    };
+};
+
+const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> => {
+    const map: { [key: string]: Playlist } = {};
     for (const song of Object.values(songsMap)) {
         if (song.year in map) map[song.year].songKeys.push(song.key);
         else {
@@ -46,6 +58,7 @@ const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistDa
             map[song.year] = {
                 key: playlistName.toHash(),
                 name: playlistName,
+                slug: playlistName.toSlug(),
                 gradient: generateGradient(),
                 isPersonal: false,
                 songKeys: [song.key]
@@ -56,12 +69,13 @@ const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistDa
     return Object.values(map).sort((a, b) => b.name.localeCompare(a.name));
 };
 
-const getPersonalPlaylists = (songsMap: { [key: string]: Song }): Array<PlaylistData> => {
-    return personalPlaylistNames.map((name) => {
+const getPersonalPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> => {
+    return personalPlaylistNames.map((playlistName) => {
         const songList = getRandomSublist(Object.keys(songsMap));
         return {
-            key: name.toHash(),
-            name,
+            key: playlistName.toHash(),
+            name: playlistName,
+            slug: playlistName.toSlug(),
             gradient: generateGradient(),
             isPersonal: true,
             songKeys: songList.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity)
@@ -73,10 +87,10 @@ export const playlistSlice = createSlice({
     name: 'store',
     initialState: (): AppState => {
         const songs = getSongs();
-        const playlists = [...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)];
+        const playlists = [getLikedSongsPlaylist(), ...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)];
         return {
-            playingSong: playlists[0].songKeys[0],
-            playingPlaylist: playlists[0].key,
+            playingSong: playlists[1].songKeys[0],
+            playingPlaylist: playlists[1].key,
             currentPlaylist: '',
             songs: songs,
             playlists: playlists
@@ -94,7 +108,7 @@ export const playlistSlice = createSlice({
             state.songs[action.payload.songKey].isFavorite = !state.songs[action.payload.songKey].isFavorite;
         },
         togglePlaylistSong: (state: AppState, action: { payload: { playlistKey: string; songKey: string } }) => {
-            const playlistIndex = state.playlists.findIndex(({ key }: PlaylistData) => key === action.payload.playlistKey);
+            const playlistIndex = state.playlists.findIndex(({ key }: Playlist) => key === action.payload.playlistKey);
 
             const songIndex = state.playlists[playlistIndex].songKeys.findIndex((songKey) => songKey === action.payload.songKey);
             if (songIndex !== -1) {

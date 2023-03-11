@@ -1,4 +1,4 @@
-import { PlaylistData } from '../../interfaces/playlist';
+import { Playlist } from '../../interfaces/playlist';
 import Title from 'antd/es/typography/Title';
 import { Typography } from 'antd';
 import './TopCard.css';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const { Text } = Typography;
 
 export interface Top50sCardProps {
-    playlist: PlaylistData;
+    playlist: Playlist;
 }
 
 const Top50sCard = ({ playlist }: Top50sCardProps) => {

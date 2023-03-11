@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { HeartOutlined, HomeOutlined, PlusSquareFilled } from '@ant-design/icons';
 import { ConfigProvider, MenuProps, Modal } from 'antd';
-import { Layout, Menu, theme } from 'antd';
+import { Menu, theme } from 'antd';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import HomeView from './pages/Home/HomeView';
 import PlaylistView from './pages/PlaylistView/PlaylistView';
 import { useSelector } from 'react-redux';
-import { PlaylistData } from './interfaces/playlist';
+import { Playlist } from './interfaces/playlist';
 import { AppState } from './redux/slices/playlistSlice';
 import MediaControlBar from './components/MediaControlBar/MediaControlBar';
 
 import './main.css';
-
-const { Content, Sider, Footer } = Layout;
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -25,7 +23,7 @@ function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode
     } as MenuItem;
 }
 
-const getItems = (playlists: Array<PlaylistData>): MenuItem[] => {
+const getItems = (playlists: Array<Playlist>): MenuItem[] => {
     const iconItems = [
         getItem(<Link to="/">Home</Link>, 'home', <HomeOutlined />),
         getItem('Create Playlist', 'create', <PlusSquareFilled />),
@@ -37,7 +35,7 @@ const getItems = (playlists: Array<PlaylistData>): MenuItem[] => {
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const personalPlaylists: Array<PlaylistData> = useSelector(({ store }: { store: AppState }) => {
+    const personalPlaylists: Array<Playlist> = useSelector(({ store }: { store: AppState }) => {
         return store.playlists.filter((playlist) => playlist.isPersonal);
     });
 

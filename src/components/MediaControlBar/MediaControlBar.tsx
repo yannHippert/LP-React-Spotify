@@ -50,11 +50,11 @@ const MediaControlBar = (props: MediaControlBarProps) => {
             </div>
             <div className="time-control">
                 <div className="time-actions">
-                    <img src="/icons/random.svg" className="general-controller" style={{ height: '20px' }} />
-                    <img src="/icons/previous.svg" className="general-controller" style={{ height: '12px' }} />
-                    <img src="/icons/play.svg" className="play-controller" />
-                    <img src="/icons/next.svg" className="general-controller" style={{ height: '12px' }} />
-                    <img src="/icons/repeat.svg" className="general-controller" style={{ height: '18px' }} />
+                    <img src="/icons/random.svg" className="general-controller" style={{ height: '20px' }} alt="" />
+                    <img src="/icons/previous.svg" className="general-controller" style={{ height: '12px' }} alt="" />
+                    <img src="/icons/play.svg" className="play-controller" alt="" />
+                    <img src="/icons/next.svg" className="general-controller" style={{ height: '12px' }} alt="" />
+                    <img src="/icons/repeat.svg" className="general-controller" style={{ height: '18px' }} alt="" />
                 </div>
                 <div>
                     <p>{secondsToTime(songTime)}</p>

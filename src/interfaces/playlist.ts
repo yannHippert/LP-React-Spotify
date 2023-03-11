@@ -1,13 +1,8 @@
-import { Song } from './song';
-
-export interface PlaylistData {
+export interface Playlist {
     key: string;
     name: string;
+    slug: string;
     gradient: string;
     isPersonal: boolean;
     songKeys: Array<string>;
-}
-
-export interface Playlist extends PlaylistData {
-    songs: Array<Song>;
 }

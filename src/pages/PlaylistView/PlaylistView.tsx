@@ -9,11 +9,10 @@ import { useDispatch } from 'react-redux';
 import { AppState, setCurrentPlaylist, setCurrentSong, toggleFavorite } from '../../redux/slices/playlistSlice';
 import { sortBy } from '../../utils/Comparer';
 import TableContextMenu from '../../components/TableContextMenu/TableContextMenu';
+import { getItemBy, mapToList } from '../../utils/Getters';
 
 import '../../extensions/string';
 import './PlaylistView.scss';
-import { getItemBy, mapToList } from '../../utils/Getters';
-import { Playlist, PlaylistData } from '../../interfaces/playlist';
 
 const PlaylistView = () => {
     const { id } = useParams();
@@ -35,7 +34,7 @@ const PlaylistView = () => {
 
     useEffect(() => {
         dispatch(setCurrentPlaylist({ playlistKey: id ?? '' }));
-    }, [id]);
+    }, [id, dispatch]);
 
     useEffect(() => {
         const playlistSongs = mapToList(globalSongs, playlist?.songKeys ?? []);
