@@ -1,3 +1,7 @@
+export const getRandomString = () => {
+    return (Math.random() + 1).toString(36).substring(7) + '-' + (Math.random() + 1).toString(36).substring(7);
+};
+
 const randomColor = (): string => {
     const hexString = '0123456789abcdef';
     let hexCode = '#';
@@ -7,11 +11,9 @@ const randomColor = (): string => {
     return hexCode;
 };
 
-export const generateGradient = (): { background: string } => {
+export const generateGradient = (): string => {
     let colorOne = randomColor();
     let colorTwo = randomColor();
     let angle = Math.floor(Math.random() * 360);
-    return {
-        background: `linear-gradient(${angle}deg, ${colorOne}, ${colorTwo})`,
-    };
+    return `linear-gradient(${angle}deg, ${colorOne}, ${colorTwo})`;
 };

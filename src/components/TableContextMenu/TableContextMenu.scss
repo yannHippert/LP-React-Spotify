@@ -1,0 +1,60 @@
+@import '/public/styles/scrollbar.scss';
+
+$context-menu-item-background: #282828;
+$context-menu-border-radius: 5px;
+
+.table-context-menu {
+    background-clip: padding-box;
+    border-radius: 5px;
+    left: 0px;
+    list-style-type: none;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    color: white;
+    background: linear-gradient(180deg, #222222 0%, #161616 100%);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    max-height: 300px;
+
+    .context-menu-header,
+    .context-menu-item {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 25px;
+        letter-spacing: -0.0525em;
+        clear: both;
+        margin: 0;
+        padding: 0.5rem 2rem 0.5rem 1.5rem;
+        transition: all 0.3s;
+        white-space: nowrap;
+        -webkit-transition: all 0.3s;
+    }
+
+    .context-menu-header {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .context-menu-options {
+        border-bottom-left-radius: $context-menu-border-radius;
+        border-bottom-right-radius: $context-menu-border-radius;
+        overflow: auto;
+
+        @extend .scrollbar;
+
+        &::-webkit-scrollbar-track {
+            background: $context-menu-item-background;
+            border-bottom-right-radius: $context-menu-border-radius;
+        }
+
+        .context-menu-item {
+            cursor: pointer;
+            background-color: $context-menu-item-background;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}

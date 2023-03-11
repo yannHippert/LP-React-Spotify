@@ -3,6 +3,6 @@ import playlistReducer from './slices/playlistSlice';
 
 export default configureStore({
     reducer: {
-        playlists: playlistReducer,
-    },
+        store: playlistReducer
+    }
 });
