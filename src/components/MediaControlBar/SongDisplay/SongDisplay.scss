@@ -1,0 +1,41 @@
+.song-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    .cover {
+        width: 75px;
+    }
+
+    .song-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        margin-right: 1rem;
+
+        h2 {
+            font-size: 18px;
+            line-height: 23px;
+            color: #ffffff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        h3 {
+            font-size: 15px;
+            line-height: 20px;
+            color: #b3b3b3;
+        }
+    }
+}

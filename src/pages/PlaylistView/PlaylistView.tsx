@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom';
 import { Dropdown, Input, MenuProps, Space, Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { Song } from '../../interfaces/song';
-import { CaretRightOutlined, HeartFilled, HeartOutlined, SearchOutlined } from '@ant-design/icons';
+import { CaretRightOutlined, SearchOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
-import { AppState, setCurrentPlaylist, setCurrentSong, toggleFavorite } from '../../redux/slices/playlistSlice';
+import { AppState, setCurrentPlaylist, setCurrentSong } from '../../redux/slices/playlistSlice';
 import { sortBy } from '../../utils/Comparer';
 import TableContextMenu from '../../components/TableContextMenu/TableContextMenu';
 import { getItemBy, mapToList } from '../../utils/Getters';
+import PlaylistCover from '../../components/PlaylistCover/PlaylistCover';
+import FavoriteIndicator from '../../components/FavotiteIndicator/FavoriteIndicator';
 
 import '../../extensions/string';
 import './PlaylistView.scss';
@@ -37,7 +39,7 @@ const PlaylistView = () => {
     }, [id, dispatch]);
 
     useEffect(() => {
-        const playlistSongs = mapToList(globalSongs, playlist?.songKeys ?? []);
+        const playlistSongs = playlist.name === 'Liked Songs' ? Object.values(globalSongs).filter(({ isFavorite }) => isFavorite) : mapToList(globalSongs, playlist?.songKeys ?? []);
         const tempSongs = playlistSongs.filter((song: Song) =>
             Object.values(song).some((value) => {
                 return song.key === value ? false : value.toString().toLowerCase().includes(searchText);
@@ -45,10 +47,6 @@ const PlaylistView = () => {
         );
         setSongs(sortBy(sortingBy, tempSongs, isAscending));
     }, [playlist, globalSongs, searchText, sortingBy, isAscending]);
-
-    const handleFavoritToggle = (songKey: string) => {
-        dispatch(toggleFavorite({ songKey }));
-    };
 
     const dispatchCurrentSong = (songKey: string) => {
         dispatch(setCurrentSong({ songKey }));
@@ -64,14 +62,7 @@ const PlaylistView = () => {
             title: '',
             dataIndex: 'isFavorite',
             width: 50,
-            render: (e, song) => {
-                return (
-                    <div className="favorite-checkbox">
-                        <input type="checkbox" checked={e} id={song.key} onChange={() => handleFavoritToggle(song.key)} />
-                        <label htmlFor={song.key}>{e ? <HeartFilled /> : <HeartOutlined />}</label>
-                    </div>
-                );
-            }
+            render: (e, song) => <FavoriteIndicator song={song} size={13} />
         },
         {
             title: 'TITLE',
@@ -157,10 +148,13 @@ const PlaylistView = () => {
     return (
         <div className="playlist-view" onScroll={handleScroll}>
             <div className="playlist-header">
-                <div className="playlist-icon" style={{ background: playlist.gradient }}></div>
-                <h1>{playlist.name}</h1>
-                <div className="playlist-background" style={{ background: playlist.gradient }}></div>
+                <div className="header-content">
+                    <PlaylistCover playlist={playlist} className="playlist-icon" />
+                    <h1>{playlist.name}</h1>
+                </div>
+                <div className="header-background" style={{ background: playlist.gradient }}></div>
             </div>
+
             <div className="playlist-body">
                 <div className="filter-container">
                     <Input
@@ -179,6 +173,7 @@ const PlaylistView = () => {
                         </a>
                     </Dropdown>
                 </div>
+
                 <div className="table-wrapper">
                     <Table
                         className="playlist-song-table"

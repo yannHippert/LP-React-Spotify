@@ -1,5 +1,12 @@
-.padding {
+@import '/public/styles/variables.scss';
+@import '/public/styles/scrollbar.scss';
+
+.home-view {
+    height: calc(100dvh - $media-controller-height);
     padding: 2rem;
+    overflow-y: scroll;
+
+    @extend .scrollbar;
 }
 
 .container {

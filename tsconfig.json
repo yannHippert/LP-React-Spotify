@@ -15,7 +15,10 @@
         "isolatedModules": true,
         "downlevelIteration": true,
         "noEmit": true,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "paths": {
+            "@Icons/*": ["./src/static/icons/*"]
+        }
     },
     "include": ["src"]
 }

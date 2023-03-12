@@ -9,12 +9,16 @@
     color: #ffffff;
 
     .nav-logo {
-        padding: 2rem;
         width: 164px;
+        margin: 1.5rem;
     }
 
     .menu {
         background-color: #000000;
+
+        .ant-menu-item:nth-child(-n + 3) {
+            height: 50px;
+        }
 
         .icon-container {
             width: 30px;

@@ -2,7 +2,7 @@
 @import '/public/styles/scrollbar.scss';
 
 .playlist-view {
-    height: calc(100dvh - 120px);
+    height: calc(100dvh - $media-controller-height);
     overflow-y: scroll;
 
     @extend .scrollbar;
@@ -14,27 +14,30 @@
         font-size: 96px;
         font-weight: 700;
         color: white;
+        padding-left: 30px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-left: 30px;
-        gap: 30px;
 
-        .playlist-background {
+        .header-background {
             position: absolute;
             inset: 0;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
-        > .playlist-icon {
-            width: 185px;
-            height: 185px;
-            border-radius: 4px 0px 0px 4px;
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             z-index: 1;
-        }
+            gap: 2rem;
 
-        > h1 {
-            z-index: 1;
+            > .playlist-icon {
+                border-radius: 4px 0px 0px 4px;
+                width: 185px;
+                font-size: 0.4em;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
         }
     }
 
@@ -55,38 +58,32 @@
                 border-radius: 26px;
                 width: 256px;
                 color: white;
+                input {
+                    background-color: transparent;
+                    &::placeholder,
+                    &:-ms-input-placeholder {
+                        color: white !important;
+                    }
+                }
+            }
+
+            .order-filter {
+                color: white;
+                background-color: #535353;
+                padding: 10px 16px;
+                border-radius: 23px;
+                cursor: pointer;
+            }
+        }
+
+        .playlist-song-table * {
+            background-color: transparent;
+            border: none !important;
+            &::before {
+                background-color: transparent !important;
             }
         }
     }
-}
-
-.filter-container input {
-    background-color: transparent;
-}
-
-.filter-container .search-filter input::placeholder,
-.filter-container .search-filter input:-ms-input-placeholder {
-    color: white !important;
-}
-
-.filter-container .order-filter {
-    color: white;
-    background-color: #535353;
-    padding: 10px 16px;
-    border-radius: 23px;
-    cursor: pointer;
-}
-
-.favorite-checkbox > input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    display: none;
-}
-
-.favorite-checkbox > input:checked ~ label {
-    cursor: pointer;
-    color: $highlight-color;
 }
 
 .popularity-text {
@@ -99,12 +96,4 @@
 
 .selected-filter {
     color: $highlight-color !important;
-}
-
-.playlist-song-table {
-    background-color: transparent;
-}
-
-.playlist-song-table .ant.table.cell {
-    background-color: transparent !important;
 }

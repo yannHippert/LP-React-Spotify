@@ -1,0 +1,13 @@
+@import '/public/styles/range-input.scss';
+
+.display-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+
+    .volume-bar {
+        @extend .range-input;
+    }
+}

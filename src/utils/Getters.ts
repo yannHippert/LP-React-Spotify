@@ -3,7 +3,7 @@ export const getRandomElement = (list: Array<any>) => {
 };
 
 export function getRandomSublist<Type>(list: Array<Type>): Array<Type> {
-    const itemCount = getRandomInt(10, list.length / 4);
+    const itemCount = getRandomInt(10, Math.min(55, list.length / 4));
     const sublist: Array<Type> = [];
     while (sublist.length !== itemCount) {
         const item = getRandomElement(list);

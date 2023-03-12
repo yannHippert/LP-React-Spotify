@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux';
 import { Playlist } from '../../interfaces/playlist';
 import Top50sCard from '../../components/TopCard/TopCard';
 import PlaylistCard from '../../components/PlaylistCard/PlaylistCard';
-import './HomeView.css';
 import { AppState } from '../../redux/slices/playlistSlice';
+
+import './HomeView.scss';
 
 const HomeView = () => {
     const playlists = useSelector(({ store }: { store: AppState }) => store.playlists);
@@ -13,7 +14,7 @@ const HomeView = () => {
     const getTop50sPlaylists = () => playlists.filter(({ name, isPersonal }) => !isPersonal && name !== 'Liked Songs');
 
     return (
-        <div className="padding">
+        <div className="home-view">
             <Title>Your playlists</Title>
             <div className="grid-container">
                 <PlaylistCard key={playlists[0].key} playlist={playlists[0]} />

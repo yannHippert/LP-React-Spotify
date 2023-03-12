@@ -1,0 +1,16 @@
+@import '/public/styles/variables.scss';
+
+.favorite-checkbox > input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+
+    &:checked ~ label * {
+        fill: $highlight-color;
+    }
+
+    ~ label {
+        cursor: pointer;
+    }
+}

@@ -23,8 +23,9 @@ const dataToSong = (data: SongData): Song => ({
     duration: data.duration,
     popularity: data.popularity,
     year: data.year,
-    isFavorite: Math.random() > 0.5
+    isFavorite: Math.random() > 0.8
 });
+
 const getSongs = (): { [key: string]: Song } => {
     const songs: { [key: string]: Song } = {};
     for (const songData of songList as Array<SongData>) {
@@ -114,7 +115,6 @@ export const playlistSlice = createSlice({
             if (songIndex !== -1) {
                 state.playlists[playlistIndex].songKeys.splice(songIndex, 1);
             } else {
-                console.log(action.payload.songKey);
                 state.playlists[playlistIndex].songKeys.push(action.payload.songKey);
             }
         }

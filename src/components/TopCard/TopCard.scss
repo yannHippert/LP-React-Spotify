@@ -1,0 +1,36 @@
+.top-card {
+    cursor: pointer;
+    background-color: #181818;
+    padding: 1rem;
+    transition: background-color 0.4s;
+    color: white;
+
+    &:hover {
+        background-color: #303030;
+    }
+
+    .playlist-cover {
+        border-radius: 14px;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        margin-top: 1.5rem;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 27px;
+        letter-spacing: -0.02em;
+    }
+
+    h3 {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: #b3b3b3;
+    }
+}
