@@ -17,6 +17,14 @@ import '../../extensions/string';
 import './PlaylistView.scss';
 
 const PlaylistView = () => {
+    const defaultValues = {
+        isAscending: false,
+        sortingBy: 'popularity'
+    } as {
+        isAscending: boolean;
+        sortingBy: keyof Song;
+    };
+
     const { id } = useParams();
     const dispatch = useDispatch();
 
@@ -24,9 +32,9 @@ const PlaylistView = () => {
     const globalSongs = useSelector(({ store }: { store: AppState }) => store.songs);
     const [songs, setSongs] = useState<Array<Song>>([]);
 
-    const [sortingBy, setSortingBy] = useState<keyof Song>('popularity');
+    const [sortingBy, setSortingBy] = useState<keyof Song>(defaultValues.sortingBy);
+    const [isAscending, setIsAscending] = useState(defaultValues.isAscending);
     const [searchText, setSearchText] = useState<string>('');
-    const [isAscending, setIsAscending] = useState(false);
     const [popup, setPopup] = useState({
         songKey: '',
         isVisible: false,
@@ -35,14 +43,17 @@ const PlaylistView = () => {
     });
 
     useEffect(() => {
+        setIsAscending(defaultValues.isAscending);
+        setSortingBy(defaultValues.sortingBy);
         dispatch(setCurrentPlaylist({ playlistKey: id ?? '' }));
     }, [id, dispatch]);
 
     useEffect(() => {
         const playlistSongs = playlist.name === 'Liked Songs' ? Object.values(globalSongs).filter(({ isFavorite }) => isFavorite) : mapToList(globalSongs, playlist?.songKeys ?? []);
+        const lowerSearchText = searchText.toLowerCase();
         const tempSongs = playlistSongs.filter((song: Song) =>
             Object.values(song).some((value) => {
-                return song.key === value ? false : value.toString().toLowerCase().includes(searchText);
+                return song.key === value ? false : value.toString().toLowerCase().includes(lowerSearchText);
             })
         );
         setSongs(sortBy(sortingBy, tempSongs, isAscending));
