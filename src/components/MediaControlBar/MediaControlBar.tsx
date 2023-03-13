@@ -13,7 +13,7 @@ interface MediaControlBarProps {
 
 const MediaControlBar = (props: MediaControlBarProps) => {
     const song = useSelector(({ store }: { store: AppState }) => store.songs[store.playingSong]);
-    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('key', store.playlists, store.playingPlaylist));
+    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('slug', store.playlists, store.playingPlaylist));
 
     return (
         <div className="media-control-bar" style={props?.style}>

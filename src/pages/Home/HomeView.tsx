@@ -1,4 +1,3 @@
-import Title from 'antd/es/typography/Title';
 import { useSelector } from 'react-redux';
 import { Playlist } from '../../interfaces/playlist';
 import Top50sCard from '../../components/TopCard/TopCard';
@@ -15,7 +14,7 @@ const HomeView = () => {
 
     return (
         <div className="home-view">
-            <Title>Your playlists</Title>
+            <h2 className="list-title">Your playlists</h2>
             <div className="grid-container">
                 <PlaylistCard key={playlists[0].key} playlist={playlists[0]} />
                 {getPersonalPlaylists().map((playlist: Playlist) => (
@@ -23,7 +22,7 @@ const HomeView = () => {
                 ))}
             </div>
 
-            <Title style={{ marginTop: '2rem' }}>TOP 50</Title>
+            <h2 className="list-title">TOP 50</h2>
             <div className="container">
                 {getTop50sPlaylists().map((playlist: Playlist) => (
                     <Top50sCard key={playlist.key} playlist={playlist} />

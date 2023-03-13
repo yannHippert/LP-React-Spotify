@@ -1,5 +1,8 @@
-@import '/public/styles/variables.scss';
-@import '/public/styles/scrollbar.scss';
+@import '/src/styles/variables.scss';
+@import '/src/styles/input.scss';
+@import '/src/styles/scrollbar.scss';
+
+$playlist-header-height: 245px;
 
 .playlist-view {
     height: calc(100dvh - $media-controller-height);
@@ -10,10 +13,10 @@
     .playlist-header {
         position: relative;
         width: 100%;
-        height: 245px;
+        height: $playlist-header-height;
         font-size: 96px;
-        font-weight: 700;
-        color: white;
+        font-weight: $font-weight;
+        color: $text-color;
         padding-left: 30px;
         display: flex;
         justify-content: flex-start;
@@ -53,18 +56,9 @@
             gap: 1rem;
 
             .search-filter {
-                background-color: rgba(255, 255, 255, 0.4);
-                border: none;
-                border-radius: 26px;
                 width: 256px;
-                color: white;
-                input {
-                    background-color: transparent;
-                    &::placeholder,
-                    &:-ms-input-placeholder {
-                        color: white !important;
-                    }
-                }
+
+                @extend .text-input;
             }
 
             .order-filter {
@@ -76,11 +70,13 @@
             }
         }
 
-        .playlist-song-table * {
-            background-color: transparent;
-            border: none !important;
-            &::before {
-                background-color: transparent !important;
+        .playlist-song-table {
+            * {
+                background-color: transparent;
+                border: none !important;
+                &::before {
+                    background-color: transparent !important;
+                }
             }
         }
     }

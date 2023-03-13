@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import SpotifyStore from './redux/store';
-import './index.css';
+import './styles/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 

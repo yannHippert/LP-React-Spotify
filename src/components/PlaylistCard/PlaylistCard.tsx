@@ -1,7 +1,8 @@
-import { HeartFilled } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { Playlist } from '../../interfaces/playlist';
-import './PlaylistCard.css';
+import PlaylistCover from '../PlaylistCover/PlaylistCover';
+
+import './PlaylistCard.scss';
 
 export interface PlaylistCardProps {
     playlist: Playlist;
@@ -9,12 +10,10 @@ export interface PlaylistCardProps {
 
 const PlaylistCard = ({ playlist }: PlaylistCardProps) => {
     return (
-        <Link to={`/playlist/${playlist.key}`}>
+        <Link to={`/playlist/${playlist.slug}`}>
             <div className="playlist-card">
-                <div className="gradient-image" style={{ background: playlist.gradient }}>
-                    {playlist.name === 'Liked Songs' ? <HeartFilled /> : <></>}
-                </div>
-                <h2>{playlist.name}</h2>
+                <PlaylistCover playlist={playlist} className="" />
+                <h3>{playlist.name}</h3>
             </div>
         </Link>
     );

@@ -16,19 +16,69 @@ import FavoriteIndicator from '../../components/FavotiteIndicator/FavoriteIndica
 import '../../extensions/string';
 import './PlaylistView.scss';
 
-const PlaylistView = () => {
-    const defaultValues = {
-        isAscending: false,
-        sortingBy: 'popularity'
-    } as {
-        isAscending: boolean;
-        sortingBy: keyof Song;
-    };
+const columns: ColumnsType<Song> = [
+    {
+        title: '#',
+        dataIndex: 'index',
+        width: 75
+    },
+    {
+        title: '',
+        dataIndex: 'isFavorite',
+        width: 50,
+        render: (e, song) => <FavoriteIndicator song={song} size={13} />
+    },
+    {
+        title: 'TITLE',
+        dataIndex: 'title',
+        render: (_, song) => (
+            <p>
+                {song.title} - {song.artist}
+            </p>
+        )
+    },
+    {
+        title: 'YEAR',
+        dataIndex: 'year',
+        width: 100
+    },
+    {
+        title: 'GENRE',
+        dataIndex: 'genre',
+        render: (genre) => genre.toTitle()
+    },
+    {
+        title: 'POPULARITY',
+        dataIndex: 'popularity',
+        width: 150,
+        render: (popularity) => <p className="popularity-text">{popularity}</p>
+    },
+    {
+        title: 'DURATION',
+        dataIndex: 'duration',
+        width: 105,
+        render: (duration) => (
+            <p className="duration-text">
+                {Math.floor(duration / 60)}:{duration % 60 < 10 && '0'}
+                {duration % 60}
+            </p>
+        )
+    }
+];
 
-    const { id } = useParams();
+const defaultValues = {
+    isAscending: false,
+    sortingBy: 'popularity'
+} as {
+    isAscending: boolean;
+    sortingBy: keyof Song;
+};
+
+const PlaylistView = () => {
+    const { slug } = useParams();
     const dispatch = useDispatch();
 
-    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('key', store.playlists, id));
+    const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('slug', store.playlists, slug));
     const globalSongs = useSelector(({ store }: { store: AppState }) => store.songs);
     const [songs, setSongs] = useState<Array<Song>>([]);
 
@@ -45,8 +95,8 @@ const PlaylistView = () => {
     useEffect(() => {
         setIsAscending(defaultValues.isAscending);
         setSortingBy(defaultValues.sortingBy);
-        dispatch(setCurrentPlaylist({ playlistKey: id ?? '' }));
-    }, [id, dispatch]);
+        dispatch(setCurrentPlaylist({ playlistSlug: slug ?? '' }));
+    }, [slug, dispatch]);
 
     useEffect(() => {
         const playlistSongs = playlist.name === 'Liked Songs' ? Object.values(globalSongs).filter(({ isFavorite }) => isFavorite) : mapToList(globalSongs, playlist?.songKeys ?? []);
@@ -63,56 +113,6 @@ const PlaylistView = () => {
         dispatch(setCurrentSong({ songKey }));
     };
 
-    const columns: ColumnsType<Song> = [
-        {
-            title: '#',
-            dataIndex: 'index',
-            width: 75
-        },
-        {
-            title: '',
-            dataIndex: 'isFavorite',
-            width: 50,
-            render: (e, song) => <FavoriteIndicator song={song} size={13} />
-        },
-        {
-            title: 'TITLE',
-            dataIndex: 'title',
-            render: (_, song) => (
-                <p>
-                    {song.title} - {song.artist}
-                </p>
-            )
-        },
-        {
-            title: 'YEAR',
-            dataIndex: 'year',
-            width: 100
-        },
-        {
-            title: 'GENRE',
-            dataIndex: 'genre',
-            render: (genre) => genre.toTitle()
-        },
-        {
-            title: 'POPULARITY',
-            dataIndex: 'popularity',
-            width: 150,
-            render: (popularity) => <p className="popularity-text">{popularity}</p>
-        },
-        {
-            title: 'DURATION',
-            dataIndex: 'duration',
-            width: 105,
-            render: (duration) => (
-                <p className="duration-text">
-                    {Math.floor(duration / 60)}:{duration % 60 < 10 && '0'}
-                    {duration % 60}
-                </p>
-            )
-        }
-    ];
-
     function handleFilterClick(e: any, key: keyof Song) {
         e.preventDefault();
         if (key === sortingBy) setIsAscending(!isAscending);
@@ -126,9 +126,9 @@ const PlaylistView = () => {
 
     const items: MenuProps['items'] = filters.map((filter: keyof Song) => ({
         label: (
-            <a onClick={(e) => handleFilterClick(e, filter)} className={sortingBy === filter ? 'selected-filter' : ''}>
+            <div onClick={(e) => handleFilterClick(e, filter)} className={sortingBy === filter ? 'selected-filter' : ''}>
                 {filter.toTitle()}
-            </a>
+            </div>
         ),
         key: filter
     }));
@@ -191,13 +191,10 @@ const PlaylistView = () => {
                         pagination={false}
                         columns={columns}
                         dataSource={songs.map((song, index) => ({ ...song, index: index + 1 }))}
-                        onRow={(record, rowIndex) => {
+                        onRow={(record) => {
                             return {
-                                onClick: (event) => {}, // click row
-                                onDoubleClick: (e) => dispatchCurrentSong(record.key), // double click row
-                                onContextMenu: (e) => handleContextMenu(e, record), // right button click row
-                                onMouseEnter: (event) => {}, // mouse enter row
-                                onMouseLeave: (event) => {} // mouse leave row
+                                onDoubleClick: (e) => dispatchCurrentSong(record.key),
+                                onContextMenu: (e) => handleContextMenu(e, record)
                             };
                         }}
                         sticky

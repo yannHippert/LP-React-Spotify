@@ -1,4 +1,5 @@
-@import '/public/styles/range-input.scss';
+@import '/src/styles/variables.scss';
+@import '/src/styles/range-input.scss';
 
 $duartion-bar-length: 600px;
 
@@ -9,18 +10,19 @@ $duartion-bar-length: 600px;
         align-items: center;
         gap: 1.5rem;
         margin-bottom: 1rem;
+        width: 100%;
     }
 
     .duration-controls {
         display: grid;
-        grid-template-columns: 1fr $duartion-bar-length 1fr;
+        grid-template-columns: auto $duartion-bar-length auto;
         align-items: center;
 
         .duration-display {
-            margin: 0 0.25rem;
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 700;
+            padding: 0 0.25rem;
+            font-family: $font-family;
+            font-style: $font-style;
+            font-weight: $font-weight;
             font-size: 14px;
             line-height: 18px;
             letter-spacing: 0.04em;
@@ -32,7 +34,7 @@ $duartion-bar-length: 600px;
         }
 
         .duration-bar {
-            width: 600px;
+            width: $duartion-bar-length;
 
             @extend .range-input;
         }

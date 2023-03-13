@@ -1,21 +1,24 @@
-import { ConfigProvider, Modal } from 'antd';
-import { theme } from 'antd';
+import { ConfigProvider } from 'antd';
+import { theme, message } from 'antd';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import HomeView from './pages/Home/HomeView';
 import PlaylistView from './pages/PlaylistView/PlaylistView';
 import MediaControlBar from './components/MediaControlBar/MediaControlBar';
+import SidebarNavigation from './components/SidebarNavigation/SidebarNavigation';
 
-import './main.css';
-import SidebarNavigation from './components/SidebarNavigation/SidebarNaviagtion';
+import './styles/main.scss';
 
 const App = () => {
+    message.config({ maxCount: 2 });
+
     return (
         <ConfigProvider
             theme={{
                 algorithm: theme.darkAlgorithm,
                 token: {
-                    colorPrimary: '#00b96b',
-                    //fontFamily: 'DM Sans',
+                    colorHighlight: '#1db954',
+                    fontFamily: 'DM Sans',
+                    colorText: '#FFFFFF',
                     fontWeightStrong: 700
                 },
                 components: {}
@@ -24,10 +27,10 @@ const App = () => {
             <div className="global-wrapper">
                 <div className="main-content">
                     <SidebarNavigation />
-                    <main className="background">
+                    <main>
                         <Routes>
                             <Route path="/" element={<HomeView />} />
-                            <Route path="/playlist/:id" element={<PlaylistView />} />
+                            <Route path="/playlist/:slug" element={<PlaylistView />} />
                             <Route path="*" element={<Navigate to="/" />} />
                         </Routes>
                     </main>

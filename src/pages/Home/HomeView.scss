@@ -1,5 +1,5 @@
-@import '/public/styles/variables.scss';
-@import '/public/styles/scrollbar.scss';
+@import '/src/styles/variables.scss';
+@import '/src/styles/scrollbar.scss';
 
 .home-view {
     height: calc(100dvh - $media-controller-height);
@@ -7,6 +7,21 @@
     overflow-y: scroll;
 
     @extend .scrollbar;
+
+    h2 {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 49px;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        padding: 1rem 0;
+
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+    }
 }
 
 .container {

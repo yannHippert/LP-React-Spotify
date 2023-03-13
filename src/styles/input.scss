@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+$input-background-color: rgba(255, 255, 255, 0.4);
+$input-border-radius: 26px;
+$input-text-color: $text-color;
+
+.text-input {
+    background-color: $input-background-color;
+    border: none;
+    border-radius: $input-border-radius;
+    color: $input-text-color;
+    .ant-input {
+        background-color: transparent;
+
+        &::placeholder {
+            opacity: 1;
+            color: white;
+        }
+
+        &:-ms-input-placeholder {
+            opacity: 1;
+            color: white;
+        }
+
+        &::-ms-input-placeholder {
+            opacity: 1;
+            color: white;
+        }
+    }
+
+    &.ant-input-affix-wrapper-focused {
+        outline: 1px solid $highlight-color;
+    }
+}

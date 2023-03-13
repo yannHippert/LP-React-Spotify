@@ -1,4 +1,4 @@
-import { ReactComponent as Heart } from '../../static/icons/heart.svg';
+import { ReactComponent as Heart } from '../../static/icons/heart_filled.svg';
 import { Playlist } from '../../interfaces/playlist';
 
 import './PlaylistCover.scss';
@@ -12,7 +12,7 @@ interface PlaylistCoverProps {
 
 const PlaylistCover = ({ playlist, style, className, width }: PlaylistCoverProps) => {
     const getCoverContent = () => {
-        if (playlist.name === 'Liked Songs') return <Heart />;
+        if (playlist.name === 'Liked Songs') return <Heart className="liked-songs-heart" />;
         if (playlist.isPersonal) return '';
         return (
             <>

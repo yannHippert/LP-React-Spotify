@@ -10,11 +10,11 @@ export interface Top50sCardProps {
 
 const Top50sCard = ({ playlist }: Top50sCardProps) => {
     return (
-        <Link to={`/playlist/${playlist.key}`}>
+        <Link to={`/playlist/${playlist.slug}`}>
             <div className="top-card">
                 <PlaylistCover playlist={playlist} className="playlist-cover" />
-                <h2>TOP 50</h2>
-                <h3>{playlist.name.substring(playlist.name.length - 4)}</h3>
+                <h3>TOP 50</h3>
+                <p>{playlist.name.substring(playlist.name.length - 4)}</p>
             </div>
         </Link>
     );

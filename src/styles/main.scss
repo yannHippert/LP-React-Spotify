@@ -1,3 +1,4 @@
+@import '/src/styles/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 * {
@@ -5,7 +6,10 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    color: $text-color;
 }
 
 body {
@@ -34,8 +38,4 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: 300px calc(100dvw - 300px);
-}
-
-.background {
-    padding-bottom: 5rem;
 }
