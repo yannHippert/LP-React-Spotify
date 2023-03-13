@@ -44,6 +44,7 @@ const getItems = (playlists: Array<Playlist>): MenuItem[] => {
             </div>
         )
     ];
+    return iconItems;
     return [...iconItems, ...playlists.map((playlist) => getItem(<Link to={`/playlist/${playlist.slug}`}>{playlist.name}</Link>, `/playlist/${playlist.slug}`))];
 };
 
@@ -70,13 +71,20 @@ const SidebarNavigation = () => {
         }
     };
 
+    const getPersnoalPlaylistItems = () => {
+        return personalPlaylists.map((playlist) => getItem(<Link to={`/playlist/${playlist.slug}`}>{playlist.name}</Link>, `/playlist/${playlist.slug}`));
+    };
+
     return (
         <>
             <nav className="sidenav">
-                <Link to="/">
-                    <img src="/img/logo.png" className="nav-logo" alt="Spotify-logo" />
-                </Link>
-                <Menu mode="inline" style={{ height: '100%', borderRight: 0 }} items={getItems(personalPlaylists)} className="menu" selectedKeys={[location.pathname]} onClick={handleMenuClick} />
+                <div>
+                    <Link to="/">
+                        <img src="/img/logo.png" className="nav-logo" alt="Spotify-logo" />
+                    </Link>
+                    <Menu mode="inline" style={{ borderRight: 0 }} items={getItems(personalPlaylists)} className="static-menu" selectedKeys={[location.pathname]} onClick={handleMenuClick} />
+                </div>
+                <Menu mode="inline" style={{ borderRight: 0 }} items={getPersnoalPlaylistItems()} className="personal-menu" selectedKeys={[location.pathname]} onClick={handleMenuClick} />
             </nav>
 
             <Modal

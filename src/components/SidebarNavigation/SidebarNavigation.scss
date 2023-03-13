@@ -1,5 +1,6 @@
 @import '/src/styles/variables.scss';
 @import '/src/styles/input.scss';
+@import '/src/styles/scrollbar.scss';
 
 .sidenav {
     background-color: #000000;
@@ -10,13 +11,17 @@
     font-style: $font-style;
     font-weight: $font-weight;
     color: $text-color;
+    height: calc(100dvh - $media-controller-height);
+    display: grid;
+    grid-template-rows: 280px auto;
+    @extend .scrollbar;
 
     .nav-logo {
         width: 164px;
         margin: 1.5rem;
     }
 
-    .menu {
+    .base-menu {
         background-color: #000000;
         font-size: 19px;
         line-height: 25px;
@@ -26,8 +31,10 @@
         .ant-menu-item-selected {
             background-color: #282828 !important;
         }
+    }
 
-        .ant-menu-item:nth-child(-n + 3) {
+    .static-menu {
+        .ant-menu-item {
             height: 50px;
         }
 
@@ -39,6 +46,13 @@
             align-items: center;
             margin-right: 0.2rem;
         }
+
+        @extend .base-menu;
+    }
+
+    .personal-menu {
+        @extend .base-menu;
+        @extend .scrollbar;
     }
 }
 
