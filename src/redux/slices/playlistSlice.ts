@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { Playlist } from '../../interfaces/playlist';
 import { Song, SongData } from '../../interfaces/song';
 import songList from '../../static/data.json';
-import { generateGradient, seededGradient } from '../../utils/GradientGenerator';
+import { seededGradient } from '../../utils/GradientGenerator';
 import { getRandomSublist } from '../../utils/Getters';
 
 import '../../extensions/string';
@@ -125,26 +125,6 @@ export const playlistSlice = createSlice({
 
             state.playlists.push(createPlaylistObject({ name: action.payload.name }));
         }
-        /*
-         onDragEnd: (state: State, action: { payload: { source: any; destination: any } }) => {
-           const { source, destination } = action.payload;
-
-      if (!destination) return;
-
-      const { droppableId: sourceId } = source;
-      const { droppableId: destinationId } = destination;
-      const sourceCategory = getItemById(state.playlists, sourceId);
-      const destionationCategory = getItemById(state.categories, destinationId);
-
-      if (sourceId === destinationId) {
-        const items = reorder(sourceCategory.items, source.index, destination.index);
-        sourceCategory.items = items;
-      } else {
-        const result = move(sourceCategory.items, destionationCategory.items, source, destination);
-        sourceCategory.items = result[sourceCategory.id];
-        destionationCategory.items = result[destionationCategory.id];
-      }
-        }*/
     }
 });
 

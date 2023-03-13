@@ -5,9 +5,10 @@ import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { Playlist } from '../../interfaces/playlist';
 import { AppState, createPlaylist } from '../../redux/slices/playlistSlice';
+import { useDispatch } from 'react-redux';
+import { ReactComponent as Home } from '../../static/icons/home.svg';
 
 import './SidebarNavigation.scss';
-import { useDispatch } from 'react-redux';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -21,12 +22,12 @@ function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode
 }
 
 const getItems = (playlists: Array<Playlist>): MenuItem[] => {
-    const iconItems = [
+    return [
         getItem(
             <Link to="/">Home</Link>,
             '/',
             <div className="icon-container">
-                <img src="/icons/home.svg" alt="" />
+                <Home />
             </div>
         ),
         getItem(
@@ -44,8 +45,6 @@ const getItems = (playlists: Array<Playlist>): MenuItem[] => {
             </div>
         )
     ];
-    return iconItems;
-    return [...iconItems, ...playlists.map((playlist) => getItem(<Link to={`/playlist/${playlist.slug}`}>{playlist.name}</Link>, `/playlist/${playlist.slug}`))];
 };
 
 const SidebarNavigation = () => {

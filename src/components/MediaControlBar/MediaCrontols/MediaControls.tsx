@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Song } from '../../../interfaces/song';
+import { ReactComponent as Random } from '../../../static/icons/random.svg';
+import { ReactComponent as Previous } from '../../../static/icons/previous.svg';
+import { ReactComponent as Play } from '../../../static/icons/play.svg';
+import { ReactComponent as Next } from '../../../static/icons/next.svg';
+import { ReactComponent as Repeat } from '../../../static/icons/repeat.svg';
 
 import './MediaControls.scss';
 
@@ -25,11 +30,11 @@ const MediaControls = ({ song }: MediaControlsProps) => {
     return (
         <div className="media-controls">
             <div className="song-controls">
-                <img src="/icons/random.svg" className="general-controller" style={{ height: '20px' }} alt="" />
-                <img src="/icons/previous.svg" className="general-controller" style={{ height: '12px' }} alt="" />
-                <img src="/icons/play.svg" className="play-controller" alt="" />
-                <img src="/icons/next.svg" className="general-controller" style={{ height: '12px' }} alt="" />
-                <img src="/icons/repeat.svg" className="general-controller" style={{ height: '18px' }} alt="" />
+                <Random />
+                <Previous />
+                <Play />
+                <Next />
+                <Repeat />
             </div>
 
             <div className="duration-controls">
