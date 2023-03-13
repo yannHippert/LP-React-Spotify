@@ -15,6 +15,7 @@ $playlist-header-height: 245px;
         width: 100%;
         height: $playlist-header-height;
         font-size: 96px;
+        font-family: $font-family;
         font-weight: $font-weight;
         color: $text-color;
         padding-left: 30px;
@@ -71,9 +72,31 @@ $playlist-header-height: 245px;
         }
 
         .playlist-song-table {
+            border-radius: 0 !important;
+
+            .ant-table-cell {
+                border: none;
+            }
+
+            &.is-pinned {
+                .ant-table-thead {
+                    background-color: #222222;
+                }
+
+                .ant-table-cell {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                }
+            }
+
+            .ant-table-row {
+                * {
+                    border: none !important;
+                }
+            }
+
             * {
+                border-radius: 0 !important;
                 background-color: transparent;
-                border: none !important;
                 &::before {
                     background-color: transparent !important;
                 }

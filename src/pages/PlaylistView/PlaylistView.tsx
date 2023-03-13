@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Dropdown, Input, MenuProps, Space, Table } from 'antd';
@@ -77,6 +77,8 @@ const defaultValues = {
 const PlaylistView = () => {
     const { slug } = useParams();
     const dispatch = useDispatch();
+    const stickyRef = useRef(null);
+    const [isPinned, setIsPinned] = useState(false);
 
     const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('slug', store.playlists, slug));
     const globalSongs = useSelector(({ store }: { store: AppState }) => store.songs);
@@ -108,6 +110,20 @@ const PlaylistView = () => {
         );
         setSongs(sortBy(sortingBy, tempSongs, isAscending));
     }, [playlist, globalSongs, searchText, sortingBy, isAscending]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsPinned(entry.intersectionRatio < 1);
+            },
+            { threshold: [1] }
+        );
+        if (stickyRef.current) observer.observe(stickyRef.current);
+
+        return () => {
+            if (stickyRef.current) observer.unobserve(stickyRef.current);
+        };
+    }, [stickyRef]);
 
     const dispatchCurrentSong = (songKey: string) => {
         dispatch(setCurrentSong({ songKey }));
@@ -154,7 +170,6 @@ const PlaylistView = () => {
     };
 
     if (playlist === undefined) return <h1>NOT FOUND</h1>;
-    //if (playlist === null) return <Navigate to="/" />;
 
     return (
         <div className="playlist-view" onScroll={handleScroll}>
@@ -185,9 +200,10 @@ const PlaylistView = () => {
                     </Dropdown>
                 </div>
 
+                <div ref={stickyRef}></div>
                 <div className="table-wrapper">
                     <Table
-                        className="playlist-song-table"
+                        className={`playlist-song-table ${isPinned ? 'is-pinned' : ''}`}
                         pagination={false}
                         columns={columns}
                         dataSource={songs.map((song, index) => ({ ...song, index: index + 1 }))}
