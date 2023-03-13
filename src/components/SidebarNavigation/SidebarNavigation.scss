@@ -1,12 +1,15 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/input.scss';
+
 .sidenav {
     background-color: #000000;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
     font-size: 19px;
     line-height: 25px;
     letter-spacing: -0.0525em;
-    color: #ffffff;
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    color: $text-color;
 
     .nav-logo {
         width: 164px;
@@ -15,6 +18,14 @@
 
     .menu {
         background-color: #000000;
+        font-size: 19px;
+        line-height: 25px;
+        letter-spacing: -0.0525em;
+        padding: 0.25rem;
+
+        .ant-menu-item-selected {
+            background-color: #282828 !important;
+        }
 
         .ant-menu-item:nth-child(-n + 3) {
             height: 50px;
@@ -28,5 +39,61 @@
             align-items: center;
             margin-right: 0.2rem;
         }
+    }
+}
+
+.create-playlist-modal {
+    .ant-modal-content {
+        padding: 0;
+        background-color: #282828;
+
+        .ant-modal-close {
+            display: none;
+        }
+
+        .ant-modal-header {
+            padding: 0.5rem 1rem;
+            font-size: 19px;
+            line-height: 25px;
+            letter-spacing: -0.08em;
+            color: #ffffff;
+        }
+
+        .ant-modal-body {
+            padding: 1rem;
+        }
+
+        .ant-modal-footer {
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .modal-input {
+        width: 100%;
+
+        @extend .text-input;
+    }
+
+    .create-playlist-button {
+        padding: 0.1rem 0.7rem;
+        border-radius: 25px;
+        border: none;
+        background-color: #1db954;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        cursor: pointer;
+    }
+}
+
+.ant-message-notice-content {
+    background-color: #303030 !important;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+
+    svg {
+        fill: rgb(253, 84, 84);
     }
 }

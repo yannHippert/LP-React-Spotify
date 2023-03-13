@@ -1,0 +1,105 @@
+import React, { useState } from 'react';
+import { PlusSquareFilled } from '@ant-design/icons';
+import { Input, Menu, MenuProps, Modal, message } from 'antd';
+import { useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
+import { Playlist } from '../../interfaces/playlist';
+import { AppState, createPlaylist } from '../../redux/slices/playlistSlice';
+
+import './SidebarNavigation.scss';
+import { useDispatch } from 'react-redux';
+
+type MenuItem = Required<MenuProps>['items'][number];
+
+function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode, children?: MenuItem[]): MenuItem {
+    return {
+        key,
+        icon,
+        children,
+        label
+    } as MenuItem;
+}
+
+const getItems = (playlists: Array<Playlist>): MenuItem[] => {
+    const iconItems = [
+        getItem(
+            <Link to="/">Home</Link>,
+            '/',
+            <div className="icon-container">
+                <img src="/icons/home.svg" alt="" />
+            </div>
+        ),
+        getItem(
+            'Create Playlist',
+            'create-playlist',
+            <div className="icon-container">
+                <PlusSquareFilled style={{ fontSize: '2rem' }} />
+            </div>
+        ),
+        getItem(
+            <Link to="/playlist/liked-songs">Liked Songs</Link>,
+            '/playlist/liked-songs',
+            <div className="icon-container">
+                <img src="/img/liked_song.png" alt="" />
+            </div>
+        )
+    ];
+    return [...iconItems, ...playlists.map((playlist) => getItem(<Link to={`/playlist/${playlist.slug}`}>{playlist.name}</Link>, `/playlist/${playlist.slug}`))];
+};
+
+const SidebarNavigation = () => {
+    const location = useLocation();
+    const dispatch = useDispatch();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [playlistName, setPlaylistName] = useState('');
+
+    const personalPlaylists: Array<Playlist> = useSelector(({ store }: { store: AppState }) => store.playlists.filter(({ isPersonal }) => isPersonal));
+
+    const handleMenuClick = (e: any) => {
+        if (e.key === 'create-playlist') {
+            setIsModalOpen(true);
+        }
+    };
+
+    const handleCreatePlaylist = () => {
+        try {
+            dispatch(createPlaylist({ name: playlistName }));
+            setIsModalOpen(false);
+        } catch (e: any) {
+            message.error(e.cause);
+        }
+    };
+
+    return (
+        <>
+            <nav className="sidenav">
+                <Link to="/">
+                    <img src="/img/logo.png" className="nav-logo" alt="Spotify-logo" />
+                </Link>
+                <Menu mode="inline" style={{ height: '100%', borderRight: 0 }} items={getItems(personalPlaylists)} className="menu" selectedKeys={[location.pathname]} onClick={handleMenuClick} />
+            </nav>
+
+            <Modal
+                className="create-playlist-modal"
+                title="Create playlist"
+                open={isModalOpen}
+                closeIcon={<></>}
+                onOk={() => {}}
+                onCancel={() => setIsModalOpen(false)}
+                afterClose={() => setPlaylistName('')}
+                width={250}
+                footer={
+                    <div className="model-footer">
+                        <button className="create-playlist-button" onClick={handleCreatePlaylist}>
+                            Create
+                        </button>
+                    </div>
+                }
+            >
+                <Input className="modal-input" prefix={<></>} allowClear onChange={(e) => setPlaylistName(e.target.value)} value={playlistName} onPressEnter={handleCreatePlaylist} />
+            </Modal>
+        </>
+    );
+};
+
+export default SidebarNavigation;

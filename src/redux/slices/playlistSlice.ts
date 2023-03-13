@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { Playlist } from '../../interfaces/playlist';
 import { Song, SongData } from '../../interfaces/song';
 import songList from '../../static/data.json';
-import { generateGradient } from '../../utils/GradientGenerator';
+import { generateGradient, seededGradient } from '../../utils/GradientGenerator';
 import { getRandomSublist } from '../../utils/Getters';
 
 import '../../extensions/string';
+import { validateMinLength, validateUnique } from '../validations';
 
 export interface AppState {
     playingSong: string;
@@ -16,7 +17,7 @@ export interface AppState {
 }
 
 const dataToSong = (data: SongData): Song => ({
-    key: data.title.toString().toHash(),
+    key: data.title.toString().toHash().toString(),
     title: data.title,
     artist: data.artist,
     genre: data.genre,
@@ -35,18 +36,26 @@ const getSongs = (): { [key: string]: Song } => {
     return songs;
 };
 
+const createPlaylistObject = ({ name, isPersonal = true, gradient, songKeys = [] }: { name: string; isPersonal?: boolean; gradient?: string; songKeys?: Array<string> }) => {
+    return {
+        key: name.toHash().toString(),
+        name,
+        slug: name.toSlug(),
+        gradient: gradient ?? seededGradient(name.toHash()),
+        isPersonal: isPersonal,
+        songKeys: songKeys
+    };
+};
+
 const personalPlaylistNames = ['FAV', 'Daily Mix 1', 'Discover Weekly', 'Malayalam', 'Dance/Electronix Mix', 'EDM/Popular'];
 
 const getLikedSongsPlaylist = (): Playlist => {
     const playlistName = 'Liked Songs';
-    return {
-        key: playlistName.toHash(),
+    return createPlaylistObject({
         name: playlistName,
-        slug: playlistName.toSlug(),
-        gradient: 'linear-gradient(135deg, #4000F4 0%, #603AED 22.48%, #7C6EE6 46.93%, #979FE1 65.71%, #A2B3DE 77.68%, #ADC8DC 88.93%, #C0ECD7 100%)',
         isPersonal: false,
-        songKeys: []
-    };
+        gradient: 'linear-gradient(135deg, #4000F4 0%, #603AED 22.48%, #7C6EE6 46.93%, #979FE1 65.71%, #A2B3DE 77.68%, #ADC8DC 88.93%, #C0ECD7 100%)'
+    });
 };
 
 const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> => {
@@ -56,14 +65,7 @@ const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> 
         else {
             const playlistName = `Top 50 ${song.year}`;
 
-            map[song.year] = {
-                key: playlistName.toHash(),
-                name: playlistName,
-                slug: playlistName.toSlug(),
-                gradient: generateGradient(),
-                isPersonal: false,
-                songKeys: [song.key]
-            };
+            map[song.year] = createPlaylistObject({ name: playlistName, isPersonal: false, songKeys: [song.key] });
         }
     }
     Object.values(map).forEach((playlist) => (playlist.songKeys = playlist.songKeys.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity)));
@@ -73,14 +75,7 @@ const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> 
 const getPersonalPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> => {
     return personalPlaylistNames.map((playlistName) => {
         const songList = getRandomSublist(Object.keys(songsMap));
-        return {
-            key: playlistName.toHash(),
-            name: playlistName,
-            slug: playlistName.toSlug(),
-            gradient: generateGradient(),
-            isPersonal: true,
-            songKeys: songList.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity)
-        };
+        return createPlaylistObject({ name: playlistName, songKeys: songList.sort((a, b) => songsMap[b].popularity - songsMap[a].popularity) });
     });
 };
 
@@ -91,7 +86,7 @@ export const playlistSlice = createSlice({
         const playlists = [getLikedSongsPlaylist(), ...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)];
         return {
             playingSong: playlists[1].songKeys[0],
-            playingPlaylist: playlists[1].key,
+            playingPlaylist: playlists[1].slug,
             currentPlaylist: '',
             songs: songs,
             playlists: playlists
@@ -102,8 +97,8 @@ export const playlistSlice = createSlice({
             state.playingSong = action.payload.songKey;
             state.playingPlaylist = state.currentPlaylist;
         },
-        setCurrentPlaylist: (state: AppState, action: { payload: { playlistKey: string } }) => {
-            state.currentPlaylist = action.payload.playlistKey;
+        setCurrentPlaylist: (state: AppState, action: { payload: { playlistSlug: string } }) => {
+            state.currentPlaylist = action.payload.playlistSlug;
         },
         toggleFavorite: (state: AppState, action: { payload: { songKey: string } }) => {
             state.songs[action.payload.songKey].isFavorite = !state.songs[action.payload.songKey].isFavorite;
@@ -117,6 +112,18 @@ export const playlistSlice = createSlice({
             } else {
                 state.playlists[playlistIndex].songKeys.push(action.payload.songKey);
             }
+        },
+        createPlaylist: (state: AppState, action: { payload: { name: string } }) => {
+            validateMinLength(action.payload.name, 2);
+            try {
+                validateUnique('slug', state.playlists, action.payload.name.toSlug());
+            } catch (e) {
+                throw new Error('Slug already exists', {
+                    cause: 'The name of a playlist must be unique'
+                });
+            }
+
+            state.playlists.push(createPlaylistObject({ name: action.payload.name }));
         }
         /*
          onDragEnd: (state: State, action: { payload: { source: any; destination: any } }) => {
@@ -141,6 +148,6 @@ export const playlistSlice = createSlice({
     }
 });
 
-export const { setCurrentSong, setCurrentPlaylist, toggleFavorite, togglePlaylistSong } = playlistSlice.actions;
+export const { setCurrentSong, setCurrentPlaylist, toggleFavorite, togglePlaylistSong, createPlaylist } = playlistSlice.actions;
 
 export default playlistSlice.reducer;

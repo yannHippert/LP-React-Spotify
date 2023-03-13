@@ -1,7 +1,7 @@
 declare global {
     interface String {
         toTitle(): string;
-        toHash(): string;
+        toHash(): number;
         toSlug(): string;
     }
 }
@@ -12,16 +12,16 @@ String.prototype.toTitle = function (): string {
         .join(' ');
 };
 
-String.prototype.toHash = function (): string {
+String.prototype.toHash = function (): number {
     let hash = 0;
     let chr;
-    if (this.length === 0) return hash.toString();
+    if (this.length === 0) return hash;
     for (let i = 0; i < this.length; i++) {
         chr = this.charCodeAt(i);
         hash = (hash << 5) - hash + chr;
         hash |= 0;
     }
-    return hash.toString();
+    return hash;
 };
 
 String.prototype.toSlug = function (): string {
