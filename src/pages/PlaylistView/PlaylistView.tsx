@@ -20,13 +20,14 @@ const columns: ColumnsType<Song> = [
     {
         title: '#',
         dataIndex: 'index',
-        width: 75
+        width: 75,
+        render: (e, song, index) => <p>{index + 1}</p>,
     },
     {
         title: '',
         dataIndex: 'isFavorite',
         width: 50,
-        render: (e, song) => <FavoriteIndicator song={song} size={13} />
+        render: (e, song) => <FavoriteIndicator song={song} size={13} />,
     },
     {
         title: 'TITLE',
@@ -35,23 +36,23 @@ const columns: ColumnsType<Song> = [
             <p>
                 {song.title} - {song.artist}
             </p>
-        )
+        ),
     },
     {
         title: 'YEAR',
         dataIndex: 'year',
-        width: 100
+        width: 100,
     },
     {
         title: 'GENRE',
         dataIndex: 'genre',
-        render: (genre) => genre.toTitle()
+        render: (genre) => genre.toTitle(),
     },
     {
         title: 'POPULARITY',
         dataIndex: 'popularity',
         width: 150,
-        render: (popularity) => <p className="popularity-text">{popularity}</p>
+        render: (popularity) => <p className="popularity-text">{popularity}</p>,
     },
     {
         title: 'DURATION',
@@ -62,13 +63,13 @@ const columns: ColumnsType<Song> = [
                 {Math.floor(duration / 60)}:{duration % 60 < 10 && '0'}
                 {duration % 60}
             </p>
-        )
-    }
+        ),
+    },
 ];
 
 const defaultValues = {
     isAscending: false,
-    sortingBy: 'popularity'
+    sortingBy: 'popularity',
 } as {
     isAscending: boolean;
     sortingBy: keyof Song;
@@ -91,7 +92,7 @@ const PlaylistView = () => {
         songKey: '',
         isVisible: false,
         x: 0,
-        y: 0
+        y: 0,
     });
 
     useEffect(() => {
@@ -106,7 +107,7 @@ const PlaylistView = () => {
         const tempSongs = playlistSongs.filter((song: Song) =>
             Object.values(song).some((value) => {
                 return song.key === value ? false : value.toString().toLowerCase().includes(lowerSearchText);
-            })
+            }),
         );
         setSongs(sortBy(sortingBy, tempSongs, isAscending));
     }, [playlist, globalSongs, searchText, sortingBy, isAscending]);
@@ -116,7 +117,7 @@ const PlaylistView = () => {
             ([entry]) => {
                 setIsPinned(entry.intersectionRatio < 1);
             },
-            { threshold: [1] }
+            { threshold: [1] },
         );
         if (stickyRef.current) observer.observe(stickyRef.current);
 
@@ -146,7 +147,7 @@ const PlaylistView = () => {
                 {filter.toTitle()}
             </div>
         ),
-        key: filter
+        key: filter,
     }));
 
     const handleContextMenu = (event: any, song: Song) => {
@@ -161,7 +162,7 @@ const PlaylistView = () => {
             songKey: song.key,
             isVisible: true,
             x: event.clientX,
-            y: event.clientY
+            y: event.clientY,
         });
     };
 
@@ -191,7 +192,7 @@ const PlaylistView = () => {
                         onChange={(e) => setSearchText(e.target.value)}
                     />
                     <Dropdown menu={{ items }} trigger={['click']} className="order-filter">
-                        <a onClick={(e) => e.preventDefault()}>
+                        <a onClick={(e) => e.preventDefault()} href="#">
                             <Space>
                                 Custom order
                                 <CaretRightOutlined style={{ transform: 'rotate(90deg)', fontSize: '0.75rem' }} />
@@ -206,11 +207,11 @@ const PlaylistView = () => {
                         className={`playlist-song-table ${isPinned ? 'is-pinned' : ''}`}
                         pagination={false}
                         columns={columns}
-                        dataSource={songs.map((song, index) => ({ ...song, index: index + 1 }))}
+                        dataSource={songs}
                         onRow={(record) => {
                             return {
                                 onDoubleClick: (e) => dispatchCurrentSong(record.key),
-                                onContextMenu: (e) => handleContextMenu(e, record)
+                                onContextMenu: (e) => handleContextMenu(e, record),
                             };
                         }}
                         sticky
