@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Dropdown, Input, MenuProps, Space, Table } from 'antd';
-import { ColumnsType } from 'antd/es/table';
 import { Song } from '../../interfaces/song';
 import { CaretRightOutlined, SearchOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
@@ -11,61 +10,10 @@ import { sortBy } from '../../utils/Comparer';
 import TableContextMenu from '../../components/TableContextMenu/TableContextMenu';
 import { getItemBy, mapToList } from '../../utils/Getters';
 import PlaylistCover from '../../components/PlaylistCover/PlaylistCover';
-import FavoriteIndicator from '../../components/FavotiteIndicator/FavoriteIndicator';
 
 import '../../extensions/string';
 import './PlaylistView.scss';
-
-const columns: ColumnsType<Song> = [
-    {
-        title: '#',
-        dataIndex: 'index',
-        width: 75,
-        render: (e, song, index) => <p>{index + 1}</p>,
-    },
-    {
-        title: '',
-        dataIndex: 'isFavorite',
-        width: 50,
-        render: (e, song) => <FavoriteIndicator song={song} size={13} />,
-    },
-    {
-        title: 'TITLE',
-        dataIndex: 'title',
-        render: (_, song) => (
-            <p>
-                {song.title} - {song.artist}
-            </p>
-        ),
-    },
-    {
-        title: 'YEAR',
-        dataIndex: 'year',
-        width: 100,
-    },
-    {
-        title: 'GENRE',
-        dataIndex: 'genre',
-        render: (genre) => genre.toTitle(),
-    },
-    {
-        title: 'POPULARITY',
-        dataIndex: 'popularity',
-        width: 150,
-        render: (popularity) => <p className="popularity-text">{popularity}</p>,
-    },
-    {
-        title: 'DURATION',
-        dataIndex: 'duration',
-        width: 105,
-        render: (duration) => (
-            <p className="duration-text">
-                {Math.floor(duration / 60)}:{duration % 60 < 10 && '0'}
-                {duration % 60}
-            </p>
-        ),
-    },
-];
+import { columns, sortable_columns } from './columns';
 
 const defaultValues = {
     isAscending: false,
@@ -119,10 +67,11 @@ const PlaylistView = () => {
             },
             { threshold: [1] },
         );
-        if (stickyRef.current) observer.observe(stickyRef.current);
+        let ref = stickyRef.current;
+        if (ref) observer.observe(ref);
 
         return () => {
-            if (stickyRef.current) observer.unobserve(stickyRef.current);
+            if (ref) observer.unobserve(ref);
         };
     }, [stickyRef]);
 
@@ -132,22 +81,21 @@ const PlaylistView = () => {
 
     function handleFilterClick(e: any, key: keyof Song) {
         e.preventDefault();
-        if (key === sortingBy) setIsAscending(!isAscending);
-        else {
+        if (key === sortingBy) {
+            setIsAscending(!isAscending);
+        } else {
             setIsAscending(false);
             setSortingBy(key);
         }
     }
 
-    const filters = ['title', 'year', 'genre', 'popularity', 'duration'] as Array<keyof Song>;
-
-    const items: MenuProps['items'] = filters.map((filter: keyof Song) => ({
+    const items: MenuProps['items'] = sortable_columns.map((sorter: keyof Song) => ({
         label: (
-            <div onClick={(e) => handleFilterClick(e, filter)} className={sortingBy === filter ? 'selected-filter' : ''}>
-                {filter.toTitle()}
+            <div onClick={(e) => handleFilterClick(e, sorter)} className={sortingBy === sorter ? 'selected-filter' : ''}>
+                {sorter.toTitle()}
             </div>
         ),
-        key: filter,
+        key: sorter,
     }));
 
     const handleContextMenu = (event: any, song: Song) => {
@@ -192,12 +140,10 @@ const PlaylistView = () => {
                         onChange={(e) => setSearchText(e.target.value)}
                     />
                     <Dropdown menu={{ items }} trigger={['click']} className="order-filter">
-                        <a onClick={(e) => e.preventDefault()} href="#">
-                            <Space>
-                                Custom order
-                                <CaretRightOutlined style={{ transform: 'rotate(90deg)', fontSize: '0.75rem' }} />
-                            </Space>
-                        </a>
+                        <Space>
+                            Custom order
+                            <CaretRightOutlined style={{ transform: 'rotate(90deg)', fontSize: '0.75rem' }} />
+                        </Space>
                     </Dropdown>
                 </div>
 

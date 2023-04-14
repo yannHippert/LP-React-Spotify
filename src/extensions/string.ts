@@ -28,7 +28,6 @@ String.prototype.toSlug = function (): string {
     let str = this.replace(/^\s+|\s+$/g, '');
     str = str.toLowerCase();
 
-    // remove accents, swap ñ for n, etc
     const from = 'àáäâèéëêìíïîòóöôùúüûñç·/_,:;';
     const to = 'aaaaeeeeiiiioooouuuunc------';
     for (let i = 0, l = from.length; i < l; i++) {
@@ -36,9 +35,9 @@ String.prototype.toSlug = function (): string {
     }
 
     str = str
-        .replace(/[^a-z0-9 -]/g, '') // remove invalid chars
-        .replace(/\s+/g, '-') // collapse whitespace and replace by -
-        .replace(/-+/g, '-'); // collapse dashes
+        .replace(/[^a-z0-9 -]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
 
     return str;
 };

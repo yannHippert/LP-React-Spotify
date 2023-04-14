@@ -2,8 +2,8 @@ export const getRandomElement = (list: Array<any>) => {
     return list[(list.length * Math.random()) << 0];
 };
 
-export function getRandomSublist<Type>(list: Array<Type>): Array<Type> {
-    const itemCount = getRandomInt(10, Math.min(55, list.length / 4));
+export function getRandomSublist<Type>(list: Array<Type>, { min = 10, max = 50 }: { min?: number; max?: number }): Array<Type> {
+    const itemCount = getRandomInt(min, Math.min(max, list.length / 4));
     const sublist: Array<Type> = [];
     while (sublist.length !== itemCount) {
         const item = getRandomElement(list);
@@ -20,7 +20,7 @@ export function getItemBy<Type, Key extends keyof Type>(keyName: Key, list: Arra
     const item = getItemByOrNull(keyName, list, key);
     if (item === null || item === undefined)
         throw new Error('Item not found', {
-            cause: `No item found with the ${keyName.toString()} ${key}`
+            cause: `No item found with the ${keyName.toString()} ${key}`,
         });
     return item;
 }

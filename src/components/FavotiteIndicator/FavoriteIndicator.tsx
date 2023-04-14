@@ -14,13 +14,13 @@ interface FavoriteIndicatorProps {
 const FavoriteIndicator = ({ song, size }: FavoriteIndicatorProps) => {
     const dispatch = useDispatch();
 
-    const handleFavoritToggle = (songKey: string) => {
-        dispatch(toggleFavorite({ songKey }));
+    const handleFavoritToggle = () => {
+        dispatch(toggleFavorite({ songKey: song.key }));
     };
 
     return (
         <div className="favorite-checkbox">
-            <input type="checkbox" checked={song.isFavorite} id={song.key} onChange={() => handleFavoritToggle(song.key)} />
+            <input type="checkbox" checked={song.isFavorite} id={song.key} onChange={handleFavoritToggle} />
             <label htmlFor={song.key}>{song.isFavorite ? <HeartFilled width={size} /> : <HeartEmpty width={size} />}</label>
         </div>
     );

@@ -68,6 +68,15 @@ $playlist-header-height: 245px;
                 padding: 10px 16px;
                 border-radius: 23px;
                 cursor: pointer;
+
+                button {
+                    color: white;
+                    background-color: #535353;
+                    border-color: #535353;
+                    padding: 10px 16px;
+                    border-radius: 23px;
+                    cursor: pointer;
+                }
             }
         }
 
