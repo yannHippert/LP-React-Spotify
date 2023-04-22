@@ -16,6 +16,10 @@ $context-menu-border-radius: 5px;
     grid-template-rows: 1fr auto;
     max-height: 300px;
 
+    &.up-menu {
+        transform: translateY(-100%);
+    }
+
     .context-menu-header,
     .context-menu-item {
         font-size: 19px;
