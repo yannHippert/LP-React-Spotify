@@ -7,17 +7,37 @@ import { ReactComponent as Next } from '../../../static/icons/next.svg';
 import { ReactComponent as Repeat } from '../../../static/icons/repeat.svg';
 
 import './MediaControls.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { SongStoreState, togglePlaying } from '../../../redux/slices/songSlice';
+import { Tooltip } from 'antd';
+import { nextSong, previousSong } from '../../../redux/slices/playlistSlice';
 
 interface MediaControlsProps {
     song: Song;
 }
 
 const MediaControls = ({ song }: MediaControlsProps) => {
+    const showTooltipArrow = false;
+    const tooltipDelay = 0.2;
+
+    const dispatch = useDispatch();
     const [songTime, setSongTime] = useState(0);
+    const isPlaying = useSelector(({ song_store: store }: { song_store: SongStoreState }) => store.isPlaying);
 
     useEffect(() => {
         setSongTime(0);
+        if (!isPlaying) dispatch(togglePlaying());
     }, [song]);
+
+    useEffect(() => {
+        if (isPlaying) {
+            const interval = setInterval(() => {
+                setSongTime((previous) => previous + 0.1);
+            }, 100);
+
+            return () => clearInterval(interval);
+        }
+    }, [isPlaying]);
 
     const secondsToTime = (seconds: number) => {
         return `${Math.floor(seconds / 60)}:${seconds % 60 < 10 ? '0' : ''}${seconds % 60}`;
@@ -27,18 +47,36 @@ const MediaControls = ({ song }: MediaControlsProps) => {
         return song !== null ? secondsToTime(song.duration) : '0:00';
     };
 
+    const handleTogglePlaying = () => {
+        dispatch(togglePlaying());
+    };
+
+    const handlePreviousSong = () => {
+        dispatch(previousSong());
+    };
+
+    const handleNextSong = () => {
+        dispatch(nextSong());
+    };
+
     return (
         <div className="media-controls">
             <div className="song-controls">
-                <Random />
-                <Previous />
-                <Play />
-                <Next />
-                <Repeat />
+                <i className="fa-solid fa-shuffle opacity-controlled"></i>
+                <Tooltip placement="top" title="Previous" showArrow={showTooltipArrow} mouseEnterDelay={tooltipDelay}>
+                    <i className="fa-solid fa-backward-step opacity-controlled" onClick={handlePreviousSong}></i>
+                </Tooltip>
+                <Tooltip placement="top" title={isPlaying ? 'Pause' : 'Play'} showArrow={showTooltipArrow} mouseEnterDelay={tooltipDelay}>
+                    <i className={`fa-solid play-pause-button fa-circle-${isPlaying ? 'pause' : 'play'}`} onClick={handleTogglePlaying}></i>
+                </Tooltip>
+                <Tooltip placement="top" title="Next" showArrow={showTooltipArrow} mouseEnterDelay={tooltipDelay}>
+                    <i className="fa-solid fa-forward-step opacity-controlled" onClick={handleNextSong}></i>
+                </Tooltip>
+                <i className="fa-solid fa-repeat opacity-controlled"></i>
             </div>
 
             <div className="duration-controls">
-                <p className="duration-display">{secondsToTime(songTime)}</p>
+                <p className="duration-display">{secondsToTime(Math.floor(songTime))}</p>
                 <input
                     className="duration-bar"
                     type="range"

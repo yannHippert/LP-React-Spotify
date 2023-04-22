@@ -5,7 +5,7 @@ import { Dropdown, Input, MenuProps, Space, Table } from 'antd';
 import { Song } from '../../interfaces/song';
 import { CaretRightOutlined, SearchOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
-import { AppState, setCurrentPlaylist, setCurrentSong } from '../../redux/slices/playlistSlice';
+import { AppState, setCurrentPlaylist, setPlayingSong } from '../../redux/slices/playlistSlice';
 import { sortBy } from '../../utils/Comparer';
 import TableContextMenu from '../../components/TableContextMenu/TableContextMenu';
 import { getItemBy, mapToList } from '../../utils/Getters';
@@ -57,6 +57,7 @@ const PlaylistView = () => {
                 return song.key === value ? false : value.toString().toLowerCase().includes(lowerSearchText);
             }),
         );
+
         setSongs(sortBy(sortingBy, tempSongs, isAscending));
     }, [playlist, globalSongs, searchText, sortingBy, isAscending]);
 
@@ -76,7 +77,7 @@ const PlaylistView = () => {
     }, [stickyRef]);
 
     const dispatchCurrentSong = (songKey: string) => {
-        dispatch(setCurrentSong({ songKey }));
+        dispatch(setPlayingSong({ songKey }));
     };
 
     function handleFilterClick(e: any, key: keyof Song) {
@@ -141,7 +142,8 @@ const PlaylistView = () => {
                     />
                     <Dropdown menu={{ items }} trigger={['click']} className="order-filter">
                         <Space>
-                            Custom order
+                            {sortingBy.toTitle()}
+                            {isAscending ? <i className="fa-solid fa-arrow-down-a-z"></i> : <i className="fa-solid fa-arrow-down-z-a"></i>}
                             <CaretRightOutlined style={{ transform: 'rotate(90deg)', fontSize: '0.75rem' }} />
                         </Space>
                     </Dropdown>

@@ -5,6 +5,7 @@ import { seededGradient } from '../../utils/GradientGenerator';
 import { getRandomSublist } from '../../utils/Getters';
 
 import '../../extensions/string';
+import { AppState } from '../slices/playlistSlice';
 
 const personalPlaylistNames = ['FAV', 'Daily Mix 1', 'Discover Weekly', 'Malayalam', 'Dance/Electronix Mix', 'EDM/Popular'];
 
@@ -69,7 +70,7 @@ const getTop50sPlaylists = (songsMap: { [key: string]: Song }): Array<Playlist> 
     return Object.values(map).sort((a, b) => b.name.localeCompare(a.name));
 };
 
-export const getInitialState = () => {
+export const getInitialState = (): AppState => {
     const songs = getSongs();
     const playlists = [getLikedSongsPlaylist(), ...getPersonalPlaylists(songs), ...getTop50sPlaylists(songs)];
     return {
@@ -78,5 +79,6 @@ export const getInitialState = () => {
         currentPlaylist: '',
         songs: songs,
         playlists: playlists,
+        isPlaying: false,
     };
 };

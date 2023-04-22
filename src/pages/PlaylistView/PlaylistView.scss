@@ -63,11 +63,15 @@ $playlist-header-height: 245px;
             }
 
             .order-filter {
+                width: 150px;
                 color: white;
                 background-color: #535353;
                 padding: 10px 16px;
                 border-radius: 23px;
                 cursor: pointer;
+                display: flex;
+                justify-content: end;
+                align-items: center;
 
                 button {
                     color: white;

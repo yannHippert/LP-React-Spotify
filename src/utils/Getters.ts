@@ -16,6 +16,15 @@ export const getRandomInt = (min = 0, max = 10) => {
     return Math.floor(Math.random() * (max - min) + min);
 };
 
+export function getIndexBy<Type>(keyName: keyof Type, list: Array<Type>, key: any) {
+    const index = list.findIndex((item: Type) => item[keyName] === key);
+    if (key === -1)
+        throw new Error('Item not found', {
+            cause: `No item found with the ${keyName.toString()} ${key}`,
+        });
+    return index;
+}
+
 export function getItemBy<Type, Key extends keyof Type>(keyName: Key, list: Array<Type>, key: any) {
     const item = getItemByOrNull(keyName, list, key);
     if (item === null || item === undefined)

@@ -53,4 +53,4 @@ export const columns: ColumnsType<Song> = [
     },
 ];
 
-export const sortable_columns = ['title', 'year', 'genre', 'popularity', 'duration'] as Array<keyof Song>;
+export const sortable_columns = ['custom', 'title', 'year', 'genre', 'popularity', 'duration'] as Array<keyof Song>;

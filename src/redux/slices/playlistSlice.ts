@@ -5,6 +5,7 @@ import { Song } from '../../interfaces/song';
 import '../../extensions/string';
 import { validateMinLength, validateUnique } from '../utils/validations';
 import { createPlaylistObject, getInitialState } from '../utils/initialGenerator';
+import { getIndexBy, getItemBy } from '../../utils/Getters';
 
 export interface AppState {
     playingSong: string;
@@ -12,15 +13,37 @@ export interface AppState {
     currentPlaylist: string;
     songs: { [key: string]: Song };
     playlists: Array<Playlist>;
+    isPlaying: boolean;
 }
 
 export const playlistSlice = createSlice({
     name: 'store',
     initialState: (): AppState => getInitialState(),
     reducers: {
-        setCurrentSong: (state: AppState, action: { payload: { songKey: string } }) => {
+        setPlayingSong: (state: AppState, action: { payload: { songKey: string } }) => {
             state.playingSong = action.payload.songKey;
             state.playingPlaylist = state.currentPlaylist;
+        },
+        previousSong: (state: AppState) => {
+            const playingPlaylist = getItemBy('slug', state.playlists, state.playingPlaylist);
+            const index = playingPlaylist.songKeys.findIndex((value: string) => value === state.playingSong);
+            if (index === 0) {
+                state.playingSong = playingPlaylist.songKeys[playingPlaylist.songKeys.length - 1];
+            } else {
+                state.playingSong = playingPlaylist.songKeys[index - 1];
+            }
+        },
+        togglePlaying: (state: AppState) => {
+            state.isPlaying = !state.isPlaying;
+        },
+        nextSong: (state: AppState) => {
+            const playingPlaylist = getItemBy('slug', state.playlists, state.playingPlaylist);
+            const index = playingPlaylist.songKeys.findIndex((value: string) => value === state.playingSong);
+            if (index === playingPlaylist.songKeys.length - 1) {
+                state.playingSong = playingPlaylist.songKeys[0];
+            } else {
+                state.playingSong = playingPlaylist.songKeys[index + 1];
+            }
         },
         setCurrentPlaylist: (state: AppState, action: { payload: { playlistSlug: string } }) => {
             state.currentPlaylist = action.payload.playlistSlug;
@@ -53,6 +76,6 @@ export const playlistSlice = createSlice({
     },
 });
 
-export const { setCurrentSong, setCurrentPlaylist, toggleFavorite, togglePlaylistSong, createPlaylist } = playlistSlice.actions;
+export const { setPlayingSong, nextSong, previousSong, togglePlaying, setCurrentPlaylist, toggleFavorite, togglePlaylistSong, createPlaylist } = playlistSlice.actions;
 
 export default playlistSlice.reducer;
