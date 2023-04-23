@@ -1,16 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Song } from '../../../interfaces/song';
-import { ReactComponent as Random } from '../../../static/icons/random.svg';
-import { ReactComponent as Previous } from '../../../static/icons/previous.svg';
-import { ReactComponent as Play } from '../../../static/icons/play.svg';
-import { ReactComponent as Next } from '../../../static/icons/next.svg';
-import { ReactComponent as Repeat } from '../../../static/icons/repeat.svg';
 
 import './MediaControls.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { SongStoreState, togglePlaying } from '../../../redux/slices/songSlice';
 import { Tooltip } from 'antd';
-import { nextSong, previousSong } from '../../../redux/slices/playlistSlice';
+import { AppState, nextSong, previousSong, togglePlaying } from '../../../redux/slices/playlistSlice';
 
 interface MediaControlsProps {
     song: Song;
@@ -22,11 +16,10 @@ const MediaControls = ({ song }: MediaControlsProps) => {
 
     const dispatch = useDispatch();
     const [songTime, setSongTime] = useState(0);
-    const isPlaying = useSelector(({ song_store: store }: { song_store: SongStoreState }) => store.isPlaying);
+    const isPlaying = useSelector(({ store }: { store: AppState }) => store.isPlaying);
 
     useEffect(() => {
         setSongTime(0);
-        if (!isPlaying) dispatch(togglePlaying());
     }, [song]);
 
     useEffect(() => {
@@ -84,7 +77,11 @@ const MediaControls = ({ song }: MediaControlsProps) => {
                     max={song?.duration}
                     onChange={(e) => setSongTime(e.target.valueAsNumber)}
                     value={songTime}
-                    style={{ background: `linear-gradient(to right, white 0%, white ${(songTime / song.duration) * 100}%, #535353 ${(songTime / song.duration) * 100}%, #535353 100%)` }}
+                    style={{
+                        background: `linear-gradient(to right, white 0%, white ${(songTime / song.duration) * 100}%, #535353 ${
+                            (songTime / song.duration) * 100
+                        }%, #535353 100%)`,
+                    }}
                 />
                 <p className="duration-display">{getSongDuration()}</p>
             </div>

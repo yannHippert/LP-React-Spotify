@@ -87,6 +87,10 @@ $playlist-header-height: 245px;
         .playlist-song-table {
             border-radius: 0 !important;
 
+            .is-playing-song {
+                color: $highlight-color;
+            }
+
             .ant-table-cell {
                 border: none;
             }

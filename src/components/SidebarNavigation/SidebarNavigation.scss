@@ -28,6 +28,19 @@
         letter-spacing: -0.0525em;
         padding: 0.25rem;
 
+        .ant-menu-title-content > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            i {
+                color: #1db954;
+                font-size: 1rem;
+                margin-right: 0.25rem;
+            }
+        }
+
         .ant-menu-item-selected {
             background-color: #282828 !important;
         }

@@ -1,28 +1,63 @@
-.playlist-card {
+@import '/src/styles/variables.scss';
+
+$playlist-card-height: 100px;
+
+.playlist-card-wrapper {
+    position: relative;
     cursor: pointer;
     background-color: #303030;
-    width: 100%;
-    height: 100px;
+
+    &:hover {
+        background-color: #181818;
+
+        .play-pause-button {
+            opacity: 1;
+        }
+    }
+
+    .play-pause-button {
+        opacity: 0;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 2.5rem;
+        transition: transform 0.2s, opacity 0.2s;
+        text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.75);
+        color: $highlight-color;
+        cursor: pointer;
+
+        &.is-playing-playlist {
+            opacity: 1;
+        }
+
+        &:hover {
+            transform: translate(0, -50%) scale(1.1);
+        }
+    }
+}
+
+.playlist-card {
+    height: $playlist-card-height;
     transition: background-color 0.4s;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-radius: 4px;
     overflow: hidden;
+    gap: 1rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    &:hover {
-        background-color: #181818;
-    }
-
     .playlist-cover {
-        margin-right: 1rem;
         height: 100%;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 1.5rem;
         line-height: 26px;
         letter-spacing: -0.02em;
+        width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

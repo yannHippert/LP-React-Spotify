@@ -10,10 +10,11 @@ import { sortBy } from '../../utils/Comparer';
 import TableContextMenu from '../../components/TableContextMenu/TableContextMenu';
 import { getItemBy, mapToList } from '../../utils/Getters';
 import PlaylistCover from '../../components/PlaylistCover/PlaylistCover';
+import { ColumnsType } from 'antd/es/table';
+import FavoriteIndicator from '../../components/FavotiteIndicator/FavoriteIndicator';
 
 import '../../extensions/string';
 import './PlaylistView.scss';
-import { columns, sortable_columns } from './columns';
 
 const defaultValues = {
     isAscending: false,
@@ -23,6 +24,59 @@ const defaultValues = {
     sortingBy: keyof Song;
 };
 
+const getColumns = (playingSong: string, isPlayingPlaylist: boolean): ColumnsType<Song> => [
+    {
+        title: '#',
+        dataIndex: 'index',
+        width: 75,
+        render: (e, song, index) => <p>{index + 1}</p>,
+    },
+    {
+        title: '',
+        dataIndex: 'isFavorite',
+        width: 50,
+        render: (e, song) => <FavoriteIndicator song={song} size={13} />,
+    },
+    {
+        title: 'TITLE',
+        dataIndex: 'title',
+        render: (_, song) => (
+            <p className={isPlayingPlaylist && playingSong === song.key ? 'is-playing-song' : ''}>
+                {song.title} - {song.artist}
+            </p>
+        ),
+    },
+    {
+        title: 'YEAR',
+        dataIndex: 'year',
+        width: 100,
+    },
+    {
+        title: 'GENRE',
+        dataIndex: 'genre',
+        render: (genre) => genre.toTitle(),
+    },
+    {
+        title: 'POPULARITY',
+        dataIndex: 'popularity',
+        width: 150,
+        render: (popularity) => <p className="popularity-text">{popularity}</p>,
+    },
+    {
+        title: 'DURATION',
+        dataIndex: 'duration',
+        width: 105,
+        render: (duration) => (
+            <p className="duration-text">
+                {Math.floor(duration / 60)}:{duration % 60 < 10 && '0'}
+                {duration % 60}
+            </p>
+        ),
+    },
+];
+
+const sortable_columns = ['custom', 'title', 'year', 'genre', 'popularity', 'duration'] as Array<keyof Song>;
+
 const PlaylistView = () => {
     const { slug } = useParams();
     const dispatch = useDispatch();
@@ -31,6 +85,8 @@ const PlaylistView = () => {
 
     const playlist = useSelector(({ store }: { store: AppState }) => getItemBy('slug', store.playlists, slug));
     const globalSongs = useSelector(({ store }: { store: AppState }) => store.songs);
+    const playingSong = useSelector(({ store }: { store: AppState }) => store.playingSong);
+    const playingPlaylist = useSelector(({ store }: { store: AppState }) => store.playingPlaylist);
     const [songs, setSongs] = useState<Array<Song>>([]);
 
     const [sortingBy, setSortingBy] = useState<keyof Song>(defaultValues.sortingBy);
@@ -50,7 +106,10 @@ const PlaylistView = () => {
     }, [slug, dispatch]);
 
     useEffect(() => {
-        const playlistSongs = playlist.name === 'Liked Songs' ? Object.values(globalSongs).filter(({ isFavorite }) => isFavorite) : mapToList(globalSongs, playlist?.songKeys ?? []);
+        const playlistSongs =
+            playlist.name === 'Liked Songs'
+                ? Object.values(globalSongs).filter(({ isFavorite }) => isFavorite)
+                : mapToList(globalSongs, playlist?.songKeys ?? []);
         const lowerSearchText = searchText.toLowerCase();
         const tempSongs = playlistSongs.filter((song: Song) =>
             Object.values(song).some((value) => {
@@ -152,9 +211,9 @@ const PlaylistView = () => {
                 <div ref={stickyRef}></div>
                 <div className="table-wrapper">
                     <Table
-                        className={`playlist-song-table ${isPinned ? 'is-pinned' : ''}`}
+                        className={`playlist-song-table ${isPinned && 'is-pinned'}`}
                         pagination={false}
-                        columns={columns}
+                        columns={getColumns(playingSong, playlist.slug === playingPlaylist)}
                         dataSource={songs}
                         onRow={(record) => {
                             return {
