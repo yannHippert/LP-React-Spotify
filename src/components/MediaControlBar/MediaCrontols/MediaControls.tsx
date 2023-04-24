@@ -18,6 +18,10 @@ const MediaControls = ({ song }: MediaControlsProps) => {
     const [songTime, setSongTime] = useState(0);
     const isPlaying = useSelector(({ store }: { store: AppState }) => store.isPlaying);
 
+    if (songTime > song.duration) {
+        dispatch(nextSong());
+    }
+
     useEffect(() => {
         setSongTime(0);
     }, [song]);

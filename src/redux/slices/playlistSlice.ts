@@ -5,7 +5,9 @@ import { Song } from '../../interfaces/song';
 import '../../extensions/string';
 import { validateMinLength, validateUnique } from '../utils/validations';
 import { createPlaylistObject, getInitialState } from '../utils/initialGenerator';
-import { getIndexBy, getItemBy } from '../../utils/Getters';
+import { getItemBy } from '../../utils/Getters';
+
+const liked_songs = 'liked-songs';
 
 export interface AppState {
     playingSong: string;
@@ -23,7 +25,11 @@ export const playlistSlice = createSlice({
         setPlayingPlaylist: (state: AppState, action: { payload: { playlistSlug: string } }) => {
             const playingPlaylist = getItemBy('slug', state.playlists, action.payload.playlistSlug);
             state.playingPlaylist = action.payload.playlistSlug;
-            state.playingSong = playingPlaylist.songKeys[0];
+            if (action.payload.playlistSlug === liked_songs) {
+                state.playingSong = Object.values(state.songs).find(({ isFavorite }) => isFavorite)!.key;
+            } else {
+                state.playingSong = playingPlaylist.songKeys[0];
+            }
             state.isPlaying = true;
         },
         setPlayingSong: (state: AppState, action: { payload: { songKey: string } }) => {
@@ -32,9 +38,15 @@ export const playlistSlice = createSlice({
         },
         previousSong: (state: AppState) => {
             const playingPlaylist = getItemBy('slug', state.playlists, state.playingPlaylist);
-            const index = playingPlaylist.songKeys.findIndex((value: string) => value === state.playingSong);
-            if (index === 0) state.playingSong = playingPlaylist.songKeys[playingPlaylist.songKeys.length - 1];
-            else state.playingSong = playingPlaylist.songKeys[index - 1];
+            const songs =
+                state.playingPlaylist === liked_songs
+                    ? Object.values(state.songs)
+                          .filter(({ isFavorite }) => isFavorite)
+                          .map(({ key }) => key)
+                    : playingPlaylist.songKeys;
+            const index = songs.findIndex((value: string) => value === state.playingSong);
+            if (index === 0) state.playingSong = songs[songs.length - 1];
+            else state.playingSong = songs[index - 1];
             if (!state.isPlaying) state.isPlaying = true;
         },
         togglePlaying: (state: AppState) => {
@@ -42,9 +54,15 @@ export const playlistSlice = createSlice({
         },
         nextSong: (state: AppState) => {
             const playingPlaylist = getItemBy('slug', state.playlists, state.playingPlaylist);
-            const index = playingPlaylist.songKeys.findIndex((value: string) => value === state.playingSong);
-            if (index === playingPlaylist.songKeys.length - 1) state.playingSong = playingPlaylist.songKeys[0];
-            else state.playingSong = playingPlaylist.songKeys[index + 1];
+            const songs =
+                state.playingPlaylist === liked_songs
+                    ? Object.values(state.songs)
+                          .filter(({ isFavorite }) => isFavorite)
+                          .map(({ key }) => key)
+                    : playingPlaylist.songKeys;
+            const index = songs.findIndex((value: string) => value === state.playingSong);
+            if (index === songs.length - 1) state.playingSong = songs[0];
+            else state.playingSong = songs[index + 1];
             if (!state.isPlaying) state.isPlaying = true;
         },
         setCurrentPlaylist: (state: AppState, action: { payload: { playlistSlug: string } }) => {
