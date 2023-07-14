@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Playlist } from '../../interfaces/playlist';
 import { AppState, createPlaylist, setPlayingPlaylist, togglePlaying } from '../../redux/slices/playlistSlice';
 import { useDispatch } from 'react-redux';
-import { ReactComponent as Home } from '../../static/icons/home.svg';
+import { ReactComponent as Home } from '@Icons/home.svg';
 
 import './SidebarNavigation.scss';
 

@@ -1,4 +1,4 @@
-import { ReactComponent as Heart } from '../../static/icons/heart_filled.svg';
+import { ReactComponent as Heart } from '@Icons/heart_filled.svg';
 import { Playlist } from '../../interfaces/playlist';
 
 import './PlaylistCover.scss';

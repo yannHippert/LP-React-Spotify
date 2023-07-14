@@ -19,9 +19,9 @@ const App = () => {
                     colorHighlight: '#1db954',
                     fontFamily: 'DM Sans',
                     colorText: '#FFFFFF',
-                    fontWeightStrong: 700
+                    fontWeightStrong: 700,
                 },
-                components: {}
+                components: {},
             }}
         >
             <div className="global-wrapper">
