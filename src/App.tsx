@@ -31,7 +31,7 @@ const App = () => {
                     <main>
                         <Routes>
                             <Route path={getBaseUrl()} element={<HomeView />} />
-                            <Route path="/playlist/:slug" element={<PlaylistView />} />
+                            <Route path={getBaseUrl() + 'playlist/:slug'} element={<PlaylistView />} />
                             <Route path="*" element={<Navigate to={getBaseUrl()} />} />
                         </Routes>
                     </main>
