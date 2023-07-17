@@ -42,7 +42,7 @@ const getItems = (): MenuItem[] => {
             <Link to="/playlist/liked-songs">Liked Songs</Link>,
             '/playlist/liked-songs',
             <div className="icon-container">
-                <img src={getBaseUrl() + '/img/liked_song.png'} alt="" />
+                <img src={getBaseUrl() + 'img/liked_song.png'} alt="" />
             </div>,
         ),
     ];
@@ -95,7 +95,7 @@ const SidebarNavigation = () => {
             <nav className="sidenav">
                 <div>
                     <Link to="/">
-                        <img src={getBaseUrl() + '/img/logo.png'} className="nav-logo" alt="Spotify-logo" />
+                        <img src={getBaseUrl() + 'img/logo.png'} className="nav-logo" alt="Spotify-logo" />
                     </Link>
                     <Menu
                         mode="inline"
