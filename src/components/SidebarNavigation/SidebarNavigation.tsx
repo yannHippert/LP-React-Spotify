@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { ReactComponent as Home } from '@Icons/home.svg';
 
 import './SidebarNavigation.scss';
+import { getBaseUrl } from '../../utils/Url';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -24,8 +25,8 @@ function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode
 const getItems = (): MenuItem[] => {
     return [
         getItem(
-            <Link to="/">Home</Link>,
-            '/',
+            <Link to={getBaseUrl()}>Home</Link>,
+            getBaseUrl(),
             <div className="icon-container">
                 <Home />
             </div>,
@@ -41,7 +42,7 @@ const getItems = (): MenuItem[] => {
             <Link to="/playlist/liked-songs">Liked Songs</Link>,
             '/playlist/liked-songs',
             <div className="icon-container">
-                <img src="/img/liked_song.png" alt="" />
+                <img src={getBaseUrl() + '/img/liked_song.png'} alt="" />
             </div>,
         ),
     ];
@@ -94,7 +95,7 @@ const SidebarNavigation = () => {
             <nav className="sidenav">
                 <div>
                     <Link to="/">
-                        <img src="/img/logo.png" className="nav-logo" alt="Spotify-logo" />
+                        <img src={getBaseUrl() + '/img/logo.png'} className="nav-logo" alt="Spotify-logo" />
                     </Link>
                     <Menu
                         mode="inline"

@@ -7,6 +7,7 @@ import MediaControlBar from './components/MediaControlBar/MediaControlBar';
 import SidebarNavigation from './components/SidebarNavigation/SidebarNavigation';
 
 import './styles/main.scss';
+import { getBaseUrl } from './utils/Url';
 
 const App = () => {
     message.config({ maxCount: 2 });
@@ -29,9 +30,9 @@ const App = () => {
                     <SidebarNavigation />
                     <main>
                         <Routes>
-                            <Route path="/" element={<HomeView />} />
+                            <Route path={getBaseUrl()} element={<HomeView />} />
                             <Route path="/playlist/:slug" element={<PlaylistView />} />
-                            <Route path="*" element={<Navigate to="/" />} />
+                            <Route path="*" element={<Navigate to={getBaseUrl()} />} />
                         </Routes>
                     </main>
                 </div>
