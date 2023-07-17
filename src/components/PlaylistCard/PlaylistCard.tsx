@@ -5,6 +5,7 @@ import PlaylistCover from '../PlaylistCover/PlaylistCover';
 import './PlaylistCard.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppState, setPlayingPlaylist, togglePlaying } from '../../redux/slices/playlistSlice';
+import { getBaseUrl } from '../../utils/Url';
 
 export interface PlaylistCardProps {
     playlist: Playlist;
@@ -25,7 +26,7 @@ const PlaylistCard = ({ playlist }: PlaylistCardProps) => {
 
     return (
         <div className="playlist-card-wrapper">
-            <Link to={`/playlist/${playlist.slug}`}>
+            <Link to={`${getBaseUrl()}/playlist/${playlist.slug}`}>
                 <div className="playlist-card">
                     <PlaylistCover playlist={playlist} className="" />
                     <h3>{playlist.name}</h3>

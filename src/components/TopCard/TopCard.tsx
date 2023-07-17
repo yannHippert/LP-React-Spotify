@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './TopCard.scss';
 import PlaylistCover from '../PlaylistCover/PlaylistCover';
+import { getBaseUrl } from '../../utils/Url';
 
 export interface Top50sCardProps {
     playlist: Playlist;
@@ -10,7 +11,7 @@ export interface Top50sCardProps {
 
 const Top50sCard = ({ playlist }: Top50sCardProps) => {
     return (
-        <Link to={`/playlist/${playlist.slug}`}>
+        <Link to={`${getBaseUrl()}/playlist/${playlist.slug}`}>
             <div className="top-card">
                 <PlaylistCover playlist={playlist} className="playlist-cover" />
                 <h3>TOP 50</h3>

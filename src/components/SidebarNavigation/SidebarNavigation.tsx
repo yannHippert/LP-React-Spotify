@@ -25,7 +25,7 @@ function getItem(label: React.ReactNode, key?: React.Key, icon?: React.ReactNode
 const getItems = (): MenuItem[] => {
     return [
         getItem(
-            <Link to={getBaseUrl()}>Home</Link>,
+            <Link to={`${getBaseUrl()}/`}>Home</Link>,
             getBaseUrl(),
             <div className="icon-container">
                 <Home />
@@ -39,10 +39,10 @@ const getItems = (): MenuItem[] => {
             </div>,
         ),
         getItem(
-            <Link to="/playlist/liked-songs">Liked Songs</Link>,
-            '/playlist/liked-songs',
+            <Link to={`${getBaseUrl()}/playlist/liked-songs`}>Liked Songs</Link>,
+            `${getBaseUrl()}/playlist/liked-songs`,
             <div className="icon-container">
-                <img src={getBaseUrl() + 'img/liked_song.png'} alt="" />
+                <img src={getBaseUrl() + '/img/liked_song.png'} alt="" />
             </div>,
         ),
     ];
@@ -82,10 +82,10 @@ const SidebarNavigation = () => {
     const getPersnoalPlaylistItems = () => {
         return personalPlaylists.map((playlist) =>
             getItem(
-                <Link to={`/playlist/${playlist.slug}`}>
+                <Link to={`${getBaseUrl()}/playlist/${playlist.slug}`}>
                     {playlist.name} {playlist.slug === playingPlaylist && <i className="fa-solid fa-volume-high"></i>}
                 </Link>,
-                `/playlist/${playlist.slug}`,
+                `${getBaseUrl()}/playlist/${playlist.slug}`,
             ),
         );
     };
@@ -94,8 +94,8 @@ const SidebarNavigation = () => {
         <>
             <nav className="sidenav">
                 <div>
-                    <Link to="/">
-                        <img src={getBaseUrl() + 'img/logo.png'} className="nav-logo" alt="Spotify-logo" />
+                    <Link to={`${getBaseUrl()}/`}>
+                        <img src={getBaseUrl() + '/img/logo.png'} className="nav-logo" alt="Spotify-logo" />
                     </Link>
                     <Menu
                         mode="inline"
